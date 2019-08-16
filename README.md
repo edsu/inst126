@@ -24,7 +24,7 @@ INST126 is an introduction to computer programming for students with very
 limited or no previous programming experience. Topics include fundamental
 programming concepts such as variables, data types, assignments, arrays,
 conditionals, loops, functions, and I/O operations. Particular emphasis is
-placed on the social and political aspects of code and data.
+placed on analysis and the social and political aspects of code and data.
 
 ## Extended Course Description
 
@@ -119,8 +119,8 @@ Here is my suggested general strategy for working on assignments:
 This course will make extensive use of the following book/website, which was
 also used in INST126:
 
-* Charles R. Severance, [Python for Everybody: Exploring Data Using Python 3] ISBN-13: 978-1530051120 https://py4e.com/book.php
-* [The Python Tutorial], v3.7.2, Python Software Foundation
+* Charles R. Severance, [Python for Everybody: Exploring Data Using Python 3] ISBN-13: 978-1530051120 https://www.py4e.com/
+* [The Python Tutorial], v3.7.4, Python Software Foundation
 
 Other readings (generally available online for free, or through Library
 subscriptions) will be made available to you in ELMS.
@@ -129,8 +129,8 @@ subscriptions) will be made available to you in ELMS.
 
 * **Laptop** - We will do programming in class, so bring your laptop. Any current OS can be used. If you do not have access to a laptop, please contact me immediately.
 * **Python** - [Python3] is freely available from https://www.python.org/downloads.
-* **Git** - We'll be using [Git] to distribute code related to the course materials. Code will also be on Canvas in case you'd rather not use it. https://git-scm.com/downloads
 * **Code** - [Visual Studio Code] (or Code) is an open source editor created by Microsoft with very nice Python and Git support. If you are already comfortable using an advanced text editor like [Atom], [Vim] or [Emacs] feel free to use it. But I will be using Code in class. It's actually pretty fun, and supports multiple languages. 
+* **Git** - We'll be using [Git] to distribute code related to the course materials. Code will also be on Canvas in case you'd rather not use it. https://git-scm.com/downloads
 * **Slack** - [Slack] is a widely used team collaboration platform. The iSchool has its own Slack workspace, and there is an inst326-105 channel that we will be using for discussion. In addition to using Slack in your browser there are apps for your [desktop] and snmartphone. https://umd-cis.slack.com
 
 Please note that we will install all necessary environments together in class
@@ -175,89 +175,90 @@ Final grades will be computed based on the following components:
 | Participation          |  10 points |
 | TOTAL                  | 100 points |
 
-## Course schedule
+## Course Schedule
 
-The following table shows the most current version of the planned schedule. The course content can be roughly divided into three interrelated units:
+The following table shows the planned schedule, but please see the modules in i
+ELMS for any recent changes.
 
-**Unit 1:** Procedural Programming Review using Python (~modules 1-5)  
-**Unit 2:** Object-Oriented Programming using Python (~modules 7-9)  
-**Unit 3:** Data Analysis using Python (~modules 10-14)
+**Module 1: Introduction**   
+08/26 - Introduction  
+08/28 - Installfest   
+08/30 - What is Code?  
 
-**Module 1**   
-01/28 - Intro and Overview  
-01/30 - Fundamentals  
-02/01 - Fundamentals
+**Module 2: Building Blocks**  
+09/02 - No Class (Labor Day)  
+09/04 - Input and Output
+09/06 - Variables and Operators
 
-**Module 2**  
-02/04 - Functions & Iteration  
-02/06 - Functions & Iteration  
-02/08 - Functions & Iteration
+**Module 3: Building Blocks**  
+09/09 - Variables and Operators **HW1**  
+09/11 - Order of Operations
+09/13 - Debugging and Exceptions
 
-**Module 3**  
-02/11 - Data Types **HW1**  
-02/13 - Data Types   
-02/15 - Data Types
+**Module 4: Control Structures**  
+09/16 - Conditionals   
+09/18 - Conditionals     
+09/20 - Functions
 
-**Module 4**  
-02/18 - Serialization & File I/O  
-02/20 - Serialization & File I/O   
-02/22 - Serialization & File I/O
-
-**Module 5**  
-02/25 - Regular Expressions **HW2**   
-02/27 - Regular Expressions  
-03/01 - Regular Expressions
+**Module 5: Control Structures**  
+09/23 - Functions **HW2**   
+09/25 - Loops   
+09/27 - Loops
 
 **Review**  
-03/04 - **Critical Reflection #1**  
-03/06 - Catch up & Review  
-03/08 - **Midterm #1**
+09/30 - **Critical Reflection #1**  
+10/02 - Catch up & Review  
+10/04 - **Midterm #1**
 
-**Module 6**  
-03/11 - OOP Fundamentals  
-03/13 - OOP Fundamentals  
-03/15 - OOP Fundamentals
+**Module 6: Data Structures**  
+10/07 - Strings  
+10/09 - Lists  
+10/11 - Dictionaries 
 
-**Spring Break**  
-03/18 - Spring Break  
-03/20 - Spring Break  
-03/22 - Spring Break
+**Module 7: Data Structures**  
+10/14 - Dictionaries **HW3**  
+10/16 - Sets  
+10/18 - Regular Expressions 
 
-**Module 7**  
-03/25 - Inheritance & Modules  
-03/27 - Inheritance & Modules  
-03/29 - Inheritance & Modules
+**Module 8: Data Formats**  
+10/21 - Text  
+10/23 - CSV  
+10/25 - JSON
 
-**Module 8**  
-04/01 - Databases and SQL **HW3**  
-04/03 - Databases and SQL  
-03/05 - Databases and SQL
+**Module 9: Data Formats**  
+10/28 - HTML **HW4**  
+10/30 -   
+11/01 - Web 
 
-**Module 9**  
-04/08 - Data on the Web  
-04/10 - Data on the Web  
-04/12 - Data on the Web
+**Module 10: Data Analysis**  
+11/04 -Jupyter  
+11/06 -   
+11/08 -
 
-**Module 10**  
-04/15 - **Critical Reflection #2**  
-04/17 - Catch up & Review  
-04/19 - **Midterm #2**
+**Review**  
+11/11 - **Critical Reflection #2**  
+11/13 - Catch up and Review  
+11/15 - **Midterm #2**
 
-**Module 11**  
-04/22 - Data Analysis **HW4**  
-04/24 - Data Analysis  
-04/26 - Data Analysis
+**Module 12: Data Analysis**  
+11/18 - **HW5**  
+11/20 -   
+11/22 - 
 
-**Module 12**  
-04/29 - In Class Project Work  
-05/01 - In Class Project Work  
-05/03 - In Class Project Work
+**Module 13: Data Analysis**  
+11/25 -   
+11/27 -   
+11/29 - 
 
-**Module 14**  
-05/06 - Testing **HW5**  
-05/08 - No Class  
-05/11 - No Class  
-05/13 - Final Presentations
+**Module 14: Final Projects**  
+12/02 -  
+12/04 -  
+12/06 -  
+
+**Module 15**  
+12/09 -   
+12/11 - Final Exams  
+12/13 - Final Exams
 
 [Git]: https://git-scm.com/
 [Python for Everybody: Exploring Data Using Python 3]: https://py4e.com/book.php
