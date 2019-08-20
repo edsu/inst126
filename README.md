@@ -4,7 +4,7 @@ geometry: "left=1in,right=1in,top=1in,bottom=1in"
 
 # Introduction to Programming for Information Professionals
 
-INST 326  
+INST 126  
 Fall 2019  
 Section 101  
 Atlantic Building 1113  
@@ -14,7 +14,6 @@ MWF 14:00-14:50
 
 Name: Ed Summers  
 Email: edsu@umd.edu  
-Twitter: [\@edsu]   
 Office:  0301 Hornbake Library ([MITH])  
 Office Hours: Friday 3-4pm and by appointment
 
@@ -77,13 +76,14 @@ modules, and will typically follow this pattern, with some exceptions:
 
 **Before class (preparation):**
 
-* Do assigned readings and/or watch assigned videos.  * Complete any exercises,
-  homework assignments or quizzes that are due.
+* Do assigned readings.
+* Complete weekly exercises.
+* Submit homework assignments or quizzes that are due.
 
 In class:
 
 * We will use a mix of lecture, discussion and lots of hands-on activities to
-  help you apply the materials.
+  help you learn programming concepts. 
 * We will make use of paired and group work in class.
 * Occasional quizzes may be administered online in class.
 * Each midterm exam will include both an in-class and take-home section.
@@ -148,10 +148,10 @@ appropriate to discuss in the Slack channel.
 | ------------------------- | --------------------------- |
 |  To use in cases when electronic devices are allowed in the course.	| To use during exams or at other times when electronic devices are not allowed. |
 | To discuss the concepts and ideas in the course, on homework assignments, and in other course assignments. | To give out an answer to a homework question, clicker question, or other assignment. |
-| To discuss the mathematical equations in the course, how they work, and to do examples. | To give out numerical answers and exact math work to math problems on a homework assignment or other course assignment. |
-| To report to the instructor any conduct or remarks on the group chat that go against the university’s Code of Academic Integrity or Non-Discrimination Policy.	| To use to complete an in-class assignment when you are not in class, such as clicker questions or pop quizzes. |
+| To discuss how programming languages work in the course. | To give out answers and exact programs on a homework assignment or other course assignment. |
+| To report to the instructor any conduct or remarks on the group chat that go against the university’s Code of Academic Integrity or Non-Discrimination Policy.	| To use to complete an in-class assignment when you are not in class. |
 | To ask about the mechanics of the course, such as when a due date is or where the class is being held. | To facilitate (help) others cheat, such as by passing on answers to assignments or quizzes, or telling others when in-class activities are occurring (i.e., clicker questions or pop quizzes). |
-| To coordinate with other course members on a groupwork assignment.	| To actively exclude another student in the course. |
+| To coordinate with other course members on a group work assignment.	| To actively exclude or be abusive to another student in the course. |
 
 ## Grading
 
@@ -187,89 +187,76 @@ ELMS for any recent changes.
 
 **Module 2: Building Blocks**  
 09/02 - No Class (Labor Day)  
-09/04 - Input and Output
-09/06 - Variables and Operators
+09/04 - Command Line and File System  
+09/06 - Lab
 
 **Module 3: Building Blocks**  
 09/09 - Variables and Operators **HW1**  
-09/11 - Order of Operations
-09/13 - Debugging and Exceptions
+09/11 - Variables and Operators  
+09/13 - Lab
 
 **Module 4: Control Structures**  
 09/16 - Conditionals   
 09/18 - Conditionals     
-09/20 - Functions
+09/20 - Lab
 
 **Module 5: Control Structures**  
 09/23 - Functions **HW2**   
-09/25 - Loops   
-09/27 - Loops
+09/25 - Functions   
+09/27 - No Class
+
+**Module 6: Control Structures**  
+09/30 - Loops  
+10/02 - Loops  
+10/04 - Lab
 
 **Review**  
-09/30 - **Critical Reflection #1**  
-10/02 - Catch up & Review  
-10/04 - **Midterm #1**
-
-**Module 6: Data Structures**  
-10/07 - Strings  
-10/09 - Lists  
-10/11 - Dictionaries 
+10/07 - **Critical Reflection #1**  
+10/09 - Catch up & Review  
+10/11 - **Midterm #1**
 
 **Module 7: Data Structures**  
-10/14 - Dictionaries **HW3**  
-10/16 - Sets  
-10/18 - Regular Expressions 
+10/14 - Strings  
+10/16 - Strings  
+10/18 - Lab
 
-**Module 8: Data Formats**  
-10/21 - Text  
-10/23 - CSV  
-10/25 - JSON
+**Module 8: Data Structures**  
+10/21 - Lists **HW3**  
+10/23 - Lists  
+10/25 - Lab
 
-**Module 9: Data Formats**  
-10/28 - HTML **HW4**  
-10/30 -   
-11/01 - Web 
+**Module 9: Data Structures**  
+10/28 - Dictionaries  
+10/30 - Dictionaries  
+11/01 - Lab
 
-**Module 10: Data Analysis**  
-11/04 -Jupyter  
-11/06 -   
-11/08 -
+**Module 10: Data Structures**  
+11/04 - Sets **HW4**  
+11/06 - Sets  
+11/08 - Lab
 
 **Review**  
 11/11 - **Critical Reflection #2**  
 11/13 - Catch up and Review  
 11/15 - **Midterm #2**
 
-**Module 12: Data Analysis**  
-11/18 - **HW5**  
-11/20 -   
-11/22 - 
+**Module 11: Data Analysis**  
+11/18 - Pandas **HW5**  
+11/20 - Pandas  
+11/22 - Lab
 
 **Module 13: Data Analysis**  
-11/25 -   
-11/27 -   
-11/29 - 
+11/25 - Matplotlib  
+11/27 - Matplotlib  
+11/29 - Lab
 
 **Module 14: Final Projects**  
-12/02 -  
-12/04 -  
-12/06 -  
+12/02 - Poster Session 1 
+12/04 - Poster Session 2 
+12/06 - Poster Session 1
 
 **Module 15**  
-12/09 -   
-12/11 - Final Exams  
-12/13 - Final Exams
+12/09 - Poster Session 1  
+12/11 - Poster Session 2  
+12/13 - No Class
 
-[Git]: https://git-scm.com/
-[Python for Everybody: Exploring Data Using Python 3]: https://py4e.com/book.php
-[The Python Tutorial]: https://docs.python.org/3/tutorial/index.html
-[Object-Oriented Programming in Python]: https://www.cs.uct.ac.za/mit_notes/python/
-[Atom]: https://atom.io/
-[Visual Studio Code]: https://code.visualstudio.com/
-[Python3]: https://www.python.org/downloads
-[Vim]: https://www.vim.org/
-[Emacs]: https://www.gnu.org/software/emacs/
-[Slack]: https://umd-cis.slack.com
-[desktop]: https://slack.com/downloads/
-[\@edsu]: https://twitter.com/edsu
-[MITH]: https://mith.umd.edu
