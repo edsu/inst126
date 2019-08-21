@@ -120,7 +120,7 @@ This course will make extensive use of the following book/website, which was
 also used in INST126:
 
 * Charles R. Severance, [Python for Everybody: Exploring Data Using Python 3] ISBN-13: 978-1530051120 https://www.py4e.com/
-* [The Python Tutorial], v3.7.4, Python Software Foundation
+* [Python Documentation], v3.7.4, Python Software Foundation.  https://docs.python.org/3/
 
 Other readings (generally available online for free, or through Library
 subscriptions) will be made available to you in ELMS.
@@ -175,88 +175,156 @@ Final grades will be computed based on the following components:
 | Participation          |  10 points |
 | TOTAL                  | 100 points |
 
+**Important:** Late work will be graded 10% off for every day that it is late.
+So please submit your work on time!
+
 ## Course Schedule
 
-The following table shows the planned schedule, but please see the modules in i
-ELMS for any recent changes.
+The following table shows the planned schedule, but please see the modules in
+ELMS for the latest information.
 
-**Module 1: Introduction**   
+### Module 1: Introduction
+
 08/26 - Introduction  
-08/28 - Installfest   
+08/28 - Installfest  
 08/30 - What is Code?  
 
-**Module 2: Building Blocks**  
+* Severance, Chapter 1.
+* Peters, T. (2004). The Zen of Python. https://www.python.org/dev/peps/pep-0020/
+
+### Module 2: Building Blocks
+
 09/02 - No Class (Labor Day)  
-09/04 - Command Line and File System  
+09/04 - The Command Line  
 09/06 - Lab
 
-**Module 3: Building Blocks**  
+### Module 3: Building Blocks
+
 09/09 - Variables and Operators **HW1**  
 09/11 - Variables and Operators  
 09/13 - Lab
 
-**Module 4: Control Structures**  
+* Severance, Chapter 2.
+
+### Module 4: Control Structures
+
 09/16 - Conditionals   
 09/18 - Conditionals     
 09/20 - Lab
 
-**Module 5: Control Structures**  
+* Severance, Chapter 3.
+
+### Module 5: Control Structures
+
 09/23 - Functions **HW2**   
 09/25 - Functions   
 09/27 - No Class
 
-**Module 6: Control Structures**  
+* Severance, Chapter 4.
+
+### Module 6: Control Structures
+
 09/30 - Loops  
 10/02 - Loops  
 10/04 - Lab
 
-**Review**  
+* Severance, Chapter 5.
+
+### Review
+
 10/07 - **Critical Reflection #1**  
 10/09 - Catch up & Review  
 10/11 - **Midterm #1**
 
-**Module 7: Data Structures**  
+### Module 7: Data Structures
+
 10/14 - Strings  
 10/16 - Strings  
 10/18 - Lab
 
-**Module 8: Data Structures**  
+* Severance, Chapter 6 and 7
+
+### Module 8: Data Structures
+
 10/21 - Lists **HW3**  
 10/23 - Lists  
 10/25 - Lab
 
-**Module 9: Data Structures**  
+* Severance, Chapter 8.
+
+### Module 9: Data Structures
+
 10/28 - Dictionaries  
 10/30 - Dictionaries  
 11/01 - Lab
 
-**Module 10: Data Structures**  
+* Severance, Chapter 9.
+
+### Module 10: Data Structures
+
 11/04 - Sets **HW4**  
 11/06 - Sets  
 11/08 - Lab
 
-**Review**  
+* Sridhar, J. An Introduction to Python Sets. DZone. Retrieved August 20, 2019. https://dzone.com/articles/an-introduction-to-python-sets
+
+### Review
+
 11/11 - **Critical Reflection #2**  
 11/13 - Catch up and Review  
 11/15 - **Midterm #2**
 
-**Module 11: Data Analysis**  
-11/18 - Pandas **HW5**  
+### Module 11: Data Analysis
+
+11/18 - Pandas  
 11/20 - Pandas  
 11/22 - Lab
 
-**Module 13: Data Analysis**  
-11/25 - Matplotlib  
+* McKinney, W. (2013). Python for Data Analysis. p. 111-121
+
+### Module 13: Data Analysis
+
+11/25 - Matplotlib **HW5**  
 11/27 - Matplotlib  
 11/29 - Lab
 
-**Module 14: Final Projects**  
-12/02 - Poster Session 1 
-12/04 - Poster Session 2 
-12/06 - Poster Session 1
+* McKinney, W. (2013). Python for Data Analysis. p. 232-241.
 
-**Module 15**  
+### Module 14: Data Analysis
+
+12/02 - Jupyter  
+12/04 - Jupyter  
+12/06 - Lab
+
+### Module 15: Final Presentations
+
 12/09 - Poster Session 1  
 12/11 - Poster Session 2  
 12/13 - No Class
 
+Nakamura, L. (2014). Indigenous Circuits. Computer History Museum. Retrieved August 20, 2019. https://www.computerhistory.org/atchm/indigenous-circuits/
+
+Gillespie, Tarleton . Algorithm. In Digital Keywords, edited by
+Ben Peters. Princeton, N.J.: Princeton University Press. http://culturedigitally.org/wp-content/uploads/2016/07/Gillespie-2016-Algorithm-Digital-Keywords-Peters-ed.pdf
+
+Seaver, Nick. (2014). Knowing Algorithms. In Media in Transition 8. 
+
+Bellowvin, S. (2019). Yes "algorithms" can be biased. Here’s why. Ars Technica. Retrieved January 24, 2019. https://arstechnica.com/tech-policy/2019/01/yes-algorithms-can-be-biased-heres-why/
+
+Sandvig, Christian. (2015). Seeing the Sort: The Aesthetic and Industrial Defense of "The Algorithm." Media-N. Retrieved August 20, 2019. http://median.newmediacaucus.org/art-infrastructures-information/seeing-the-sort-the-aesthetic-and-industrial-defense-of-the-algorithm/
+
+Hernandez, S. (2019). One Of The Biggest At-Home DNA Testing Companies Is Working With The FBI. BuzzFeed News. Retrieved February 4, 2019. https://www.buzzfeednews.com/article/salvadorhernandez/family-tree-dna-fbi-investigative-genealogy-privacy
+
+Fisher, M. and Taub, A. (2019). How YouTube Radicalized Brazil. New York Times. Retrieved August 20, 2019. https://www.nytimes.com/2019/08/11/world/americas/youtube-brazil.html
+
+Donovan, Joan. (2019). How Hate Groups’ Secret Sound System Works. The Atlantic. Retrieved August 20, 2019. https://www.theatlantic.com/ideas/archive/2019/03/extremists-understand-what-tech-platforms-have-built/585136/
+
+Glanz, J., Kaplan, T., and Nicas, J. (2018). In Ethiopia Crash, Faulty Sensor on Boeing 737 Max Is Suspected. New York Times. March 29, 2019. Retrieved August 20, 2019. https://www.nytimes.com/2019/03/29/business/boeing-737-max-crash.html
+
+Finn, E. (2016). Algorithms aren't like Spock. Slate. Retrieved August 20, 2019.  https://slate.com/technology/2016/02/algorithms-are-like-kirk-not-spock.html
+
+Burrell, J. (2016). How the machine "thinks": Understanding opacity in machine
+learning algorithms. Big Data & Society, 3(1),  Retrieved August 20, 2019. https://journals.sagepub.com/doi/full/10.1177/2053951715622512 
+
+Crawford, K. and Joler, Vladan. (2018). Anatomy of an AI system. Retrieved
+August 20, 2019. https://anatomyof.ai/
