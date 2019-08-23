@@ -17,17 +17,9 @@ Email: edsu@umd.edu
 Office:  0301 Hornbake Library ([MITH])  
 Office Hours: Friday 3-4pm and by appointment
 
-## Catalog Description
+## Description
 
-INST126 is an introduction to computer programming for students with very
-limited or no previous programming experience. Topics include fundamental
-programming concepts such as variables, data types, assignments, arrays,
-conditionals, loops, functions, and I/O operations. Particular emphasis is
-placed on analysis and the social and political aspects of code and data.
-
-## Extended Course Description
-
-This is an introduction to programming for information science majors. This
+INST126 is an introduction to programming for information science majors. This
 course provides a path for students with diverse backgrounds to successfully
 learn programming. You are not expected to have any computer programming
 experience.
@@ -85,8 +77,8 @@ In class:
 * We will use a mix of lecture, discussion and lots of hands-on activities to
   help you learn programming concepts. 
 * We will make use of paired and group work in class.
-* Occasional quizzes may be administered online in class.
-* Each midterm exam will include both an in-class and take-home section.
+* We will have exercises in ELMS that you need to submit.
+* Each midterm exam will be in class with a take-home section.
 
 After class:
 
