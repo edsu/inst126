@@ -2,7 +2,7 @@
 geometry: "left=1in,right=1in,top=1in,bottom=1in"
 ---
 
-# Introduction to Programming for Information Professionals
+# Introduction to Programming for Information Studies
 
 INST 126  
 Fall 2019  
