@@ -318,3 +318,16 @@ ELMS for the latest information.
 12/11 - Poster Session 2  
 12/13 - No Class
 
+[Git]: https://git-scm.com/
+[Python for Everybody: Exploring Data Using Python 3]: https://py4e.com/book.php
+[The Python Tutorial]: https://docs.python.org/3/tutorial/index.html
+[Object-Oriented Programming in Python]: https://www.cs.uct.ac.za/mit_notes/python/
+[Atom]: https://atom.io/
+[Visual Studio Code]: https://code.visualstudio.com/
+[Python3]: https://www.python.org/downloads
+[Vim]: https://www.vim.org/
+[Emacs]: https://www.gnu.org/software/emacs/
+[Slack]: https://umd-cis.slack.com
+[desktop]: https://slack.com/downloads/
+[\@edsu]: https://twitter.com/edsu
+[MITH]: https://mith.umd.edu
