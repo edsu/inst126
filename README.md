@@ -131,18 +131,19 @@ subscriptions) will be made available to you in ELMS.
 * **Python** - [Python3] is freely available from https://www.python.org/downloads.
 * **Code** - [Visual Studio Code] (or Code) is an open source editor created by Microsoft with very nice Python and Git support. If you are already comfortable using an advanced text editor like [Atom], [Vim] or [Emacs] feel free to use it. But I will be using Code in class. It's actually pretty fun, and supports multiple languages. 
 * **Git** - We'll be using [Git] to distribute code related to the course materials. Code will also be on Canvas in case you'd rather not use it. https://git-scm.com/downloads
-* **Slack** - [Slack] is a widely used team collaboration platform. The iSchool has its own Slack workspace, and there is an inst326-105 channel that we will be using for discussion. In addition to using Slack in your browser there are apps for your [desktop] and snmartphone. https://umd-cis.slack.com
+* **Slack** - [Slack] is a widely used team collaboration platform. The iSchool has [its own Slack workspace](https://umd-cis.slack.com), and there is an inst326-105 channel that we will be using for discussion. In addition to using Slack in your browser there are apps for your [desktop] and smartphone.
 
 Please note that we will install all necessary environments together in class
 during the first couple of weeks.
 
 ## Group Chat
 
-We will be using the iSchool's Slack as a discussion forum for the class. You
-should receive an invitation to your UMD email address on how to join the Slack.
-Once you are in you need to join the #inst126 channel. You can join any other channels
-that look interesting to you. The table below contains information about what's
-appropriate to discuss in the Slack channel.
+We will be using the [iSchool's Slack](https://umd-cis.slack.com) as a
+discussion forum for the class. You should receive an invitation to your UMD
+email address on how to join the Slack.  Once you are in you need to join the
+#inst126 channel. You can join any other channels that look interesting to you.
+The table below contains information about what's appropriate to discuss in the
+Slack channel.
 
 | Acceptable in Group Chats	| Unacceptable in Group Chats |
 | ------------------------- | --------------------------- |
