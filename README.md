@@ -120,7 +120,7 @@ This course will make extensive use of the following book/website, which was
 also used in INST126:
 
 * Charles R. Severance, [Python for Everybody: Exploring Data Using Python 3] ISBN-13: 978-1530051120 https://www.py4e.com/
-* [Python Documentation], v3.7.4, Python Software Foundation.  https://docs.python.org/3/
+* [Python Documentation], v3.7.4, Python Software Foundation. https://docs.python.org/3/
 
 Other readings (generally available online for free, or through Library
 subscriptions) will be made available to you in ELMS.
@@ -198,6 +198,8 @@ ELMS for the latest information.
 09/04 - The Command Line  
 09/06 - Lab
 
+* Introduction to the Command Line. (2019). Launch School. https://launchschool.com/books/command_line Please read these sections: Introduction; The Command Line Interface; and Files, Directories and Executables.
+
 ### Module 3: Building Blocks
 
 09/09 - Variables and Operators **HW1**  
@@ -205,6 +207,7 @@ ELMS for the latest information.
 09/13 - Lab
 
 * Severance, Chapter 2.
+* Bellowvin, S. (2019). Yes "algorithms" can be biased. Here’s why. Ars Technica. Retrieve d January 24, 2019.  https://arstechnica.com/tech-policy/2019/01/yes-algorithms-can-be-biased-heres-why/
 
 ### Module 4: Control Structures
 
@@ -213,6 +216,7 @@ ELMS for the latest information.
 09/20 - Lab
 
 * Severance, Chapter 3.
+* Hernandez, S. (2019). One Of The Biggest At-Home DNA Testing Companies Is Working With The FBI. BuzzFeed News. Retrieved February 4, 2019. https://www.buzzfeednews.com/article/salvadorhernandez/family-tree-dna-fbi-investigative-genealogy-privacy
 
 ### Module 5: Control Structures
 
@@ -221,6 +225,7 @@ ELMS for the latest information.
 09/27 - No Class
 
 * Severance, Chapter 4.
+* Donovan, Joan. (2019). How Hate Groups’ Secret Sound System Works. The Atlantic. Retrieved August 20, 2019. https://www.theatlantic.com/ideas/archive/2019/03/extremists-understand-what-tech-platforms-have-built/585136/
 
 ### Module 6: Control Structures
 
@@ -229,6 +234,7 @@ ELMS for the latest information.
 10/04 - Lab
 
 * Severance, Chapter 5.
+* Gillespie, Tarleton. (2016). Algorithm. In *Digital Keywords*, edited by Ben Peters.  Retrieved August 20, 2019. http://culturedigitally.org/wp-content/uploads/2016/07/Gillespie-2016-Algorithm-Digital-Keywords-Peters-ed.pdf
 
 ### Review
 
@@ -242,7 +248,8 @@ ELMS for the latest information.
 10/16 - Strings  
 10/18 - Lab
 
-* Severance, Chapter 6 and 7
+* Severance, Chapters 6 and 7
+* Punishing the Poor. A podcast interview with Virginia Eubanks from Against the Grain (KPFA). Retrieved August 22, 2019.  https://kpfa.org/episode/against-the-grain-july-18-2018/
 
 ### Module 8: Data Structures
 
@@ -251,6 +258,7 @@ ELMS for the latest information.
 10/25 - Lab
 
 * Severance, Chapter 8.
+* Glanz, J., Kaplan, T., and Nicas, J. (2018). In Ethiopia Crash, Faulty Sensor on Boeing 737 Max Is Suspected. New York Times. March 29, 2019. Retrieved August 20, 2019. https://www.nytimes.com/2019/03/29/business/boeing-737-max-crash.html
 
 ### Module 9: Data Structures
 
@@ -259,6 +267,7 @@ ELMS for the latest information.
 11/01 - Lab
 
 * Severance, Chapter 9.
+* Crawford, K. and Joler, Vladan. (2018). Anatomy of an AI system. Retrieved August 20, 2019. https://anatomyof.ai/
 
 ### Module 10: Data Structures
 
@@ -267,6 +276,7 @@ ELMS for the latest information.
 11/08 - Lab
 
 * Sridhar, J. An Introduction to Python Sets. DZone. Retrieved August 20, 2019. https://dzone.com/articles/an-introduction-to-python-sets
+* Seaver, Nick. (2013). Knowing Algorithms. Media in Transition 8: Public Media, Private Media. Retrieved August 22, 2109. http://nickseaver.net/s/seaverMiT8.pdf
 
 ### Review
 
@@ -280,7 +290,9 @@ ELMS for the latest information.
 11/20 - Pandas  
 11/22 - Lab
 
-* McKinney, W. (2013). Python for Data Analysis. p. 111-121
+* McKinney, W. (2013). Python for Data Analysis. p. 123-136.
+* Nakamura, L. (2014). Indigenous Circuits. Computer History Museum. Retrieved August 20, 2019. https://www.computerhistory.org/atchm/indigenous-circuits/
+
 
 ### Module 13: Data Analysis
 
@@ -288,7 +300,8 @@ ELMS for the latest information.
 11/27 - Matplotlib  
 11/29 - Lab
 
-* McKinney, W. (2013). Python for Data Analysis. p. 232-241.
+* McKinney, W. (2013). Plotting With Pandas and Seaborn. In Python for Data Analysis. p. 268-286.
+* Fisher, M. and Taub, A. (2019). How YouTube Radicalized Brazil. New York Times. Retrieved August 20, 2019. https://www.nytimes.com/2019/08/11/world/americas/youtube-brazil.html
 
 ### Module 14: Data Analysis
 
@@ -296,35 +309,12 @@ ELMS for the latest information.
 12/04 - Jupyter  
 12/06 - Lab
 
+* Driscoll, M. (2019). Jupyter Notebook: An Introduction. Real Python. Retrieved August 20, 2019.  https://realpython.com/jupyter-notebook-introduction/#installation
+* The Crime Machine, Part 1. A podcast episode from Reply All. Retrieved August 22, 2019. https://gimletmedia.com/shows/reply-all/o2hx34
+
 ### Module 15: Final Presentations
 
 12/09 - Poster Session 1  
 12/11 - Poster Session 2  
 12/13 - No Class
 
-Nakamura, L. (2014). Indigenous Circuits. Computer History Museum. Retrieved August 20, 2019. https://www.computerhistory.org/atchm/indigenous-circuits/
-
-Gillespie, Tarleton . Algorithm. In Digital Keywords, edited by
-Ben Peters. Princeton, N.J.: Princeton University Press. http://culturedigitally.org/wp-content/uploads/2016/07/Gillespie-2016-Algorithm-Digital-Keywords-Peters-ed.pdf
-
-Seaver, Nick. (2014). Knowing Algorithms. In Media in Transition 8. 
-
-Bellowvin, S. (2019). Yes "algorithms" can be biased. Here’s why. Ars Technica. Retrieved January 24, 2019. https://arstechnica.com/tech-policy/2019/01/yes-algorithms-can-be-biased-heres-why/
-
-Sandvig, Christian. (2015). Seeing the Sort: The Aesthetic and Industrial Defense of "The Algorithm." Media-N. Retrieved August 20, 2019. http://median.newmediacaucus.org/art-infrastructures-information/seeing-the-sort-the-aesthetic-and-industrial-defense-of-the-algorithm/
-
-Hernandez, S. (2019). One Of The Biggest At-Home DNA Testing Companies Is Working With The FBI. BuzzFeed News. Retrieved February 4, 2019. https://www.buzzfeednews.com/article/salvadorhernandez/family-tree-dna-fbi-investigative-genealogy-privacy
-
-Fisher, M. and Taub, A. (2019). How YouTube Radicalized Brazil. New York Times. Retrieved August 20, 2019. https://www.nytimes.com/2019/08/11/world/americas/youtube-brazil.html
-
-Donovan, Joan. (2019). How Hate Groups’ Secret Sound System Works. The Atlantic. Retrieved August 20, 2019. https://www.theatlantic.com/ideas/archive/2019/03/extremists-understand-what-tech-platforms-have-built/585136/
-
-Glanz, J., Kaplan, T., and Nicas, J. (2018). In Ethiopia Crash, Faulty Sensor on Boeing 737 Max Is Suspected. New York Times. March 29, 2019. Retrieved August 20, 2019. https://www.nytimes.com/2019/03/29/business/boeing-737-max-crash.html
-
-Finn, E. (2016). Algorithms aren't like Spock. Slate. Retrieved August 20, 2019.  https://slate.com/technology/2016/02/algorithms-are-like-kirk-not-spock.html
-
-Burrell, J. (2016). How the machine "thinks": Understanding opacity in machine
-learning algorithms. Big Data & Society, 3(1),  Retrieved August 20, 2019. https://journals.sagepub.com/doi/full/10.1177/2053951715622512 
-
-Crawford, K. and Joler, Vladan. (2018). Anatomy of an AI system. Retrieved
-August 20, 2019. https://anatomyof.ai/
