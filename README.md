@@ -111,8 +111,9 @@ Here is my suggested general strategy for working on assignments:
 This course will make extensive use of the following book/website, which was
 also used in INST126:
 
-* Charles R. Severance, [Python for Everybody: Exploring Data Using Python 3] ISBN-13: 978-1530051120 https://www.py4e.com/
-* [Python Documentation], v3.7.4, Python Software Foundation. https://docs.python.org/3/
+* Charles R. Severance, [Python for Everybody: Exploring Data Using Python 3]. (Available at https://www.py4e.com/ and in ELMS)
+* McKinney, W. (2018). *Python for Data Analysis*, 2nd Edition. O'Reilly. (Available in ELMS)
+* [Python Documentation], v3.7.4, Python Software Foundation. https://docs.python.org/3
 
 Other readings (generally available online for free, or through Library
 subscriptions) will be made available to you in ELMS.
@@ -183,7 +184,7 @@ ELMS for the latest information.
 08/30 - What is Code?  
 
 * Severance, Chapter 1.
-* Peters, T. (2004). The Zen of Python. https://www.python.org/dev/peps/pep-0020/
+* Peters, T. (2004). *The Zen of Python*. https://www.python.org/dev/peps/pep-0020/
 
 ### Module 2: Building Blocks
 
@@ -191,7 +192,7 @@ ELMS for the latest information.
 09/04 - The Command Line  
 09/06 - Lab
 
-* Introduction to the Command Line. (2019). Launch School. https://launchschool.com/books/command_line Please read these sections: Introduction; The Command Line Interface; and Files, Directories and Executables.
+* Introduction to the Command Line. (2019). *Launch School*. https://launchschool.com/books/command_line Please read these sections: Introduction; The Command Line Interface; and Files, Directories and Executables.
 
 ### Module 3: Building Blocks
 
@@ -200,7 +201,7 @@ ELMS for the latest information.
 09/13 - Lab
 
 * Severance, Chapter 2.
-* Bellowvin, S. (2019). Yes "algorithms" can be biased. Here’s why. Ars Technica. Retrieve d January 24, 2019.  https://arstechnica.com/tech-policy/2019/01/yes-algorithms-can-be-biased-heres-why/
+* Bellowvin, S. (2019). Yes "algorithms" can be biased. Here’s why. *Ars Technica*. Retrieve d January 24, 2019.  https://arstechnica.com/tech-policy/2019/01/yes-algorithms-can-be-biased-heres-why/
 
 ### Module 4: Control Structures
 
@@ -209,7 +210,7 @@ ELMS for the latest information.
 09/20 - Lab
 
 * Severance, Chapter 3.
-* Hernandez, S. (2019). One Of The Biggest At-Home DNA Testing Companies Is Working With The FBI. BuzzFeed News. Retrieved February 4, 2019. https://www.buzzfeednews.com/article/salvadorhernandez/family-tree-dna-fbi-investigative-genealogy-privacy
+* Hernandez, S. (2019). One Of The Biggest At-Home DNA Testing Companies Is Working With The FBI. *BuzzFeed News*. Retrieved February 4, 2019. https://www.buzzfeednews.com/article/salvadorhernandez/family-tree-dna-fbi-investigative-genealogy-privacy
 
 ### Module 5: Control Structures
 
@@ -218,7 +219,7 @@ ELMS for the latest information.
 09/27 - No Class
 
 * Severance, Chapter 4.
-* Donovan, Joan. (2019). How Hate Groups’ Secret Sound System Works. The Atlantic. Retrieved August 20, 2019. https://www.theatlantic.com/ideas/archive/2019/03/extremists-understand-what-tech-platforms-have-built/585136/
+* Donovan, Joan. (2019). How Hate Groups’ Secret Sound System Works. *The Atlantic*. Retrieved August 20, 2019. https://www.theatlantic.com/ideas/archive/2019/03/extremists-understand-what-tech-platforms-have-built/585136/
 
 ### Module 6: Control Structures
 
@@ -242,7 +243,7 @@ ELMS for the latest information.
 10/18 - Lab
 
 * Severance, Chapters 6 and 7
-* Punishing the Poor. A podcast interview with Virginia Eubanks from Against the Grain (KPFA). Retrieved August 22, 2019.  https://kpfa.org/episode/against-the-grain-july-18-2018/
+* Punishing the Poor. A podcast interview with Virginia Eubanks from *Against the Grain (KPFA)*. Retrieved August 22, 2019.  https://kpfa.org/episode/against-the-grain-july-18-2018/
 
 ### Module 8: Data Structures
 
@@ -251,7 +252,7 @@ ELMS for the latest information.
 10/25 - Lab
 
 * Severance, Chapter 8.
-* Glanz, J., Kaplan, T., and Nicas, J. (2018). In Ethiopia Crash, Faulty Sensor on Boeing 737 Max Is Suspected. New York Times. March 29, 2019. Retrieved August 20, 2019. https://www.nytimes.com/2019/03/29/business/boeing-737-max-crash.html
+* Glanz, J., Kaplan, T., and Nicas, J. (2018). In Ethiopia Crash, Faulty Sensor on Boeing 737 Max Is Suspected. *New York Times*. March 29, 2019. Retrieved August 20, 2019. https://www.nytimes.com/2019/03/29/business/boeing-737-max-crash.html
 
 ### Module 9: Data Structures
 
@@ -260,7 +261,7 @@ ELMS for the latest information.
 11/01 - Lab
 
 * Severance, Chapter 9.
-* Crawford, K. and Joler, Vladan. (2018). Anatomy of an AI system. Retrieved August 20, 2019. https://anatomyof.ai/
+* Crawford, K. and Joler, Vladan. (2018). *Anatomy of an AI System*. Retrieved August 20, 2019. https://anatomyof.ai/
 
 ### Module 10: Data Structures
 
@@ -268,8 +269,8 @@ ELMS for the latest information.
 11/06 - Sets  
 11/08 - Lab
 
-* Sridhar, J. An Introduction to Python Sets. DZone. Retrieved August 20, 2019. https://dzone.com/articles/an-introduction-to-python-sets
-* Seaver, Nick. (2013). Knowing Algorithms. Media in Transition 8: Public Media, Private Media. Retrieved August 22, 2109. http://nickseaver.net/s/seaverMiT8.pdf
+* Sridhar, J. An Introduction to Python Sets. *DZone*. Retrieved August 20, 2019. https://dzone.com/articles/an-introduction-to-python-sets
+* Seaver, Nick. (2013). Knowing Algorithms. *Media in Transition 8: Public Media, Private Media*. Retrieved August 22, 2109. http://nickseaver.net/s/seaverMiT8.pdf
 
 ### Review
 
@@ -283,9 +284,8 @@ ELMS for the latest information.
 11/20 - Pandas  
 11/22 - Lab
 
-* McKinney, W. (2013). Python for Data Analysis. p. 123-136.
-* Nakamura, L. (2014). Indigenous Circuits. Computer History Museum. Retrieved August 20, 2019. https://www.computerhistory.org/atchm/indigenous-circuits/
-
+* McKinney, W. (2018). *Python for Data Analysis*. pp. 123-136.
+* Nakamura, L. (2014). Indigenous Circuits. *Computer History Museum*. Retrieved August 20, 2019. https://www.computerhistory.org/atchm/indigenous-circuits/
 
 ### Module 13: Data Analysis
 
@@ -293,8 +293,8 @@ ELMS for the latest information.
 11/27 - Matplotlib  
 11/29 - Lab
 
-* McKinney, W. (2013). Plotting With Pandas and Seaborn. In Python for Data Analysis. p. 268-286.
-* Fisher, M. and Taub, A. (2019). How YouTube Radicalized Brazil. New York Times. Retrieved August 20, 2019. https://www.nytimes.com/2019/08/11/world/americas/youtube-brazil.html
+* McKinney, W. (2018). Plotting With Pandas and Seaborn. In *Python for Data Analysis*. pp. 268-286.
+* Fisher, M. and Taub, A. (2019). How YouTube Radicalized Brazil. *New York Times*. Retrieved August 20, 2019. https://www.nytimes.com/2019/08/11/world/americas/youtube-brazil.html
 
 ### Module 14: Data Analysis
 
@@ -302,8 +302,8 @@ ELMS for the latest information.
 12/04 - Jupyter  
 12/06 - Lab
 
-* Driscoll, M. (2019). Jupyter Notebook: An Introduction. Real Python. Retrieved August 20, 2019.  https://realpython.com/jupyter-notebook-introduction/#installation
-* The Crime Machine, Part 1. A podcast episode from Reply All. Retrieved August 22, 2019. https://gimletmedia.com/shows/reply-all/o2hx34
+* Driscoll, M. (2019). Jupyter Notebook: An Introduction. *Real Python*. Retrieved August 20, 2019.  https://realpython.com/jupyter-notebook-introduction/#installation
+* The Crime Machine, Part 1. A podcast episode from *Reply All*. Retrieved August 22, 2019. https://gimletmedia.com/shows/reply-all/o2hx34
 
 ### Module 15: Final Presentations
 
