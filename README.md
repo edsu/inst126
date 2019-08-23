@@ -26,13 +26,13 @@ experience.
 
 You will learn how programmers analyze problems and design solutions for those
 problems using computational thinking, and practice using computational
-thinking to solve problems. You will learn how implement computational
-solutions using the Python language (https://python.org/), which is
-particularly well suited for many problems that information professionals
-seek to solve, such as data collection, analysis and management, and developing
-Web applications such as search engines. This is a hands-on course - both in
-and out of class you will be writing, analyzing, testing and debugging code,
-culminating in a project that tackles a challenging real-world problem.
+thinking to solve problems. You will learn how implement computational solutions
+using the particularly well suited for many problems that information
+professionals seek to solve, such as data collection, analysis and management,
+and developing Web applications such as search engines. This is a hands-on
+course - both in and out of class you will be writing, analyzing, testing and
+debugging code, culminating in a project that tackles a challenging real-world
+problem.
 
 Throughout the course, we will examine issues like algorithmic bias,
 ethical/unethical uses of algorithms and disparities in opportunities in tech
@@ -313,7 +313,7 @@ ELMS for the latest information.
 
 [Git]: https://git-scm.com/
 [Python for Everybody: Exploring Data Using Python 3]: https://py4e.com/book.php
-[The Python Tutorial]: https://docs.python.org/3/tutorial/index.html
+[Python Documentation]: https://docs.python.org/3/
 [Object-Oriented Programming in Python]: https://www.cs.uct.ac.za/mit_notes/python/
 [Atom]: https://atom.io/
 [Visual Studio Code]: https://code.visualstudio.com/
