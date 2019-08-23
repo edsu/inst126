@@ -19,7 +19,7 @@ Office Hours: Friday 3-4pm and by appointment
 
 ## Description
 
-INST126 is an introduction to programming for information science majors. This
+INST 126 is an introduction to programming for information science majors. This
 course provides a path for students with diverse backgrounds to successfully
 learn programming. You are not expected to have any computer programming
 experience.
