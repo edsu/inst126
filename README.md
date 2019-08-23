@@ -176,7 +176,8 @@ So please submit your work on time!
 
 The following table shows the planned schedule, but please see the modules in
 ELMS for the latest information. The due dates for homework assignments are
-marked with **HW**.
+marked with **HW**. The schedule is broken up into weekly modules which you will
+also find in ELMS.
 
 ### Module 1: Introduction
 
@@ -187,7 +188,7 @@ marked with **HW**.
 * Severance, Chapter 1.
 * Peters, T. (2004). *The Zen of Python*. https://www.python.org/dev/peps/pep-0020/
 
-### Module 2: Building Blocks
+### Module 2: Building Blocks 1
 
 09/02 - No Class (Labor Day)  
 09/04 - The Command Line  
@@ -195,7 +196,7 @@ marked with **HW**.
 
 * Introduction to the Command Line. (2019). *Launch School*. https://launchschool.com/books/command_line Please read these sections: Introduction; The Command Line Interface; and Files, Directories and Executables.
 
-### Module 3: Building Blocks
+### Module 3: Building Blocks 2
 
 09/09 - Variables and Operators **HW1**  
 09/11 - Variables and Operators  
@@ -204,7 +205,7 @@ marked with **HW**.
 * Severance, Chapter 2.
 * Bellowvin, S. (2019). Yes "algorithms" can be biased. Here’s why. *Ars Technica*. Retrieve d January 24, 2019.  https://arstechnica.com/tech-policy/2019/01/yes-algorithms-can-be-biased-heres-why/
 
-### Module 4: Control Structures
+### Module 4: Control Structures 1
 
 09/16 - Conditionals   
 09/18 - Conditionals     
@@ -213,7 +214,7 @@ marked with **HW**.
 * Severance, Chapter 3.
 * Hernandez, S. (2019). One Of The Biggest At-Home DNA Testing Companies Is Working With The FBI. *BuzzFeed News*. Retrieved February 4, 2019. https://www.buzzfeednews.com/article/salvadorhernandez/family-tree-dna-fbi-investigative-genealogy-privacy
 
-### Module 5: Control Structures
+### Module 5: Control Structures 2
 
 09/23 - Functions **HW2**   
 09/25 - Functions   
@@ -222,7 +223,7 @@ marked with **HW**.
 * Severance, Chapter 4.
 * Donovan, Joan. (2019). How Hate Groups’ Secret Sound System Works. *The Atlantic*. Retrieved August 20, 2019. https://www.theatlantic.com/ideas/archive/2019/03/extremists-understand-what-tech-platforms-have-built/585136/
 
-### Module 6: Control Structures
+### Module 6: Control Structures 3
 
 09/30 - Loops  
 10/02 - Loops  
@@ -237,7 +238,7 @@ marked with **HW**.
 10/09 - Catch up & Review  
 10/11 - **Midterm #1**
 
-### Module 7: Data Structures
+### Module 7: Data Structures 1
 
 10/14 - Strings  
 10/16 - Strings  
@@ -246,7 +247,7 @@ marked with **HW**.
 * Severance, Chapters 6 and 7
 * Punishing the Poor. A podcast interview with Virginia Eubanks from *Against the Grain (KPFA)*. Retrieved August 22, 2019.  https://kpfa.org/episode/against-the-grain-july-18-2018/
 
-### Module 8: Data Structures
+### Module 8: Data Structures 2
 
 10/21 - Lists **HW3**  
 10/23 - Lists  
@@ -255,7 +256,7 @@ marked with **HW**.
 * Severance, Chapter 8.
 * Glanz, J., Kaplan, T., and Nicas, J. (2018). In Ethiopia Crash, Faulty Sensor on Boeing 737 Max Is Suspected. *New York Times*. March 29, 2019. Retrieved August 20, 2019. https://www.nytimes.com/2019/03/29/business/boeing-737-max-crash.html
 
-### Module 9: Data Structures
+### Module 9: Data Structures 3
 
 10/28 - Dictionaries  
 10/30 - Dictionaries  
@@ -264,7 +265,7 @@ marked with **HW**.
 * Severance, Chapter 9.
 * Crawford, K. and Joler, Vladan. (2018). *Anatomy of an AI System*. Retrieved August 20, 2019. https://anatomyof.ai/
 
-### Module 10: Data Structures
+### Module 10: Data Structures 4
 
 11/04 - Sets **HW4**  
 11/06 - Sets  
@@ -279,7 +280,7 @@ marked with **HW**.
 11/13 - Catch up and Review  
 11/15 - **Midterm #2**
 
-### Module 11: Data Analysis
+### Module 11: Data Analysis 1
 
 11/18 - Pandas  
 11/20 - Pandas  
@@ -288,7 +289,7 @@ marked with **HW**.
 * McKinney, W. (2018). *Python for Data Analysis*. pp. 123-136.
 * Nakamura, L. (2014). Indigenous Circuits. *Computer History Museum*. Retrieved August 20, 2019. https://www.computerhistory.org/atchm/indigenous-circuits/
 
-### Module 13: Data Analysis
+### Module 13: Data Analysis 2
 
 11/25 - Matplotlib **HW5**  
 11/27 - Matplotlib  
@@ -297,7 +298,7 @@ marked with **HW**.
 * McKinney, W. (2018). Plotting With Pandas and Seaborn. In *Python for Data Analysis*. pp. 268-286.
 * Fisher, M. and Taub, A. (2019). How YouTube Radicalized Brazil. *New York Times*. Retrieved August 20, 2019. https://www.nytimes.com/2019/08/11/world/americas/youtube-brazil.html
 
-### Module 14: Data Analysis
+### Module 14: Data Analysis 3
 
 12/02 - Jupyter  
 12/04 - Jupyter  
