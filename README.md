@@ -175,7 +175,8 @@ So please submit your work on time!
 ## Course Schedule
 
 The following table shows the planned schedule, but please see the modules in
-ELMS for the latest information.
+ELMS for the latest information. The due dates for homework assignments are
+marked with **HW**.
 
 ### Module 1: Introduction
 
