@@ -244,8 +244,9 @@ also find in ELMS.
 10/16 - Strings  
 10/18 - Lab
 
-* Severance, Chapters 6 and 7
-* Punishing the Poor. A podcast interview with Virginia Eubanks from *Against the Grain (KPFA)*. Retrieved August 22, 2019.  https://kpfa.org/episode/against-the-grain-july-18-2018/
+* Severance, Chapters 6 and 
+* Eubanks, V. (2018). Automating Bias: How Algorithms Designed to Alleviate Poverty Can Perpetuate it Instead. *Scientific American*. November, pp 68-71.
+* [Optional] Punishing the Poor. A podcast interview with Virginia Eubanks from *Against the Grain (KPFA)*. Retrieved August 22, 2019.  https://kpfa.org/episode/against-the-grain-july-18-2018/
 
 ### Module 8: Data Structures 2
 
