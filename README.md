@@ -272,7 +272,7 @@ also find in ELMS.
 11/08 - Lab
 
 * Sridhar, J. An Introduction to Python Sets. *DZone*. Retrieved August 20, 2019. https://dzone.com/articles/an-introduction-to-python-sets
-* Seaver, Nick. (2013). Knowing Algorithms. *Media in Transition 8: Public Media, Private Media*. Retrieved August 22, 2109. http://nickseaver.net/s/seaverMiT8.pdf
+* Noble, S. U. (2012). Missed Connections. Bitch Media. Retrieved August 23, 2019. https://safiyaunoble.files.wordpress.com/2012/03/54_search_engines.pdf
 
 ### Review
 
