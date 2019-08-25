@@ -66,7 +66,7 @@ After successfully completing this course you will be able to:
 All course materials will be found ELMS where they are divided into weekly
 modules, and will typically follow this pattern, with some exceptions:
 
-**Before class (preparation):**
+Before class (preparation):
 
 * Do assigned readings.
 * Complete weekly exercises.
