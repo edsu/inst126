@@ -17,6 +17,13 @@ Email: edsu@umd.edu
 Office:  0301 Hornbake Library ([MITH])  
 Office Hours: Friday 3-4pm and by appointment
 
+## Teaching Assistant
+
+Name: Md Main Uddin Rony
+Email: mrony@umd.edu
+Office: TBD
+Office Hours: TBD
+
 ## Description
 
 INST 126 is an introduction to programming for information studies majors. This

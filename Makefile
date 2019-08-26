@@ -1,6 +1,6 @@
-all: all-modules syllabus
+all: all-modules README.md
 
-syllabus:
+README.md:
 	pandoc README.md -o syllabus.pdf
 
 all-modules:
