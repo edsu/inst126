@@ -244,7 +244,7 @@ also find in ELMS.
 10/16 - Strings  
 10/18 - Lab
 
-* Severance, Chapters 6 and 
+* Severance, Chapters 6 and 7
 * Eubanks, V. (2018). Automating Bias: How Algorithms Designed to Alleviate Poverty Can Perpetuate it Instead. *Scientific American*. November, pp 68-71.
 * [Optional] Punishing the Poor. A podcast interview with Virginia Eubanks from *Against the Grain (KPFA)*. Retrieved August 22, 2019.  https://kpfa.org/episode/against-the-grain-july-18-2018/
 
@@ -290,16 +290,16 @@ also find in ELMS.
 * McKinney, W. (2018). *Python for Data Analysis*. pp. 123-136.
 * Nakamura, L. (2014). Indigenous Circuits. *Computer History Museum*. Retrieved August 20, 2019. https://www.computerhistory.org/atchm/indigenous-circuits/
 
-### Module 13: Data Analysis 2
+### Module 12: Data Analysis 2
 
 11/25 - Matplotlib **HW5**  
-11/27 - Matplotlib  
-11/29 - Lab
+11/27 - No Class (Thanksgiving)
+11/29 - No Class (Thanksgiving)
 
 * McKinney, W. (2018). Plotting With Pandas and Seaborn. In *Python for Data Analysis*. pp. 268-286.
 * Fisher, M. and Taub, A. (2019). How YouTube Radicalized Brazil. *New York Times*. Retrieved August 20, 2019. https://www.nytimes.com/2019/08/11/world/americas/youtube-brazil.html
 
-### Module 14: Data Analysis 3
+### Module 13: Data Analysis 3
 
 12/02 - Jupyter  
 12/04 - Jupyter  
@@ -308,7 +308,7 @@ also find in ELMS.
 * Driscoll, M. (2019). Jupyter Notebook: An Introduction. *Real Python*. Retrieved August 20, 2019.  https://realpython.com/jupyter-notebook-introduction/#installation
 * The Crime Machine, Part 1. A podcast episode from *Reply All*. Retrieved August 22, 2019. https://gimletmedia.com/shows/reply-all/o2hx34
 
-### Module 15: Final Presentations
+### Final Presentations
 
 12/09 - Poster Session 1  
 12/11 - Poster Session 2  
