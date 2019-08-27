@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>INST326 Python Style Guide</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reset.css">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <link rel="stylesheet" href="../css/page.css"/>
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">INST326 Python Style Guide</h1>
+</section>
+
+<section id="style-matters" class="slide level2">
+<h2>Style Matters</h2>
+<p>It might be tempting to think of programming as a purely technical exercise of assembling instructions in order to accomplish a particular task, but in fact writing code is as much a creative art as it is a skill. As such, it requires not only logic and precision, but also leaves room for a good amount of of creativity and style.</p>
+<p>The leaders of the Python community have issued guidelines on various topics with the goal of promoting the health of the open-source community. These guidelines are known as Python Enhancement Proposals, or PEPs, and include a <a href="https://www.python.org/dev/peps/pep-0008/">“Style Guide for Python Code,”</a> known as PEP8. Many of the rules below draw on PEP8, and certainly none of them contradict it. I would encourage you to familiarize yourselves with the entire document so you can write code more clearly, and keep your code in line with community best practices.</p>
+</section>
+<section id="course-style-guide" class="slide level2">
+<h2>Course Style Guide</h2>
+<p>All Python programs are required to contain the following elements:</p>
+<h3 id="header">Header</h3>
+<p>A program header (contained within a block comment) which lists the student’s name, directory ID, submission date, assignment name, and exercise number. See below for an example.</p>
+<pre><code>Name: I. M. Student
+Directory ID: imstudent
+Date: 2018-08-30
+Assignment: Homework 1</code></pre>
+<h3 id="helpful-comments">Helpful Comments</h3>
+<p>Wherever you write a non-obvious algorithm or series of statements, include appropriate comments to explain the underlying reasoning. Meaningful variable and function names - any variables or functions that you create should be named according to purpose or use.</p>
+<h3 id="functions-and-classes">Functions and Classes</h3>
+<p>Unless otherwise instructed, please perform all meaningful computation inside functions or classes. Use of functions and classes facilitates testing and code reuse.</p>
+<h3 id="global-variables">Global Variables</h3>
+<p>Global variables should only be used for constant values. Variables whose values will change over the course of the program should be defined within functions, methods, or classes and passed as arguments to other functions or methods as needed.</p>
+<h3 id="if-name-equals-main">If Name Equals Main</h3>
+<p>Unless otherwise instructed, please put an</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">&#39;__main__&#39;</span>:</span></code></pre></div>
+<p>clause in your main scripts, and keep its contents to a minimum. This facilitates testing and code reuse. For more information, see: https://docs.python.org/3/library/<strong>main</strong>.html and https://docs.python.org/3/tutorial/modules.html</p>
+<h3 id="documentation-strings-docstrings">Documentation Strings (docstrings)</h3>
+<p>docstrings are special strings that document scripts, classes, functions, and methods. Unless instructed otherwise, you are expected to include docstrings in every script, class, function, and method you write.</p>
+<h3 id="readability">Readability</h3>
+<p>No individual line of code should exceed 80 characters. This includes comments and docstrings. Most IDEs or feature-rich text editors can be configured to wrap lines at 80 characters or less. Use whitespace judiciously to separate and spread out segments of code so that programs are easy to follow.</p>
+<h3 id="indentation">Indentation</h3>
+<p>Use 4 spaces per indentation level (but any exception listed in PEP 8 is okay). Don’t use tab characters. Most feature-rich text editors can be configured to insert four spaces when you press the tab key.</p>
+<h3 id="imports">Imports</h3>
+<p>Use separate lines for imports from separate modules, for example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="im">import</span> random</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="im">import</span> sys</span></code></pre></div>
+<p>Don’t import multiple modules on a single line:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> random, sys</span></code></pre></div>
+<p>Don’t use wildcard imports:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="im">from</span> random <span class="im">import</span> <span class="op">*</span></span></code></pre></div>
+<h3 id="naming-conventions">Naming Conventions</h3>
+<p>Variables, functions, module names, package names: use lower-case letters, plus underscores as needed to improve readability. It’s okay to include numbers in names, ifn it makes sense to do so. Avoid using capital letters in these names.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> is_valid_phone_number(num):</span></code></pre></div>
+<p>Class Names: use CapWords (CamelCase). It’s okay to use numbers in your class names, if it makes sense to do so. Avoid underscores in these names.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">class</span> PhoneNumber:</span></code></pre></div>
+<p>Constants: use capital letters, plus underscores as needed to improve readability. It’s okay to use numbers in your constant names, if it makes sense to do so. Avoid using lower-case letters in these names.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>UMD_COLORS <span class="op">=</span> [<span class="st">&#39;red&#39;</span>, <span class="st">&#39;white&#39;</span>, <span class="st">&#39;black&#39;</span>, <span class="st">&#39;gold&#39;</span>]</span></code></pre></div>
+<p>Note that many of these styling requirements are subjective and that there are legitimate circumstances under which some of these rules can/should be broken. When in doubt, add a comment. Style points will be deducted for deviations from these style requirements (up to 20% of the points for a given assignment).</p>
+</section>
+<section id="submitting-coursework" class="slide level2">
+<h2>Submitting Coursework</h2>
+<p>Homework assignments and take-home midterms in this course are to be submitted via upload to ELMS. Please follow the naming conventions below. Individual assignments may contain more specific instructions than the guidelines provided here. When more than one file is included in the submission, please combine the files into a single ZIP archive for submission.</p>
+<p>Files that are corrupted, fail to open, or are empty will receive zero points. Exceptions will be handled on a case-by-case basis by the instructor.</p>
+</section>
+<section id="file-naming-convention" class="slide level2">
+<h2>File Naming Convention</h2>
+<p>Because we will generally want the ability to import Python scripts as modules, it’s important to save these files with names that are valid module names. Please observe the following constraints when naming Python files:</p>
+<p>Use only lower-case letters, numbers, and underscores only. Avoid hyphens, spaces, and other special characters at all costs.</p>
+<ul>
+<li>File names must begin with a letter (not a number or underscore).</li>
+<li>File names should be short but reasonably mnemonic.</li>
+<li>File names for python files should end in .py; data files and zip archives should be given the appropriate extension for the file format.</li>
+<li>For other kinds of files (essays, documentation, etc.), use mnemonic names.</li>
+</ul>
+</section>
+<section id="questions" class="slide level2">
+<h2>Questions</h2>
+<p>If you have any questions about these requirements over the course of the semester, reach out to the instructor for further clarification.</p>
+</section>
+<section class="slide level2">
+
+<p><em>Note: This document was based on an earlier version of the same, created by Aric Bills. v1.0, 2018-08-29</em></p>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
