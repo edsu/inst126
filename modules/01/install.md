@@ -27,6 +27,16 @@ operating specific installers for all of the tools we'll be installing today,
 which  hould take care of most of the details. But expect some roadblocks as we
 discover some things.
 
+## Slack
+
+First make sure you are able to log in to the iSchool Slack and join the
+\#inst126 channel.
+
+https://umd-cis.slack.com
+
+This will be a good place to ask questions about pieces of code, error messages,
+and to work with other people during class and when you are at home.
+
 ## Python3
 
 This is the big one since we're going to be using the Python programming
