@@ -14,3 +14,9 @@ navigate ELMS, and start Code.
 4. Change the text to match your name and directory ID.
 5. Take a screenshot of the Code screen and upload it to ELMS for Assignment 1.
 
+**Optional 1:** See if you can figure out how to run the program (we'll be doing
+this next week).
+
+**Optional 2:** Download the hello-web.py from the Modules / Module -01 folder
+and see if you can run it. What does it do?
+
