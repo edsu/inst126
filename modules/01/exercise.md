@@ -1,6 +1,6 @@
 ---
 title: Exercise 1
-css: ../../../css/page.css
+css: ../../css/page.css
 ---
 
 Once you have followed the instructions for installing Python, Git and Visual

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Homework 1: The File-System and Command Line</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="../../css/page.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Homework 1: The File-System and Command Line</h1>
+</header>
+<p>Follow these instructions while substituting anywhere you see <code>{umd-id}</code> with your UMD Directory ID.</p>
+<h2 id="setup">Setup</h2>
+<ol type="1">
+<li>Download <em>hw1-files.tar.gz</em> from the <em>Homeworks</em> files in ELMS to your <em>Projects/inst126</em> directory.</li>
+<li>Open Visual Studio Code.</li>
+<li>Open your folder <em>Projects/inst126</em> in Visual Studio Code.</li>
+<li>Open a bash terminal window using Terminal menu (make sure it’s bash!).</li>
+<li>Unpack the archive file <em>hw1.tar.gz</em>: <code>tar xvfz hw1-files.tar.gz</code></li>
+<li>Rename <code>hw1-files</code> directory to your University Directory ID: for example, <code>mv hw1-files {umd-id}</code></li>
+<li>Change directory: <code>cd {umd-id}</code></li>
+</ol>
+<h2 id="organize">Organize</h2>
+<ol type="1">
+<li>List the contents of the directory: <code>ls</code></li>
+<li>List the contents of the directory with file sizes: <code>ls -l</code></li>
+<li>Remove the the largest file: <code>rm &lt;filename&gt;</code></li>
+<li>Make a directory called <em>images</em>: <code>mkdir images</code></li>
+<li>Make a directory called <em>documents</em>: <code>mkdir documents</code></li>
+<li>Move all of the <code>.jpg</code> files to the <em>images</em> directory: <code>mv *.jpg images</code></li>
+<li>Move all of the <code>.txt</code> files to the <em>documents</em> directory: <code>mv *.txt documents</code></li>
+</ol>
+<h2 id="package-and-upload">Package and Upload</h2>
+<ol type="1">
+<li>Change directories up: <code>cd ..</code></li>
+<li>Package up the your directory as tar file: <code>tar cvfz {umd-id}.tar.gz {umd-id}</code></li>
+<li>Submit the file to the assignment.</li>
+</ol>
+<h2 id="rubric">Rubric:</h2>
+<ul>
+<li>Able to unpack tar file (1pt)</li>
+<li>Able to navigate directories (1pt)</li>
+<li>Able to remove a file (1pt)</li>
+<li>Able to move files (1pt)</li>
+<li>Able to package up directory as a tar file (1pt)</li>
+</ul>
+</body>
+</html>
