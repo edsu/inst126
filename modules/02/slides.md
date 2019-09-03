@@ -15,12 +15,12 @@ transition: slide
 
 ## 
 
-<h3>What is information?</h3>
+<h3>What is *information*?</h3>
 
 ##
 
 <div class="left">
-<h3>Why is understanding programming important for the study of information?</h3>
+<h3>Why is understanding *programming* important for the study of *information*?</h3>
 </div>
 
 ##
