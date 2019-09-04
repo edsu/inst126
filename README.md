@@ -19,10 +19,10 @@ Office Hours: Friday 3-4pm and by appointment
 
 ## Teaching Assistant
 
-Name: Md Main Uddin Rony
-Email: mrony@umd.edu
-Office: TBD
-Office Hours: TBD
+Name: Md Main Uddin Rony  
+Email: mrony@umd.edu  
+Office: 2118 Hornbake South  
+Office Hours: Monday, 4-5pm
 
 ## Description
 
@@ -210,7 +210,7 @@ also find in ELMS.
 09/13 - Lab
 
 * Severance, Chapter 2.
-* Bellowvin, S. (2019). Yes "algorithms" can be biased. Here’s why. *Ars Technica*. Retrieve d January 24, 2019.  https://arstechnica.com/tech-policy/2019/01/yes-algorithms-can-be-biased-heres-why/
+* Bellowvin, S. (2019). Yes "algorithms" can be biased. Here’s why. *Ars Technica*. Retrieved January 24, 2019.  https://arstechnica.com/tech-policy/2019/01/yes-algorithms-can-be-biased-heres-why/
 
 ### Module 4: Control Structures 1
 

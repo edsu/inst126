@@ -225,6 +225,12 @@ body {
 .reveal small * {
   vertical-align: top; }
 
+.reveal cite {
+  display: inline-block;
+  line-height: 1.2em;
+  text-align: left;
+  font-size: 0.6em; }
+
 /*********************************************
  * LINKS
  *********************************************/
