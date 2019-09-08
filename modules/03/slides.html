@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Building Blocks 2</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../lib/reveal/css/reset.css">
+  <link rel="stylesheet" href="../../lib/reveal/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../lib/reveal/css/theme/inst126.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../../lib/reveal/css/print/pdf.css' : '../../lib/reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="../../lib/reveal/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Building Blocks 2</h1>
+  <p class="subtitle">Variables, Expressions, Statements, Operators</p>
+</section>
+
+<section id="section" class="slide level1">
+<h1></h1>
+<div class="left">
+<p>Python is an <a href="https://en.wikipedia.org/wiki/Imperative_programming">imperative</a> programming language. Your programs are a series of <strong>Statements</strong> that are executed in order.</p>
+<p>Each <strong>Statement</strong> can be made up of <strong>Variables</strong> and <strong>Expressions</strong>.</p>
+</div>
+</section>
+<section id="section-1" class="slide level1">
+<h1></h1>
+<style>
+.statement {
+  font-size: larger;
+  font-weight: bold;
+  border: thin solid black;
+  padding: 5px 20px 5px 20px;
+  border-radius: 40px;
+  background-color: lightgreen;
+}
+</style>
+<p><span class="statement">1</span></p>
+<p>↓</p>
+<p><span class="statement">2</span></p>
+<p>↓</p>
+<p><span class="statement">3</span></p>
+<p>↓</p>
+<p><span class="statement">4</span></p>
+</section>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<p><img src="images/interpreter.png"></p>
+</section>
+<section id="what-are-variables" class="slide level1">
+<h1>What are Variables?</h1>
+<p class="left">
+Variables are <strong>names</strong> that can be attached to <strong>values</strong>. Each variable has a <strong>type</strong>:
+</p>
+<div>
+<ul>
+<li class="fragment">integer:<br> <code>x = 1</code></li>
+<li class="fragment">string:<br> <code>x = "umd"</code></li>
+<li class="fragment">float:<br> <code>x = 1.5</code></li>
+<li class="fragment">boolean:<br> <code>x = True</code></li>
+</ul>
+</div>
+</section>
+<section id="section-3" class="slide level1">
+<h1></h1>
+<h1>
+a² = b² + c²
+</h1>
+</section>
+<section id="working-with-variables" class="slide level1">
+<h1>Working with Variables</h1>
+<p>There are two main actions we take with variables:</p>
+<ul>
+<li><strong>assignment</strong>: attach a name to some value</li>
+<li><strong>evaluation</strong>: lookup the value by its name</li>
+</ul>
+</section>
+<section id="practice-with-variables" class="slide level1">
+<h1>Practice with Variables</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="st">&quot;Hello World&quot;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(x)</span>
+<span id="cb1-3"><a href="#cb1-3"></a>hello world</span></code></pre></div>
+</section>
+<section id="errors" class="slide level1">
+<h1>Errors</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(y)</span>
+<span id="cb2-2"><a href="#cb2-2"></a>Traceback (most recent call last):</span>
+<span id="cb2-3"><a href="#cb2-3"></a>  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="pp">NameError</span>: name <span class="st">&#39;y&#39;</span> <span class="kw">is</span> <span class="kw">not</span> defined</span></code></pre></div>
+</section>
+<section id="what-are-expressions" class="slide level1">
+<h1>What are Expressions?</h1>
+<div class="left">
+<p>Expressions are Python that get <strong>evaluated</strong>, and are often created using <strong>variables</strong> and <strong>operators</strong>:</p>
+</div>
+<div class="columns">
+<div class="column">
+<ul>
+<li>equals: <strong><em>=</em></strong></li>
+<li>addition: <strong>+</strong></li>
+<li>subtraction: <strong><em>-</em></strong></li>
+<li>multiplication: <strong><em>*</em></strong></li>
+<li>division: <strong><em>/</em></strong></li>
+</ul>
+</div><ul>
+<li>parentheses: <strong>()</strong></li>
+<li>exponent: <strong>**</strong></li>
+<li>modulo: <strong>%</strong></li>
+<li>equality: <strong>==</strong></li>
+<li>comparison: <strong>&gt; &lt;</strong></li>
+</ul>
+</div>
+</section>
+<section id="practice-with-expressions" class="slide level1">
+<h1>Practice with Expressions</h1>
+</section>
+<section id="section-4" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">2</span> </span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">*</span> x</span></code></pre></div>
+<div class="fragment">
+<p><strong>4</strong></p>
+</div>
+</section>
+<section id="section-5" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">**</span> <span class="dv">3</span></span></code></pre></div>
+<div class="fragment">
+<p><strong>8</strong></p>
+</div>
+</section>
+<section id="section-6" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">2</span> </span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">==</span> y</span></code></pre></div>
+<div class="fragment">
+<p><strong>False</strong></p>
+</div>
+</section>
+<section id="section-7" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">80</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">-</span> y</span></code></pre></div>
+<div class="fragment">
+<p><strong>50</strong></p>
+</div>
+</section>
+<section id="section-8" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">-</span> x <span class="op">+</span> <span class="dv">4</span></span></code></pre></div>
+<div class="fragment">
+<p><strong>5</strong></p>
+</div>
+</section>
+<section id="section-9" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span> <span class="op">+</span> x <span class="op">**</span> <span class="dv">3</span></span></code></pre></div>
+<div class="fragment">
+<p><strong>10</strong></p>
+</div>
+</section>
+<section id="order-of-operations" class="slide level1">
+<h1>Order of Operations</h1>
+<p><a href="https://www.mathsisfun.com/operation-order-pemdas.html">PEMDAS</a></p>
+<ol type="1">
+<li><strong>P</strong>arentheses</li>
+<li><strong>E</strong>xponents</li>
+<li><strong>M</strong>ultiplication &amp; <strong>D</strong>ivision</li>
+<li><strong>A</strong>ddition &amp; <strong>S</strong>ubtraction</li>
+</ol>
+</section>
+<section id="section-10" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> <span class="dv">3</span></span></code></pre></div>
+<div class="fragment">
+<p><strong>7</strong></p>
+</div>
+</section>
+<section id="section-11" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="op">&gt;&gt;&gt;</span> (<span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span>) <span class="op">*</span> <span class="dv">3</span></span></code></pre></div>
+<div class="fragment">
+<p><strong>9</strong></p>
+</div>
+</section>
+<section id="section-12" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> (<span class="dv">3</span> <span class="op">+</span> <span class="dv">1</span>) <span class="op">**</span> <span class="dv">2</span>)</span></code></pre></div>
+<div class="fragment">
+<p><strong>33</strong></p>
+</div>
+</section>
+<section id="section-13" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="op">&gt;&gt;&gt;</span> (<span class="dv">1</span> <span class="op">+</span> <span class="dv">2</span> <span class="op">*</span> <span class="dv">3</span>)</span></code></pre></div>
+<div class="fragment">
+<p><strong>7</strong></p>
+</div>
+</section>
+<section id="section-14" class="slide level1">
+<h1></h1>
+<p>Some operators behave differently depending on the <em>type</em>:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;u&quot;</span> <span class="op">+</span> <span class="st">&quot;m&quot;</span> <span class="op">+</span> <span class="st">&quot;d&quot;</span></span></code></pre></div>
+<div class="fragment">
+<p><strong>umd</strong></p>
+</div>
+</section>
+<section id="section-15" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="st">&quot;umd&quot;</span></span>
+<span id="cb14-2"><a href="#cb14-2"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> x <span class="op">*</span> <span class="dv">5</span></span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(y)</span></code></pre></div>
+<div class="fragment">
+<p><strong>umd umd umd umd umd</strong></p>
+</div>
+</section>
+<section id="section-16" class="slide level1">
+<h1></h1>
+<div class="left">
+<p>But some operators don’t work on when combined with different types of variables:</p>
+</div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="st">&quot;123&quot;</span></span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(x <span class="op">+</span> <span class="dv">5</span>)</span></code></pre></div>
+<div class="fragment">
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a>Traceback (most recent call last):</span>
+<span id="cb16-2"><a href="#cb16-2"></a>  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb16-3"><a href="#cb16-3"></a><span class="pp">TypeError</span>: can only concatenate <span class="bu">str</span> (<span class="kw">not</span> <span class="st">&quot;int&quot;</span>) to <span class="bu">str</span></span></code></pre></div>
+</div>
+</section>
+<section id="section-17" class="slide level1">
+<h1></h1>
+<p>You can convert types using the <strong>int()</strong>, <strong>float()</strong>, <strong>str()</strong> functions:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="st">&quot;123&quot;</span></span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="op">&gt;&gt;&gt;</span> y <span class="op">=</span> <span class="bu">int</span>(x)</span>
+<span id="cb17-3"><a href="#cb17-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(y <span class="op">+</span> <span class="dv">5</span>)</span></code></pre></div>
+<div class="fragment">
+<p><strong>128</strong></p>
+</div>
+</section>
+<section id="what-are-statements" class="slide level1">
+<h1>What are Statements?</h1>
+<ul>
+<li>Statements are the most basic units of executable Python code.</li>
+<li>A Python program is a series of statements executed in order.</li>
+<li>We’ve already been running them in the interpreter but now let’s create our first program.</li>
+</ul>
+</section>
+<section id="section-18" class="slide level1">
+<h1></h1>
+<div class="left">
+<p>Let’s put these statements in our first Python program and run it in VSCode.</p>
+<p>We are using the <strong>input</strong> function (more about functions later) to read in input from the keyboard, and storing it in the variable <strong>username</strong>.</p>
+</div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a>username <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your name: &quot;</span>)</span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="bu">print</span>(<span class="st">&quot;Hello &quot;</span> <span class="op">+</span> username)</span></code></pre></div>
+</section>
+<section id="section-19" class="slide level1">
+<h1></h1>
+<p><img src="images/editor.png"></p>
+</section>
+<section id="so" class="slide level1">
+<h1>So …</h1>
+<p class="left">
+We’ve covered a lot but now you know the basic buiding blocks of all Python programs, and <a href="https://en.wikipedia.org/wiki/Imperative_programming">imperative</a> programming languages in general:
+</p>
+<div>
+<ul>
+<li class="fragment">Variables</li>
+<li class="fragment">Types</li>
+<li class="fragment">Operators</li>
+<li class="fragment">Expressions</li>
+<li class="fragment">Statements</li>
+</ul>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="../../lib/reveal/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../../lib/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../../lib/reveal/plugin/zoom-js/zoom.js', async: true },
+          { src: '../../lib/reveal/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

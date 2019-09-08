@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="pandoc">
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
   <title>INST326 Python Style Guide</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="reveal.js/css/reset.css">
-  <link rel="stylesheet" href="reveal.js/css/reveal.css">
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -80,35 +76,19 @@ code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
-  <link rel="stylesheet" href="../css/page.css"/>
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement( 'link' );
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
-    document.getElementsByTagName( 'head' )[0].appendChild( link );
-  </script>
+  <link rel="stylesheet" href="../css/page.css" />
   <!--[if lt IE 9]>
-  <script src="reveal.js/lib/js/html5shiv.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
 </head>
 <body>
-  <div class="reveal">
-    <div class="slides">
-
-<section id="title-slide">
-  <h1 class="title">INST326 Python Style Guide</h1>
-</section>
-
-<section id="style-matters" class="slide level2">
-<h2>Style Matters</h2>
+<header id="title-block-header">
+<h1 class="title">INST326 Python Style Guide</h1>
+</header>
+<h2 id="style-matters">Style Matters</h2>
 <p>It might be tempting to think of programming as a purely technical exercise of assembling instructions in order to accomplish a particular task, but in fact writing code is as much a creative art as it is a skill. As such, it requires not only logic and precision, but also leaves room for a good amount of of creativity and style.</p>
 <p>The leaders of the Python community have issued guidelines on various topics with the goal of promoting the health of the open-source community. These guidelines are known as Python Enhancement Proposals, or PEPs, and include a <a href="https://www.python.org/dev/peps/pep-0008/">“Style Guide for Python Code,”</a> known as PEP8. Many of the rules below draw on PEP8, and certainly none of them contradict it. I would encourage you to familiarize yourselves with the entire document so you can write code more clearly, and keep your code in line with community best practices.</p>
-</section>
-<section id="course-style-guide" class="slide level2">
-<h2>Course Style Guide</h2>
+<h2 id="course-style-guide">Course Style Guide</h2>
 <p>All Python programs are required to contain the following elements:</p>
 <h3 id="header">Header</h3>
 <p>A program header (contained within a block comment) which lists the student’s name, directory ID, submission date, assignment name, and exercise number. See below for an example.</p>
@@ -148,14 +128,10 @@ Assignment: Homework 1</code></pre>
 <p>Constants: use capital letters, plus underscores as needed to improve readability. It’s okay to use numbers in your constant names, if it makes sense to do so. Avoid using lower-case letters in these names.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>UMD_COLORS <span class="op">=</span> [<span class="st">&#39;red&#39;</span>, <span class="st">&#39;white&#39;</span>, <span class="st">&#39;black&#39;</span>, <span class="st">&#39;gold&#39;</span>]</span></code></pre></div>
 <p>Note that many of these styling requirements are subjective and that there are legitimate circumstances under which some of these rules can/should be broken. When in doubt, add a comment. Style points will be deducted for deviations from these style requirements (up to 20% of the points for a given assignment).</p>
-</section>
-<section id="submitting-coursework" class="slide level2">
-<h2>Submitting Coursework</h2>
+<h2 id="submitting-coursework">Submitting Coursework</h2>
 <p>Homework assignments and take-home midterms in this course are to be submitted via upload to ELMS. Please follow the naming conventions below. Individual assignments may contain more specific instructions than the guidelines provided here. When more than one file is included in the submission, please combine the files into a single ZIP archive for submission.</p>
 <p>Files that are corrupted, fail to open, or are empty will receive zero points. Exceptions will be handled on a case-by-case basis by the instructor.</p>
-</section>
-<section id="file-naming-convention" class="slide level2">
-<h2>File Naming Convention</h2>
+<h2 id="file-naming-convention">File Naming Convention</h2>
 <p>Because we will generally want the ability to import Python scripts as modules, it’s important to save these files with names that are valid module names. Please observe the following constraints when naming Python files:</p>
 <p>Use only lower-case letters, numbers, and underscores only. Avoid hyphens, spaces, and other special characters at all costs.</p>
 <ul>
@@ -164,35 +140,9 @@ Assignment: Homework 1</code></pre>
 <li>File names for python files should end in .py; data files and zip archives should be given the appropriate extension for the file format.</li>
 <li>For other kinds of files (essays, documentation, etc.), use mnemonic names.</li>
 </ul>
-</section>
-<section id="questions" class="slide level2">
-<h2>Questions</h2>
+<h2 id="questions">Questions</h2>
 <p>If you have any questions about these requirements over the course of the semester, reach out to the instructor for further clarification.</p>
-</section>
-<section class="slide level2">
-
+<hr />
 <p><em>Note: This document was based on an earlier version of the same, created by Aric Bills. v1.0, 2018-08-29</em></p>
-</section>
-    </div>
-  </div>
-
-  <script src="reveal.js/js/reveal.js"></script>
-
-  <script>
-
-      // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
-      Reveal.initialize({
-        // Push each slide change to the browser history
-        history: true,
-
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
-          { src: 'reveal.js/plugin/notes/notes.js', async: true }
-        ]
-      });
-    </script>
-    </body>
+</body>
 </html>

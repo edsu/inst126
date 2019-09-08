@@ -1,4 +1,10 @@
-all: style.html
+all: style.html slides.html exercise.html
+
+slides.html: slides.md
+	pandoc --to revealjs --standalone --output slides.html slides.md
 
 style.html: style.md
-	pandoc --to revealjs --standalone --output style.html style.md
+	pandoc --standalone --output style.html style.md
+
+exercise.html: exercise.md
+	pandoc --standalone --output exercise.html exercise.md

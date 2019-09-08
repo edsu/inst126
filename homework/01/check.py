@@ -22,12 +22,15 @@ def main():
     check('documents/pied-kingfisher.txt', entries)
     check('documents/bank-myna.txt', entries)
 
-    check('images/allahabad-sangam.jpg', entries, exists=True)
+    check('images/allahabad-sangam.jpg', entries, exists=False)
 
 def check(path, list, exists=True):
     result = (path in list) == exists
     if not result:
-        print(path)
+        if exists:
+            print("Uhoh {} doesn't exist".format(path))
+        else:
+            print("Uhoh {} exists".format(path))
     return result
 
 if __name__ == "__main__":
