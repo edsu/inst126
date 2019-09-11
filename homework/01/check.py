@@ -10,6 +10,8 @@ def main():
 
     entries = [i.name for i in tar]
     dirname = entries.pop(0)
+    if dirname.startswith('.'):
+        dirname = entries.pop(0)
     entries = [e.replace(dirname + '/', '') for e in entries]
 
     check('images', entries)

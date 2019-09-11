@@ -3,7 +3,8 @@ title: Module 3 Exercise
 css: ../../css/page.css
 ---
 
-Create a program that will calculate the gross pay based on the number of hours worked and their hourly rate.
+Create a program that will calculate the gross pay based on the number of hours
+worked and their hourly rate.
 
 The program should look like this when you run it:
 
