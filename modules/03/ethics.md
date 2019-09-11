@@ -19,9 +19,10 @@ society in conversation with Ta-Nehisi Coates:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/q3-QvoIfpxc?start=2073" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Let's take 5 minutes to discuss:
+Let's take 5 minutes to discuss with the person next to you, or groups of three
+if you notice someone who doesn't have a partner:
 
 1. Introduce yourself 😀 
 2. Do you agree with Ocasio-Cortez's point about automation?
 3. What key points did Bellowvin's make to support her claim?
-4. What can we do as technologists and citizens to address bias in technology?
+4. What can we do as technologists to address the role of bias?
