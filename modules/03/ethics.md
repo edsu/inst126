@@ -8,7 +8,7 @@ involve the political and ethical aspects of computer programming and automation
 in general. When we do our reflection writing in a few weeks I will ask you to
 write some short pieces on these topics.
 
-This week we read this piece by Steve Bellovin who is a professor of computer
+This week we read this piece by Steve Bellovin, who is a professor of computer
 science at Columbia University:
 
 Bellowvin, S. (2019). [Yes "algorithms" can be biased. Here’s why.](https://arstechnica.com/tech-policy/2019/01/yes-algorithms-can-be-biased-heres-why/) Ars Technica.
