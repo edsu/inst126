@@ -14,8 +14,8 @@ science at Columbia University:
 Bellowvin, S. (2019). [Yes "algorithms" can be biased. Here’s why.](https://arstechnica.com/tech-policy/2019/01/yes-algorithms-can-be-biased-heres-why/) Ars Technica.
 
 For some context to the article here is the segment where Rep. Alexandra
-Ocasio-Cortez discusses the political role that technology plays in society in
-conversation with Ta-Nehisi Coates:
+Ocasio-Cortez is discussing the political role that technology plays in society
+in conversation with Ta-Nehisi Coates. Watch from 34:34 to 41:18.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/q3-QvoIfpxc?start=2073" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
