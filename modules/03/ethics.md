@@ -5,8 +5,8 @@ css: ../../css/page.css
 
 Over the semester I'd like you to keep your eye out for news stories that
 involve the political and ethical aspects of computer programming and automation
-in general. When we do our reflection writing in a few weeks I will ask you to
-write some short pieces on these topics.
+in general. When we do our reflection writing over the semester (3 assignments)
+I will ask you to write some short essays on these stories.
 
 This week we read this piece by Steve Bellovin, who is a professor of computer
 science at Columbia University:
