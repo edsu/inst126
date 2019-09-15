@@ -130,7 +130,7 @@ created using **variables** and **operators**:
 
 # 
 
-~~~ {.python .numberLines}
+~~~ {.python}
 >>> x = 2 
 >>> x * x
 ~~~

@@ -147,7 +147,7 @@ body {
 .reveal pre {
   display: block;
   position: relative;
-  width: 100%;
+  width: 80%;
   margin: 20px auto;
   padding: 10px 20px 10px 0px;
   text-align: left;
@@ -165,7 +165,6 @@ body {
   text-transform: none; }
 
 .reveal pre code {
-  font-size: 28pt;
   display: block;
   padding: 5px;
   overflow: auto;
@@ -173,7 +172,6 @@ body {
   word-wrap: normal; }
 
 .reveal pre.numberLines code {
-  width: 80%;
   display: inline;
   padding: 0px;
 }
@@ -227,12 +225,6 @@ body {
 .reveal small * {
   vertical-align: top; }
 
-.reveal cite {
-  display: inline-block;
-  line-height: 1.2em;
-  text-align: left;
-  font-size: 0.6em; }
-
 /*********************************************
  * LINKS
  *********************************************/
@@ -282,6 +274,7 @@ body {
 .reveal figcaption {
   text-align: middle;
   font-size: 12pt; }
+
 
 /*********************************************
  * NAVIGATION CONTROLS
