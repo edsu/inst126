@@ -260,6 +260,8 @@ else:
 no
 :::
 
+#
+
 ~~~ {.python .numberLines}
 x = int(input("Enter a number: "))
 
@@ -275,8 +277,6 @@ else:
 ::: fragment
 no
 :::
-
-
 
 # 
 
