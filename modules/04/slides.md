@@ -250,7 +250,7 @@ x = int(input("Enter a number: "))
 
 if x > 2:
     print("x is greater than 2")
-elif x == 2
+elif x == 2:
     print("x equals 2")
 else:
     print("x is less than 2")
@@ -259,6 +259,24 @@ else:
 ::: fragment
 no
 :::
+
+~~~ {.python .numberLines}
+x = int(input("Enter a number: "))
+
+if x > 2:
+    print("x is greater than 2")
+    print("x squared is", x ** 2)
+elif x == 2:
+    print("x equals 2")
+else:
+    print("x is less than 2")
+~~~
+
+::: fragment
+no
+:::
+
+
 
 # 
 

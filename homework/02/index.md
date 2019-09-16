@@ -1,40 +1,59 @@
 ---
-title: "Homework 1: The File-System and Command Line"
+title: "Homework 2: Variables and Logic"
 css: ../../css/page.css
 ---
 
-Follow these instructions while substituting anywhere you see `{umd-id}` with your UMD Directory ID.
+Homework 2: Write a program to prompt for a score *between 0.0 and 1.0*. If the
+score is out of range, print an error message. If the score is between 0.0 and
+1.0, print a grade using the following table:
 
-## Setup
+<style>
+  table {
+    border: thin solid black;
+    width: 250px;
+  }
 
-1. Download *hw1-files.tar.gz* from the *Homeworks* files in ELMS to your *Projects/inst126* directory.
-1. Open Visual Studio Code.
-1. Open your folder *Projects/inst126* in Visual Studio Code.
-1. Open a bash terminal window using Terminal menu (make sure it's bash!).
-1. Unpack the archive file *hw1.tar.gz*: `tar xvfz hw1-files.tar.gz`
-1. Rename `hw1-files` directory to your University Directory ID: for example, `mv hw1-files {umd-id}`
-1. Change directory: `cd {umd-id}`
+  th {
+    text-align: left;
+  }
 
-## Organize
+  th, td {
+    border-bottom: thin solid black;
+    margin: 1px;
+    padding: 10px;
+  }
+</style>
 
-1. List the contents of the directory: `ls`
-1. List the contents of the directory with file sizes: `ls -l`
-1. Remove the the largest file: `rm <filename>`
-1. Make a directory called *images*: `mkdir images`
-1. Make a directory called *documents*: `mkdir documents`
-1. Move all of the `.jpg` files to the *images* directory: `mv *.jpg images`
-1. Move all of the `.txt` files to the *documents* directory: `mv *.txt documents`
+| Score      | Grade |
+| ---------- | ----- |
+| &gt;= 0.9  | A     |
+| &gt;= 0.8  | B     |
+| &gt;= 0.7  | C     |
+| &gt;= 0.6  | D     |
+| &lt; 0.6   | F     |
 
-## Package and Upload
+Run it several times at the command line to make sure its output looks like this:
 
-1. Change directories up: `cd ..`
-1. Package up the your directory as tar file: `tar cvfz {umd-id}.tar.gz {umd-id}`
-1. Submit the file to the assignment.
+```
+Enter score: 0.95
+A
 
-## Rubric:
+Enter score: 10.0
+Bad score
 
-* Able to unpack tar file (1pt)
-* Able to navigate directories (1pt)
-* Able to remove a file (1pt)
-* Able to move files (1pt)
-* Able to package up directory as a tar file (1pt)
+Enter score: 0.9
+A
+
+Enter score: 0.75
+C
+
+Enter score: 0.5
+F
+```
+
+## Rubric
+
+* Program submitted (1pt)
+* Program runs (1pt)
+* Program calculates the correct grades. (2pt)
+* Program checks that the input is between 0 and 1 inclusive (1pt)

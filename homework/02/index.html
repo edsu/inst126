@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Homework 1: The File-System and Command Line</title>
+  <title>Homework 2: Variables and Logic</title>
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -18,42 +18,76 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Homework 1: The File-System and Command Line</h1>
+<h1 class="title">Homework 2: Variables and Logic</h1>
 </header>
-<p>Follow these instructions while substituting anywhere you see <code>{umd-id}</code> with your UMD Directory ID.</p>
-<h2 id="setup">Setup</h2>
-<ol type="1">
-<li>Download <em>hw1-files.tar.gz</em> from the <em>Homeworks</em> files in ELMS to your <em>Projects/inst126</em> directory.</li>
-<li>Open Visual Studio Code.</li>
-<li>Open your folder <em>Projects/inst126</em> in Visual Studio Code.</li>
-<li>Open a bash terminal window using Terminal menu (make sure it’s bash!).</li>
-<li>Unpack the archive file <em>hw1.tar.gz</em>: <code>tar xvfz hw1-files.tar.gz</code></li>
-<li>Rename <code>hw1-files</code> directory to your University Directory ID: for example, <code>mv hw1-files {umd-id}</code></li>
-<li>Change directory: <code>cd {umd-id}</code></li>
-</ol>
-<h2 id="organize">Organize</h2>
-<ol type="1">
-<li>List the contents of the directory: <code>ls</code></li>
-<li>List the contents of the directory with file sizes: <code>ls -l</code></li>
-<li>Remove the the largest file: <code>rm &lt;filename&gt;</code></li>
-<li>Make a directory called <em>images</em>: <code>mkdir images</code></li>
-<li>Make a directory called <em>documents</em>: <code>mkdir documents</code></li>
-<li>Move all of the <code>.jpg</code> files to the <em>images</em> directory: <code>mv *.jpg images</code></li>
-<li>Move all of the <code>.txt</code> files to the <em>documents</em> directory: <code>mv *.txt documents</code></li>
-</ol>
-<h2 id="package-and-upload">Package and Upload</h2>
-<ol type="1">
-<li>Change directories up: <code>cd ..</code></li>
-<li>Package up the your directory as tar file: <code>tar cvfz {umd-id}.tar.gz {umd-id}</code></li>
-<li>Submit the file to the assignment.</li>
-</ol>
-<h2 id="rubric">Rubric:</h2>
+<p>Homework 2: Write a program to prompt for a score <em>between 0.0 and 1.0</em>. If the score is out of range, print an error message. If the score is between 0.0 and 1.0, print a grade using the following table:</p>
+<style>
+  table {
+    border: thin solid black;
+    width: 250px;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  th, td {
+    border-bottom: thin solid black;
+    margin: 1px;
+    padding: 10px;
+  }
+</style>
+<table>
+<thead>
+<tr class="header">
+<th>Score</th>
+<th>Grade</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>&gt;= 0.9</td>
+<td>A</td>
+</tr>
+<tr class="even">
+<td>&gt;= 0.8</td>
+<td>B</td>
+</tr>
+<tr class="odd">
+<td>&gt;= 0.7</td>
+<td>C</td>
+</tr>
+<tr class="even">
+<td>&gt;= 0.6</td>
+<td>D</td>
+</tr>
+<tr class="odd">
+<td>&lt; 0.6</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
+<p>Run it several times at the command line to make sure its output looks like this:</p>
+<pre><code>Enter score: 0.95
+A
+
+Enter score: 10.0
+Bad score
+
+Enter score: 0.9
+A
+
+Enter score: 0.75
+C
+
+Enter score: 0.5
+F</code></pre>
+<h2 id="rubric">Rubric</h2>
 <ul>
-<li>Able to unpack tar file (1pt)</li>
-<li>Able to navigate directories (1pt)</li>
-<li>Able to remove a file (1pt)</li>
-<li>Able to move files (1pt)</li>
-<li>Able to package up directory as a tar file (1pt)</li>
+<li>Program submitted (1pt)</li>
+<li>Program runs (1pt)</li>
+<li>Program calculates the correct grades. (2pt)</li>
+<li>Program checks that the input is between 0 and 1 inclusive (1pt)</li>
 </ul>
 </body>
 </html>

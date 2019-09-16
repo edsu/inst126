@@ -6,7 +6,7 @@ syllabus.pdf: README.md
 all-modules:
 	cd modules/ && $(MAKE)
 
-all-homework:
+all-homework: homework
 	cd homework && $(MAKE)
 
 
