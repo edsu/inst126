@@ -8,15 +8,16 @@ This week we read this piece by [Salvador Hernandez](https://twitter.com/SalHern
 Hernandez, S. (2019). [One Of The Biggest At-Home DNA Testing Companies Is Working With The FBI](). Buzzfeed News. 
 
 The article talks about the effect that identification of the Golden State
-Killer had on law enforcement. Family Tree DNA updated their terms of service in
-December 2018 to allow you to opt-in or out of having your identity being made
-available to law enforcement. Users in Europe are opted-out by default because
-of recent privacy laws in the European Union (GDPR). But elsewhere users are
-opted in by default. The opt-in/out is designed to be symmetric, so Users who do
-not share their information are unable to look up other people's information.
+Killer had on law enforcement practices. Family Tree DNA updated their terms of
+service in December 2018 to allow users to opt-in or out of having their
+identity being made available to law enforcement. Users in Europe are opted-out
+by default because of recent privacy laws in the European Union (GDPR). But
+elsewhere users are opted in by default. The opt-in/out is designed to be
+symmetric, so users who do not share their information are unable to look up
+other people's information.
 
 The Golden State Killer was identified using a different service called
-GEDmatch.  Let's watch this video about the process of creating an account and
+GEDmatch. Let's watch this video about the process of creating an account and
 uploading your DNA to it.
 
 *When watching this video please pay particular attention to the options that
