@@ -17,8 +17,10 @@ not share their information are unable to look up other people's information.
 
 The Golden State Killer was identified using a different service called
 GEDmatch.  Let's watch this video about the process of creating an account and
-uploading your DNA to it. *I want you to pay particular attention to the options
-that are available when uploading.*
+uploading your DNA to it.
+
+*When watching this video please pay particular attention to the options that
+are available when uploading.*
 
 <iframe width="700" height="400" src="https://www.youtube.com/embed/id7JJ1NoTNk"
 frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;
