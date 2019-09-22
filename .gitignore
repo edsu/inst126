@@ -2,3 +2,4 @@ archive
 readings
 .vscode
 Pipfile.lock
+**/submitted/*

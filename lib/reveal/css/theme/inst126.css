@@ -225,6 +225,9 @@ body {
 .reveal small * {
   vertical-align: top; }
 
+.reveal .subtitle {
+    font-size: 50pt; }
+
 /*********************************************
  * LINKS
  *********************************************/
