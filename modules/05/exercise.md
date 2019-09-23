@@ -1,39 +1,15 @@
 ---
-title: "Module 2 Exercise"
+title: "Module 5 Exercise"
 css: ../../css/page.css
 ---
 
-What error message do you get when you run this program (1 point)
+Rewrite the pay calculation from the previous exercise by creating a function
+called **compute_pay** that will take two arguments: **hours** and **rate** and
+will return the pay. Use the function to compute the pay for the hours and rate
+that were input and print it out.
 
-``` {.python .numberLines}
-def get_energy(mass):
-    speed_of_light = 300000000
-    return mass * speed_of_light ** 2
+As a bonus see if you can calculate overtime pay of time-and-a-half when someone
+has worked over 40 hours. So for example if an employee worked 50 hours at 15.00
+an hour they would be paid $825.00.
 
-weights = [1, 100, .5, .75]
-
-while weights:
-    joules = get_energy(kg)
-    print(kg, "kg is equal to ", joules, "joules")
-```
-
-What output do you see when you fix it? (1 point)
-
-## Extra Credit (1 point)
-
-Write a program that will let you enter a word or phrase and then tell you many
-characters long it is. The program should allow the user to keep entering words
-and phrases until they enter "quit".
-
-Here's what a sample run might look like:
-
-```
-Enter a word/phrase: python
-That is 6 characters long
-
-Enter a word/phrase: holy coding, batman!
-That is 20 characters long
-
-Enter a word/phrase: quit
-Bye!
-```
+40 * 15 + 10 * (15 + 7.50) = 825

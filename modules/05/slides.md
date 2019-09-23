@@ -42,6 +42,29 @@ the media? It's important to remember that computer programming wasn't invented
 in Silicon Valley, and is a field with a long history with many cultural origins.
 :::
 
+# Problem Solving
+
+::: left
+
+When creating a program to perform a particular task it is often useful to [decompose]
+a **large problem** into several **smaller parts** that are easier to understand
+and test.
+
+Consider how to make a peanut butter & jelly sandwich:
+
+:::
+
+::: incremental
+
+1. Get two pieces of bread. 🍞
+1. Spread jelly on one piece of bread. 🍓
+1. Spread peanut butter on the other piece of bread. 🥜
+1. Put the two pieces of bread together. 🥪
+
+:::
+
+[decompose]: https://en.wikipedia.org/wiki/Decomposition_(computer_science)
+
 # What is a Function?
 
 ::: incremental
@@ -69,34 +92,58 @@ Hello World
 12
 ```
 
-# Problem Solving
+# Imported Functions
 
 ::: left
 
-When creating a program to perform a particular task it is often useful to [decompose]
-a **large problem** into several **smaller parts** that are easier to understand
-and test.
-
-Consider how to make a peanut butter & jelly sandwich:
+Python also comes with many [modules] that you can **import** that let you do
+lots of useful things.
 
 :::
 
-::: incremental
+```python
+>>> import random
+>>> random.randint(0, 20)
+1
+>>> random.randint(0, 20)
+15
+```
 
-1. Get two pieces of bread. 🍞
-1. Spread jelly on one piece of bread. 🍓
-1. Spread peanut butter on the other piece of bread. 🥜
-1. Put the two pieces of bread together. 🥪
+::: left
+
+Notice the **dot notation** that is used to separate the **module name**, from
+the **function name**?
 
 :::
 
-[decompose]: https://en.wikipedia.org/wiki/Decomposition_(computer_science)
+# Third Party Software
+
+::: left
+
+You can also install third party **open source** software from the
+[Python Package Index](https://pypi.python.org) to do many more
+things. This program uses the [geopy](https://geopy.readthedocs.io/en/stable/) module to geolocate an address:
+
+:::
+
+``` {.python .numberLines}
+import geopy.geocoders import Nominatim
+geo = Nominatim(user_agent="Class Example")
+location = geo.geocode("1600 Pennsylvania Ave NW, Washington, DC")
+print(location.longitude, location.latitude)
+```
+
+::: fragment
+**-77.0365534886228 38.8976998**
+:::
+
+
 
 # Python Functions
 
 ::: left
 
-Python functions are declared using the **def** keyword followed by the **name**
+Python functions are created using the **def** keyword followed by the **name**
 for your function. After the name is a set of parentheses containing an optional
 list of **parameters**, followed by a colon, which begins the block of your function. 
 
@@ -104,7 +151,7 @@ list of **parameters**, followed by a colon, which begins the block of your func
 
 ``` {.python .numberLines}
 def say_hello(name):
-    print("Hello", name)
+    print("Hello " + name)
 
 say_hello("Alice")
 Hello Alice
@@ -190,26 +237,6 @@ print(seconds_in_year(3))
 ```
 
 **94608000**
-
-# Modules
-
-::: left
-
-Python comes with lots of functions that are organized into **modules**, which we'll
-be talking about later in the semester.
-
-:::
-
-``` {.python .numberLines}
-import random
-
-x = random.randint(0, 50)
-print(x)
-```
-
-::: fragment
-31
-:::
 
 # Review
 

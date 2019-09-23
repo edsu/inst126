@@ -121,6 +121,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Sharaf al-Dīn al-Ṭūsī was a mathematician and astronomer who lived during 12th century. He developed a method to approximate the root of a cubic equation. He lived in Damascus, Aleppo and Mosul. You may be familiar with some of those places from the media? It’s important to remember that computer programming wasn’t invented in Silicon Valley, and is a field with a long history with many cultural origins.</p>
 </aside>
 </section>
+<section id="problem-solving" class="slide level1">
+<h1>Problem Solving</h1>
+<div class="left">
+<p>When creating a program to perform a particular task it is often useful to <a href="https://en.wikipedia.org/wiki/Decomposition_(computer_science)">decompose</a> a <strong>large problem</strong> into several <strong>smaller parts</strong> that are easier to understand and test.</p>
+<p>Consider how to make a peanut butter &amp; jelly sandwich:</p>
+</div>
+<div>
+<ol type="1">
+<li class="fragment">Get two pieces of bread. 🍞</li>
+<li class="fragment">Spread jelly on one piece of bread. 🍓</li>
+<li class="fragment">Spread peanut butter on the other piece of bread. 🥜</li>
+<li class="fragment">Put the two pieces of bread together. 🥪</li>
+</ol>
+</div>
+</section>
 <section id="what-is-a-function" class="slide level1">
 <h1>What is a Function?</h1>
 <div>
@@ -142,41 +157,53 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">len</span>(<span class="st">&quot;Hello World!&quot;</span>)</span>
 <span id="cb2-2"><a href="#cb2-2"></a><span class="dv">12</span></span></code></pre></div>
 </section>
-<section id="problem-solving" class="slide level1">
-<h1>Problem Solving</h1>
+<section id="imported-functions" class="slide level1">
+<h1>Imported Functions</h1>
 <div class="left">
-<p>When creating a program to perform a particular task it is often useful to <a href="https://en.wikipedia.org/wiki/Decomposition_(computer_science)">decompose</a> a <strong>large problem</strong> into several <strong>smaller parts</strong> that are easier to understand and test.</p>
-<p>Consider how to make a peanut butter &amp; jelly sandwich:</p>
+<p>Python also comes with many [modules] that you can <strong>import</strong> that let you do lots of useful things.</p>
 </div>
-<div>
-<ol type="1">
-<li class="fragment">Get two pieces of bread. 🍞</li>
-<li class="fragment">Spread jelly on one piece of bread. 🍓</li>
-<li class="fragment">Spread peanut butter on the other piece of bread. 🥜</li>
-<li class="fragment">Put the two pieces of bread together. 🥪</li>
-</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> random</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="op">&gt;&gt;&gt;</span> random.randint(<span class="dv">0</span>, <span class="dv">20</span>)</span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="dv">1</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="op">&gt;&gt;&gt;</span> random.randint(<span class="dv">0</span>, <span class="dv">20</span>)</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="dv">15</span></span></code></pre></div>
+<div class="left">
+<p>Notice the <strong>dot notation</strong> that is used to separate the <strong>module name</strong>, from the <strong>function name</strong>?</p>
+</div>
+</section>
+<section id="third-party-software" class="slide level1">
+<h1>Third Party Software</h1>
+<div class="left">
+<p>You can also install third party <strong>open source</strong> software from the <a href="https://pypi.python.org">Python Package Index</a> to do many more things. This program uses the <a href="https://geopy.readthedocs.io/en/stable/">geopy</a> module to geolocate an address:</p>
+</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="im">import</span> geopy.geocoders <span class="im">import</span> Nominatim</span>
+<span id="cb4-2"><a href="#cb4-2"></a>geo <span class="op">=</span> Nominatim(user_agent<span class="op">=</span><span class="st">&quot;Class Example&quot;</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a>location <span class="op">=</span> geo.geocode(<span class="st">&quot;1600 Pennsylvania Ave NW, Washington, DC&quot;</span>)</span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="bu">print</span>(location.longitude, location.latitude)</span></code></pre></div>
+<div class="fragment">
+<p><strong>-77.0365534886228 38.8976998</strong></p>
 </div>
 </section>
 <section id="python-functions" class="slide level1">
 <h1>Python Functions</h1>
 <div class="left">
-<p>Python functions are declared using the <strong>def</strong> keyword followed by the <strong>name</strong> for your function. After the name is a set of parentheses containing an optional list of <strong>parameters</strong>, followed by a colon, which begins the block of your function.</p>
+<p>Python functions are created using the <strong>def</strong> keyword followed by the <strong>name</strong> for your function. After the name is a set of parentheses containing an optional list of <strong>parameters</strong>, followed by a colon, which begins the block of your function.</p>
 </div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">def</span> say_hello(name):</span>
-<span id="cb3-2"><a href="#cb3-2"></a>    <span class="bu">print</span>(<span class="st">&quot;Hello&quot;</span>, name)</span>
-<span id="cb3-3"><a href="#cb3-3"></a></span>
-<span id="cb3-4"><a href="#cb3-4"></a>say_hello(<span class="st">&quot;Alice&quot;</span>)</span>
-<span id="cb3-5"><a href="#cb3-5"></a>Hello Alice</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> say_hello(name):</span>
+<span id="cb5-2"><a href="#cb5-2"></a>    <span class="bu">print</span>(<span class="st">&quot;Hello &quot;</span> <span class="op">+</span> name)</span>
+<span id="cb5-3"><a href="#cb5-3"></a></span>
+<span id="cb5-4"><a href="#cb5-4"></a>say_hello(<span class="st">&quot;Alice&quot;</span>)</span>
+<span id="cb5-5"><a href="#cb5-5"></a>Hello Alice</span></code></pre></div>
 </section>
 <section id="return-values" class="slide level1">
 <h1>Return Values</h1>
 <div class="left">
 <p>Python functions usually <strong>return</strong> a value. For example here’s a function that calculates the area of a circle using a radius parameter that is passed in:</p>
 </div>
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> area(r):</span>
-<span id="cb4-2"><a href="#cb4-2"></a>    <span class="cf">return</span> <span class="fl">3.1415792</span> <span class="op">*</span> r <span class="op">**</span> <span class="dv">2</span></span>
-<span id="cb4-3"><a href="#cb4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4"></a><span class="bu">print</span>(area(<span class="dv">20</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> area(r):</span>
+<span id="cb6-2"><a href="#cb6-2"></a>    <span class="cf">return</span> <span class="fl">3.1415792</span> <span class="op">*</span> r <span class="op">**</span> <span class="dv">2</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="bu">print</span>(area(<span class="dv">20</span>))</span></code></pre></div>
 <div class="fragment">
 <p><strong>1256.63168</strong></p>
 </div>
@@ -186,12 +213,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="left">
 <p>A function can contain multiple statements. Here’s a function that calculates the number seconds in a given number of years.</p>
 </div>
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> hours_in_year(year):</span>
-<span id="cb5-2"><a href="#cb5-2"></a>    days <span class="op">=</span> year <span class="op">*</span> <span class="dv">365</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>    hours <span class="op">=</span> days <span class="op">*</span> <span class="dv">24</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>    <span class="cf">return</span> hours</span>
-<span id="cb5-5"><a href="#cb5-5"></a></span>
-<span id="cb5-6"><a href="#cb5-6"></a><span class="bu">print</span>(hours_in_year(<span class="dv">5</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> hours_in_year(year):</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    days <span class="op">=</span> year <span class="op">*</span> <span class="dv">365</span></span>
+<span id="cb7-3"><a href="#cb7-3"></a>    hours <span class="op">=</span> days <span class="op">*</span> <span class="dv">24</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>    <span class="cf">return</span> hours</span>
+<span id="cb7-5"><a href="#cb7-5"></a></span>
+<span id="cb7-6"><a href="#cb7-6"></a><span class="bu">print</span>(hours_in_year(<span class="dv">5</span>))</span></code></pre></div>
 <div class="fragment">
 <p><strong>43800</strong></p>
 </div>
@@ -201,40 +228,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="left">
 <p>Can you modify the <strong>hours_in_year</strong> function to return the seconds in a year:</p>
 </div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="kw">def</span> seconds_in_year(year):</span>
-<span id="cb6-2"><a href="#cb6-2"></a>    days <span class="op">=</span> year <span class="op">*</span> <span class="dv">365</span></span>
-<span id="cb6-3"><a href="#cb6-3"></a>    hours <span class="op">=</span> days <span class="op">*</span> <span class="dv">24</span></span>
-<span id="cb6-4"><a href="#cb6-4"></a>    ...</span>
-<span id="cb6-5"><a href="#cb6-5"></a></span>
-<span id="cb6-6"><a href="#cb6-6"></a><span class="bu">print</span>(seconds_in_year(<span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="kw">def</span> seconds_in_year(year):</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    days <span class="op">=</span> year <span class="op">*</span> <span class="dv">365</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>    hours <span class="op">=</span> days <span class="op">*</span> <span class="dv">24</span></span>
+<span id="cb8-4"><a href="#cb8-4"></a>    ...</span>
+<span id="cb8-5"><a href="#cb8-5"></a></span>
+<span id="cb8-6"><a href="#cb8-6"></a><span class="bu">print</span>(seconds_in_year(<span class="dv">3</span>))</span></code></pre></div>
 </section>
 <section id="section-2" class="slide level1">
 <h1></h1>
 <div class="left">
 <p>Modify the hours_in_year function to return the seconds in a year:</p>
 </div>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="kw">def</span> seconds_in_year(year):</span>
-<span id="cb7-2"><a href="#cb7-2"></a>    days <span class="op">=</span> year <span class="op">*</span> <span class="dv">365</span></span>
-<span id="cb7-3"><a href="#cb7-3"></a>    hours <span class="op">=</span> days <span class="op">*</span> <span class="dv">24</span></span>
-<span id="cb7-4"><a href="#cb7-4"></a>    minutes <span class="op">=</span> hours <span class="op">*</span> <span class="dv">60</span></span>
-<span id="cb7-5"><a href="#cb7-5"></a>    seconds <span class="op">=</span> minutes <span class="op">*</span> <span class="dv">60</span></span>
-<span id="cb7-6"><a href="#cb7-6"></a>    <span class="cf">return</span> seconds</span>
-<span id="cb7-7"><a href="#cb7-7"></a></span>
-<span id="cb7-8"><a href="#cb7-8"></a><span class="bu">print</span>(seconds_in_year(<span class="dv">3</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="kw">def</span> seconds_in_year(year):</span>
+<span id="cb9-2"><a href="#cb9-2"></a>    days <span class="op">=</span> year <span class="op">*</span> <span class="dv">365</span></span>
+<span id="cb9-3"><a href="#cb9-3"></a>    hours <span class="op">=</span> days <span class="op">*</span> <span class="dv">24</span></span>
+<span id="cb9-4"><a href="#cb9-4"></a>    minutes <span class="op">=</span> hours <span class="op">*</span> <span class="dv">60</span></span>
+<span id="cb9-5"><a href="#cb9-5"></a>    seconds <span class="op">=</span> minutes <span class="op">*</span> <span class="dv">60</span></span>
+<span id="cb9-6"><a href="#cb9-6"></a>    <span class="cf">return</span> seconds</span>
+<span id="cb9-7"><a href="#cb9-7"></a></span>
+<span id="cb9-8"><a href="#cb9-8"></a><span class="bu">print</span>(seconds_in_year(<span class="dv">3</span>))</span></code></pre></div>
 <p><strong>94608000</strong></p>
-</section>
-<section id="modules" class="slide level1">
-<h1>Modules</h1>
-<div class="left">
-<p>Python comes with lots of functions that are organized into <strong>modules</strong>, which we’ll be talking about later in the semester.</p>
-</div>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a><span class="im">import</span> random</span>
-<span id="cb8-2"><a href="#cb8-2"></a></span>
-<span id="cb8-3"><a href="#cb8-3"></a>x <span class="op">=</span> random.randint(<span class="dv">0</span>, <span class="dv">50</span>)</span>
-<span id="cb8-4"><a href="#cb8-4"></a><span class="bu">print</span>(x)</span></code></pre></div>
-<div class="fragment">
-<p>31</p>
-</div>
 </section>
 <section id="review" class="slide level1">
 <h1>Review</h1>
