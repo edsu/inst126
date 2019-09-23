@@ -92,51 +92,6 @@ Hello World
 12
 ```
 
-# Imported Functions
-
-::: left
-
-Python also comes with many [modules] that you can **import** that let you do
-lots of useful things.
-
-:::
-
-```python
->>> import random
->>> random.randint(0, 20)
-1
->>> random.randint(0, 20)
-15
-```
-
-::: left
-
-Notice the **dot notation** that is used to separate the **module name**, from
-the **function name**?
-
-:::
-
-# Third Party Software
-
-::: left
-
-You can also install third party **open source** software from the
-[Python Package Index](https://pypi.python.org) to do many more
-things. This program uses the [geopy](https://geopy.readthedocs.io/en/stable/) module to geolocate an address:
-
-:::
-
-``` {.python .numberLines}
-import geopy.geocoders import Nominatim
-geo = Nominatim(user_agent="Class Example")
-location = geo.geocode("1600 Pennsylvania Ave NW, Washington, DC")
-print(location.longitude, location.latitude)
-```
-
-::: fragment
-**-77.0365534886228 38.8976998**
-:::
-
 
 
 # Python Functions
@@ -238,11 +193,58 @@ print(seconds_in_year(3))
 
 **94608000**
 
+# Imported Functions
+
+::: left
+
+Python also comes with many [modules] that you can **import** that let you do
+lots of useful things.
+
+:::
+
+```python
+>>> import random
+>>> random.randint(0, 20)
+1
+>>> random.randint(0, 20)
+15
+```
+
+::: left
+
+Notice the **dot notation** that is used to separate the **module name**, from
+the **function name**?
+
+:::
+
+# Third Party Software
+
+::: left
+
+You can also install third party **open source** software from the
+[Python Package Index](https://pypi.python.org) to do many more
+things. This program uses the [geopy](https://geopy.readthedocs.io/en/stable/) module to geolocate an address:
+
+:::
+
+``` {.python .numberLines}
+import geopy.geocoders import Nominatim
+geo = Nominatim(user_agent="Class Example")
+location = geo.geocode("1600 Pennsylvania Ave NW, Washington, DC")
+print(location.longitude, location.latitude)
+```
+
+::: fragment
+**-77.0365534886228 38.8976998**
+:::
+
+
 # Review
 
 * Functions are a useful organizational technique for solving problems.
+* Functions allow you to reuse code!
 * Use the **def** keyword to declare a function that can have optional **paramters**.
 * Every function has a **return** value.
 * You call a function using its **name** and by passing any variables as arguments.
-* Functions can be organized into **modules** (we'll cover this later)
+* Functions can be organized into **modules** 
 
