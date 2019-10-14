@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Module 5 Exercise</title>
+  <title>Module 7 Exercise</title>
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -18,19 +18,15 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Module 5 Exercise</h1>
+<h1 class="title">Module 7 Exercise</h1>
 </header>
-<p>Rewrite the pay calculation from the previous exercise that will print a warning if the rate of pay is less than the minimum wage, and will prompt the user again to input the rate of pay. Your program should keep prompting for a rate of pay until a rate of pay greater than or equal to minimum wage is entered.</p>
-<p>For example:</p>
-<pre><code>Enter hours: 35
-Enter rate: 10.50
-I&#39;m sorry 10.50 is lower than the minimum wage. Please try again.
-Enter hours: 35
-Enter rate: 12.75
-I&#39;m sorry 12.75 is lower than the minimum wage. Please try again.
-Enter hours: 35
-Enter rate: 17.50
-Pay: $612.50</code></pre>
-<p>Hint: if your <em>compute_pay</em> function returns <em>None</em> then you know the rate of pay was less than the minimum wage. Use an <em>if statement</em> to check the return value of <em>compute_pay</em>, and if it is <em>None</em> you can <em>break</em> out of a <em>while</em> loop.</p>
+<p>Write a program to prompt for a file name, and then read through the file and look for lines of the form:</p>
+<pre><code>X-DSPAM-Confidence: 0.8475</code></pre>
+<p>When you encounter a line that starts with “X-DSPAM-Confidence:” pull apart the line to extract the floating-point number on the line. Count these lines and then compute the total of the spam confidence values from these lines. When you reach the end of the file, print out the average spam confidence.</p>
+<pre><code>Enter the file name: mbox.txt
+Average spam confidence: 0.894128046745
+
+Enter the file name: mbox-short.txt
+Average spam confidence: 0.750718518519</code></pre>
 </body>
 </html>

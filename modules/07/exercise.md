@@ -1,22 +1,24 @@
 ---
-title: "Module 5 Exercise"
+title: "Module 7 Exercise"
 css: ../../css/page.css
 ---
 
-Rewrite the pay calculation from the previous exercise that will print a warning if the rate of pay is less than the minimum wage, and will prompt the user again to input the rate of pay. Your program should keep prompting for a rate of pay until a rate of pay greater than or equal to minimum wage is entered.
+Write a program to prompt for a file name, and then read through the file and look 
+for lines of the form:
 
-For example:
+    X-DSPAM-Confidence: 0.8475
 
-~~~
-Enter hours: 35
-Enter rate: 10.50
-I'm sorry 10.50 is lower than the minimum wage. Please try again.
-Enter hours: 35
-Enter rate: 12.75
-I'm sorry 12.75 is lower than the minimum wage. Please try again.
-Enter hours: 35
-Enter rate: 17.50
-Pay: $612.50
-~~~
+When you encounter a line that starts with "X-DSPAM-Confidence:" pull apart the
+line to extract the floating-point number on the line. Count these lines and
+then compute the total of the spam confidence values from these lines. When you
+reach the end of the file, print out the average spam confidence.
 
-Hint: if your *compute_pay* function returns *None* then you know the rate of pay was less than the minimum wage. Use an *if statement* to check the return value of *compute_pay*, and if it is *None* you can *break* out of a *while* loop.
+    Enter the file name: mbox.txt
+    Average spam confidence: 0.894128046745
+
+    Enter the file name: mbox-short.txt
+    Average spam confidence: 0.750718518519
+
+
+
+

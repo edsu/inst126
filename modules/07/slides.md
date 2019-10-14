@@ -200,6 +200,36 @@ s = "To be or not to be"
 **HELLO**
 :::
 
+# Iteration
+
+``` python
+for l in 'To be or not to be.':
+  print(l)
+```
+
+# in
+
+You can use the **in** operator with strings:
+
+```python
+>>> s = "To be or not to be."
+>>> "to" in s
+```
+
+::: fragment
+**True**
+:::
+
+::: fragment
+```python
+>>> "Be" in s
+```
+:::
+
+::: fragment
+**False**
+:::
+
 # String Methods
 
 ::: left
