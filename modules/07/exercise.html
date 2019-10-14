@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Module 5 Exercise</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="../../css/page.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Module 5 Exercise</h1>
+</header>
+<p>Rewrite the pay calculation from the previous exercise that will print a warning if the rate of pay is less than the minimum wage, and will prompt the user again to input the rate of pay. Your program should keep prompting for a rate of pay until a rate of pay greater than or equal to minimum wage is entered.</p>
+<p>For example:</p>
+<pre><code>Enter hours: 35
+Enter rate: 10.50
+I&#39;m sorry 10.50 is lower than the minimum wage. Please try again.
+Enter hours: 35
+Enter rate: 12.75
+I&#39;m sorry 12.75 is lower than the minimum wage. Please try again.
+Enter hours: 35
+Enter rate: 17.50
+Pay: $612.50</code></pre>
+<p>Hint: if your <em>compute_pay</em> function returns <em>None</em> then you know the rate of pay was less than the minimum wage. Use an <em>if statement</em> to check the return value of <em>compute_pay</em>, and if it is <em>None</em> you can <em>break</em> out of a <em>while</em> loop.</p>
+</body>
+</html>

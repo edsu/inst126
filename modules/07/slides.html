@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Data Structures 1</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../lib/reveal/css/reset.css">
+  <link rel="stylesheet" href="../../lib/reveal/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../lib/reveal/css/theme/inst126.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../../lib/reveal/css/print/pdf.css' : '../../lib/reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="../../lib/reveal/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Data Structures 1</h1>
+  <p class="subtitle">Strings &amp; Files</p>
+</section>
+
+<section id="from-atoms-to-molecules" class="slide level1">
+<h1>From atoms to molecules</h1>
+<div>
+<ul>
+<li class="fragment">We have already introduced some of the basic building blocks of data (integers, floats, booleans, strings)</li>
+<li class="fragment">All programming languages, including Python, supports combining these basic types into larger <em>data structures</em></li>
+<li class="fragment">You can think of the building blocks as atoms and the structures as molecules.</li>
+</ul>
+</div>
+</section>
+<section id="strings" class="slide level1">
+<h1>Strings</h1>
+<div class="fragment">
+<p>(again)</p>
+</div>
+</section>
+<section id="section" class="slide level1">
+<h1></h1>
+<p><img src="images/string.jpg"></p>
+</section>
+<section id="section-1" class="slide level1">
+<h1></h1>
+<p><img src="images/string.png"></p>
+</section>
+<section id="strings-are-objects" class="slide level1">
+<h1>Strings are Objects</h1>
+<div>
+<ul>
+<li class="fragment">Strings have <em>properties</em> and <em>methods</em>. Properties provide access to the data, and methods are like functions that are attached to the data. You’ll learn more about objects and methods in INST326.</li>
+<li class="fragment">In addition to the <a href="https://docs.python.org/3/library/string.html">documentation</a> you can use some Python functions for exploring in the interpreter:
+<ul>
+<li class="fragment"><strong>type()</strong> - returns an object’s class</li>
+<li class="fragment"><strong>dir()</strong> - returns list of available methods</li>
+<li class="fragment"><strong>help()</strong> - opens built-in documentation pages</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="try-it-out-interpreter" class="slide level1">
+<h1>Try it out (Interpreter)</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">&gt;&gt;&gt;</span> s <span class="op">=</span> <span class="st">&quot;To be or not to be.&quot;</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(s)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;str&#39;</span><span class="op">&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">help</span>(s)</span>
+<span id="cb1-5"><a href="#cb1-5"></a>...</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">dir</span>(s)</span>
+<span id="cb1-7"><a href="#cb1-7"></a>...</span></code></pre></div>
+</section>
+<section id="what-are-strings" class="slide level1">
+<h1>What are strings?</h1>
+<div>
+<ul>
+<li class="fragment">Strings are textual data</li>
+<li class="fragment">Strings are ordered sequences of characters</li>
+<li class="fragment">The characters that make up a string are <a href="https://en.wikipedia.org/wiki/Character_encoding">“encoded”</a> using a character set</li>
+<li class="fragment">In Python (starting with v3), strings are encoded by default in <a href="https://unicode.org">unicode</a>, which means there is automatic support for any writing system (well, <em>almost</em> any…)</li>
+</ul>
+</div>
+</section>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<p><a href="https://www.unicode.org/charts/PDF/U0000.pdf"> <img height=600 src="images/unicode0.png"> </a></p>
+</section>
+<section id="section-3" class="slide level1">
+<h1></h1>
+<p><a href="https://www.unicode.org/charts/PDF/U4E00.pdf"> <img height=600 src="images/unicode1.png"> </a></p>
+</section>
+<section id="section-4" class="slide level1">
+<h1></h1>
+<p><a href="https://www.unicode.org/charts/PDF/U13000.pdf"> <img height=600 src="images/unicode2.png"> </a></p>
+</section>
+<section id="section-5" class="slide level1">
+<h1></h1>
+<p><a href="https://www.unicode.org/charts/PDF/U1D2E0.pdf"> <img height=600 src="images/unicode4.png"> </a></p>
+</section>
+<section id="section-6" class="slide level1">
+<h1></h1>
+<p><a href="https://www.unicode.org/charts/PDF/U1F600.pdf"> <img height=600 src="images/unicode3.png"> </a></p>
+</section>
+<section id="creating-strings" class="slide level1">
+<h1>Creating strings</h1>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>s <span class="op">=</span> <span class="st">&quot;To be or not to be&quot;</span></span></code></pre></div>
+<div>
+<ul>
+<li class="fragment">We create strings using quotation marks</li>
+<li class="fragment">You can use single (') or double (") quotes</li>
+<li class="fragment">You cannot <em>mix</em> single/double quotes when creating a string, but you can <em>nest</em> them (useful if you need to make quotation marks part of a string)</li>
+</ul>
+</div>
+</section>
+<section id="section-7" class="slide level1">
+<h1></h1>
+<p><img src="images/string.png"></p>
+</section>
+<section id="accessing-strings" class="slide level1">
+<h1>Accessing strings</h1>
+<div>
+<ul>
+<li class="fragment">Strings are sequences of characters</li>
+<li class="fragment">By default the variable returns the whole sequence</li>
+<li class="fragment">Parts of strings (called substrings) are accessed by index</li>
+<li class="fragment">The first position of a string has an offset of zero</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="st">&#39;To be or not to be.&#39;</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="op">&gt;&gt;&gt;</span> x[<span class="dv">3</span>]</span></code></pre></div>
+</div>
+<div class="fragment">
+<p><strong>b</strong></p>
+</div>
+</section>
+<section id="string-indices-and-slices" class="slide level1">
+<h1>String indices and slices</h1>
+<ul>
+<li>The index is an integer representing the distance (offset) from the beginning of the string</li>
+<li>Sequences can be accessed by slicing (beginning and end separated by colon)</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">&gt;&gt;&gt;</span> lyric <span class="op">=</span> <span class="st">&quot;Another one bites the dust.&quot;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="op">&gt;&gt;&gt;</span> lyric[<span class="dv">12</span>:<span class="dv">17</span>]</span></code></pre></div>
+<div class="fragment">
+<p><strong>bites</strong></p>
+</div>
+</section>
+<section id="negative-indices" class="slide level1">
+<h1>Negative indices</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">&gt;&gt;&gt;</span> lyric <span class="op">=</span> <span class="st">&quot;Another one bites the dust.&quot;</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="op">&gt;&gt;&gt;</span> lyric[<span class="op">-</span><span class="dv">5</span>]</span></code></pre></div>
+<div class="fragment">
+<p><strong>d</strong></p>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="op">&gt;&gt;&gt;</span> lyric <span class="op">=</span> <span class="st">&quot;Another one bites the dust.&quot;</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="op">&gt;&gt;&gt;</span> lyric[<span class="op">-</span><span class="dv">5</span>:<span class="op">-</span><span class="dv">1</span>]</span></code></pre></div>
+</div>
+<div class="fragment">
+<p><strong>dust</strong></p>
+</div>
+</section>
+<section id="modifying-strings" class="slide level1">
+<h1>“Modifying” strings</h1>
+<div>
+<ul>
+<li class="fragment">Strings are <em>immutable</em> which means they do not change.</li>
+<li class="fragment">However it’s common to reassign a string variable.</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="st">&#39;hello&#39;</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> x.upper()  <span class="co"># reassigns x </span></span>
+<span id="cb7-3"><a href="#cb7-3"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(x)</span></code></pre></div>
+</div>
+<div class="fragment">
+<p><strong>HELLO</strong></p>
+</div>
+</section>
+<section id="string-methods" class="slide level1">
+<h1>String Methods</h1>
+<div class="left">
+<p><a href="https://docs.python.org/3/library/string.html">Strings</a> have lots of useful <a href="https://docs.python.org/3/library/stdtypes.html#string-methods">methods</a> like <em>upper()</em> which you just saw. Here are a few more, but try using <em>dir</em> and <em>help</em> to learn about them.</p>
+</div>
+<div class="columns">
+<div class="column">
+<ul>
+<li><a href="https://docs.python.org/3/library/stdtypes.html#str.lower">lower()</a></li>
+<li><a href="https://docs.python.org/3/library/stdtypes.html#str.upper">upper()</a></li>
+<li><a href="https://docs.python.org/3/library/stdtypes.html#str.split">split(s)</a></li>
+<li><a href="https://docs.python.org/3/library/stdtypes.html#str.join">join(words)</a></li>
+</ul>
+</div><ul>
+<li><a href="https://docs.python.org/3/library/stdtypes.html#str.capitalize">capitalize()</a></li>
+<li><a href="https://docs.python.org/3/library/stdtypes.html#str.replace">replace(old, new)</a></li>
+<li><a href="https://docs.python.org/3/library/stdtypes.html#str.find">find(s)</a></li>
+<li><a href="https://docs.python.org/3/library/stdtypes.html#str.format">format(args)</a></li>
+</ul><div class="column">
+
+</div>
+</div>
+</section>
+<section id="files" class="slide level1">
+<h1>Files</h1>
+</section>
+<section id="section-8" class="slide level1">
+<h1></h1>
+<p><a href="https://www.smithsonianmag.com/history/the-worlds-most-famous-filing-cabinet-36568830/"> <img src="images/cabinet.jpg"> </a></p>
+<aside class="notes">
+<p>The filing cabinet that government agents broke into to steal the medical records of Daniel Ellsberg, who was responsible for leaking the Pentagon Papers, which helped bring an end to the Vietnam War, and later the Nixon Presidency. The filing cabinet is in the Smithsonian American History Museum.</p>
+</aside>
+</section>
+<section id="section-9" class="slide level1">
+<h1></h1>
+<p><a href="https://www.acc.af.mil/News/Photos/igphoto/2001845476/"> <img style="width: 80%;" src="images/files.jpg"> </a></p>
+<aside class="notes">
+<p>An example of a file.</p>
+</aside>
+</section>
+<section id="section-10" class="slide level1">
+<h1></h1>
+<p><a href="https://patents.google.com/patent/US722709"> <img style="width: 60%;" src="images/patent.png"> </a></p>
+<aside class="notes">
+<p>Patent filed in 1902 for the Expansible filing system by The Library Bureau that become Remington Rand (famous for its type writers) and later invented one of the first computers the UNIVAC for the US Census.</p>
+</aside>
+</section>
+<section id="section-11" class="slide level1">
+<h1></h1>
+<p><img src="images/files-osx.png"></p>
+<aside class="notes">
+<p>The metaphor of the “file system” lives on in our computers.</p>
+</aside>
+</section>
+<section id="file-path" class="slide level1">
+<h1>File Path</h1>
+<p><br></p>
+<p><strong>Absolute</strong></p>
+<pre><code>/Users/edsu/inst326/slides.pdf</code></pre>
+<p><br></p>
+<p><strong>Relative</strong></p>
+<pre><code>inst326/slides.pdf</code></pre>
+</section>
+<section id="section-12" class="slide level1">
+<h1></h1>
+<p><img width="80%" src="images/formats.jpg"></p>
+</section>
+<section id="text-csv-and-json" class="slide level1">
+<h1>Text, CSV and JSON</h1>
+</section>
+<section id="text-files" class="slide level1">
+<h1>Text Files</h1>
+<div class="left">
+<p><a href="speech.txt">speech.txt</a> is an example of a text file. Here are a few things to notice about text files:</p>
+</div>
+<ul>
+<li>text files often have a <strong>.txt</strong> file extension</li>
+<li>text files have lines separated by <strong>newline</strong> characters</li>
+<li>text files have an <strong>encoding</strong>, usually <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a></li>
+</ul>
+</section>
+<section id="read-a-text-file" class="slide level1">
+<h1>Read a Text File</h1>
+<div class="left">
+<p>Use the <a href="https://docs.python.org/3.7/library/functions.html#open">open</a> function to open a file using the file’s <strong>path</strong> as a parameter. Use the file object’s <strong>read</strong> method to read the contents of the file into a variable.</p>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;speech.txt&#39;</span>)</span>
+<span id="cb10-2"><a href="#cb10-2"></a>text <span class="op">=</span> fh.read()</span>
+<span id="cb10-3"><a href="#cb10-3"></a><span class="bu">print</span>(text)</span></code></pre></div>
+</section>
+<section id="writing-a-text-file" class="slide level1">
+<h1>Writing a Text File</h1>
+<div class="left">
+<p>You can also use the <strong>open</strong> function to open a file for <strong>writing</strong> by passing in <strong>w</strong> as a second argument to open. This then allows you to write data to a file.</p>
+</div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python numberLines smaller"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;sonnet.txt&#39;</span>, <span class="st">&#39;w&#39;</span>)</span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>fh.write(<span class="st">&#39;So long as men can breathe, or eyes can see,</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb11-4"><a href="#cb11-4"></a>fh.write(<span class="st">&#39;So long lives this, and this gives life to thee.</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb11-5"><a href="#cb11-5"></a></span>
+<span id="cb11-6"><a href="#cb11-6"></a>fh.close()</span></code></pre></div>
+</section>
+<section id="iterating" class="slide level1">
+<h1>Iterating</h1>
+<div class="left">
+<p>You can use a <strong>for loop</strong> to iterate through the lines in a file object.</p>
+<p>Why might it be important to be able to read a file line by line instead of all at once?</p>
+</div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(<span class="st">&#39;speech.txt&#39;</span>):</span>
+<span id="cb12-2"><a href="#cb12-2"></a>    <span class="bu">print</span>(line)</span></code></pre></div>
+</section>
+<section id="that-was-a-lot" class="slide level1">
+<h1>That was a lot!</h1>
+<div>
+<ul>
+<li class="fragment">strings</li>
+<li class="fragment">characters</li>
+<li class="fragment">encoding</li>
+<li class="fragment">string slices</li>
+<li class="fragment">string methods</li>
+<li class="fragment">files</li>
+<li class="fragment">reading files</li>
+<li class="fragment">writing files</li>
+</ul>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="../../lib/reveal/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../../lib/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../../lib/reveal/plugin/zoom-js/zoom.js', async: true },
+          { src: '../../lib/reveal/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

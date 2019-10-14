@@ -1,0 +1,1 @@
+print(sum(["abc", "def", "ghi"]))

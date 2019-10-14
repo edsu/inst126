@@ -125,7 +125,7 @@ learning more about **lists** in Module 8.
 :::
 
 ``` {.python .lineNumbers}
-days in ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
 
 for day in days:
     print(day)
