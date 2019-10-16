@@ -304,15 +304,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="section-8" class="slide level1">
 <h1></h1>
 <p>Some examples of using <a href="https://docs.python.org/3/library/string.html#formatspec"><em>format()</em></a></p>
-<div class=".python">
-<blockquote>
-<blockquote>
-<blockquote>
-<p>pi = 22/7 print(pi) 3.142857142857143 print(‘Pi is {:.2f}’.format(pi)) 3.14</p>
-</blockquote>
-</blockquote>
-</blockquote>
-</div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="op">&gt;&gt;&gt;</span> pi <span class="op">=</span> <span class="dv">22</span><span class="op">/</span><span class="dv">7</span></span>
+<span id="cb11-2"><a href="#cb11-2"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(pi)</span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="fl">3.142857142857143</span></span>
+<span id="cb11-4"><a href="#cb11-4"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">print</span>(<span class="st">&#39;Pi is </span><span class="sc">{:.2f}</span><span class="st">&#39;</span>.<span class="bu">format</span>(pi))</span>
+<span id="cb11-5"><a href="#cb11-5"></a><span class="fl">3.14</span></span></code></pre></div>
 </section>
 <section id="files" class="slide level1">
 <h1>Files</h1>
@@ -377,21 +373,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="left">
 <p>Use the <a href="https://docs.python.org/3.7/library/functions.html#open">open</a> function to open a file using the file’s <strong>path</strong> as a parameter. Use the file object’s <strong>read</strong> method to read the contents of the file into a variable.</p>
 </div>
-<div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;speech.txt&#39;</span>)</span>
-<span id="cb13-2"><a href="#cb13-2"></a>text <span class="op">=</span> fh.read()</span>
-<span id="cb13-3"><a href="#cb13-3"></a><span class="bu">print</span>(text)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;speech.txt&#39;</span>)</span>
+<span id="cb14-2"><a href="#cb14-2"></a>text <span class="op">=</span> fh.read()</span>
+<span id="cb14-3"><a href="#cb14-3"></a><span class="bu">print</span>(text)</span></code></pre></div>
 </section>
 <section id="writing-a-text-file" class="slide level1">
 <h1>Writing a Text File</h1>
 <div class="left">
 <p>You can also use the <strong>open</strong> function to open a file for <strong>writing</strong> by passing in <strong>w</strong> as a second argument to open. This then allows you to write data to a file.</p>
 </div>
-<div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python numberLines smaller"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;sonnet.txt&#39;</span>, <span class="st">&#39;w&#39;</span>)</span>
-<span id="cb14-2"><a href="#cb14-2"></a></span>
-<span id="cb14-3"><a href="#cb14-3"></a>fh.write(<span class="st">&#39;So long as men can breathe, or eyes can see,</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
-<span id="cb14-4"><a href="#cb14-4"></a>fh.write(<span class="st">&#39;So long lives this, and this gives life to thee.</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
-<span id="cb14-5"><a href="#cb14-5"></a></span>
-<span id="cb14-6"><a href="#cb14-6"></a>fh.close()</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python numberLines smaller"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;sonnet.txt&#39;</span>, <span class="st">&#39;w&#39;</span>)</span>
+<span id="cb15-2"><a href="#cb15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3"></a>fh.write(<span class="st">&#39;So long as men can breathe, or eyes can see,</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb15-4"><a href="#cb15-4"></a>fh.write(<span class="st">&#39;So long lives this, and this gives life to thee.</span><span class="ch">\n</span><span class="st">&#39;</span>)</span>
+<span id="cb15-5"><a href="#cb15-5"></a></span>
+<span id="cb15-6"><a href="#cb15-6"></a>fh.close()</span></code></pre></div>
 </section>
 <section id="iterating" class="slide level1">
 <h1>Iterating</h1>
@@ -399,8 +395,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>You can use a <strong>for loop</strong> to iterate through the lines in a file object.</p>
 <p>Why might it be important to be able to read a file line by line instead of all at once?</p>
 </div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(<span class="st">&#39;speech.txt&#39;</span>):</span>
-<span id="cb15-2"><a href="#cb15-2"></a>    <span class="bu">print</span>(line)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="cf">for</span> line <span class="kw">in</span> <span class="bu">open</span>(<span class="st">&#39;speech.txt&#39;</span>):</span>
+<span id="cb16-2"><a href="#cb16-2"></a>    <span class="bu">print</span>(line)</span></code></pre></div>
 </section>
 <section id="that-was-a-lot" class="slide level1">
 <h1>That was a lot!</h1>
