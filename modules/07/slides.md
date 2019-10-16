@@ -262,6 +262,18 @@ You can use the **in** operator with strings:
 
 :::
 
+#
+
+Some examples of using [*format()*](https://docs.python.org/3/library/string.html#formatspec)
+
+::: .python
+>>> pi = 22/7
+>>> print(pi)
+3.142857142857143
+>>> print('Pi is {:.2f}'.format(pi))
+3.14
+:::
+
 # Files
 
 #
