@@ -104,7 +104,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="section" class="slide level1">
 <h1></h1>
-<div style="font-size: 120pt;">
+<div style="font-size: 120pt; font-weight: bold;">
 Lists
 </div>
 </section>
@@ -169,6 +169,9 @@ href="https://en.wikipedia.org/wiki/Shopping_list#/media/File:Shopping_list_2017
 </section>
 <section id="mutate" class="slide level1">
 <h1>Mutate</h1>
+<div class="left">
+<p>Unlike <em>strings</em> which are immutable you can change, or mutate, the elements of a list:</p>
+</div>
 <div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>shopping <span class="op">=</span> [<span class="st">&quot;milk&quot;</span>, <span class="st">&quot;beer&quot;</span>, <span class="st">&quot;bread&quot;</span>, <span class="st">&quot;onions&quot;</span>, <span class="st">&quot;salad&quot;</span>]</span>
 <span id="cb8-2"><a href="#cb8-2"></a>shopping[<span class="dv">1</span>] <span class="op">=</span> <span class="st">&quot;orange juice&quot;</span></span>
 <span id="cb8-3"><a href="#cb8-3"></a><span class="bu">print</span>(shopping)</span></code></pre></div>
@@ -211,16 +214,23 @@ href="https://en.wikipedia.org/wiki/Shopping_list#/media/File:Shopping_list_2017
 </section>
 <section id="mixed-types" class="slide level1">
 <h1>Mixed Types</h1>
+<div class="left">
+<p>Your list can contain items of different types, such as this one that contains a string, int, float and boolean.</p>
+</div>
 <div class="sourceCode" id="cb13"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a>stuff <span class="op">=</span> [<span class="st">&quot;cat&quot;</span>, <span class="dv">123</span>, <span class="fl">45.3</span>, <span class="va">True</span>]</span>
 <span id="cb13-2"><a href="#cb13-2"></a><span class="bu">print</span>(stuff)</span></code></pre></div>
 <div class="fragment">
 <p><strong>['cat', 123, 45.3, True]</strong></p>
 </div>
-<div class="fragment">
+</section>
+<section id="section-7" class="slide level1">
+<h1></h1>
+<div class="left">
+<p>Your list can also contain variables, and (as we’ll see in a moment) these variables can be of any type:</p>
+</div>
 <div class="sourceCode" id="cb14"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1"></a>s <span class="op">=</span> <span class="st">&quot;dog&quot;</span></span>
 <span id="cb14-2"><a href="#cb14-2"></a>stuff <span class="op">=</span> [<span class="st">&quot;cat&quot;</span>, <span class="dv">123</span>, s, <span class="fl">45.3</span>, <span class="va">True</span>]</span>
 <span id="cb14-3"><a href="#cb14-3"></a><span class="bu">print</span>(stuff)</span></code></pre></div>
-</div>
 <div class="fragment">
 <p><strong>['cat', 123, 'dog', 45.3, True]</strong></p>
 </div>
@@ -266,62 +276,81 @@ purchasing salad</code></pre>
 <section id="sorted" class="slide level1">
 <h1>sorted</h1>
 <div class="sourceCode" id="cb20"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a>numbers <span class="op">=</span> [<span class="dv">88</span>, <span class="dv">22</span>, <span class="dv">33</span>, <span class="dv">18</span>, <span class="dv">2</span>]</span>
-<span id="cb20-2"><a href="#cb20-2"></a>numbers <span class="op">=</span> <span class="bu">sorted</span>(numbers)</span></code></pre></div>
-</section>
-<section id="section-7" class="slide level1">
-<h1></h1>
-<div class="left">
-<p>We could write a function to calculate the average of a list of numbers like this:</p>
-</div>
-<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="kw">def</span> average(l):</span>
-<span id="cb21-2"><a href="#cb21-2"></a>  count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb21-3"><a href="#cb21-3"></a>  total <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb21-4"><a href="#cb21-4"></a>  <span class="cf">for</span> n <span class="kw">in</span> l:</span>
-<span id="cb21-5"><a href="#cb21-5"></a>      count <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb21-6"><a href="#cb21-6"></a>      total <span class="op">+=</span> n</span>
-<span id="cb21-7"><a href="#cb21-7"></a>  <span class="cf">return</span> total <span class="op">/</span> count</span>
-<span id="cb21-8"><a href="#cb21-8"></a></span>
-<span id="cb21-9"><a href="#cb21-9"></a><span class="bu">print</span>(average([<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">22</span>, <span class="dv">18</span>, <span class="dv">12</span>]))</span></code></pre></div>
+<span id="cb20-2"><a href="#cb20-2"></a>numbers <span class="op">=</span> <span class="bu">sorted</span>(numbers)</span>
+<span id="cb20-3"><a href="#cb20-3"></a><span class="bu">print</span>(numbers)</span></code></pre></div>
 <div class="fragment">
-<p><strong>10</strong></p>
+<p><strong>[2, 18, 22, 33, 88]</strong></p>
+</div>
+</section>
+<section id="reverse" class="slide level1">
+<h1>reverse</h1>
+<div class="sourceCode" id="cb21"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a>numbers <span class="op">=</span> [<span class="dv">88</span>, <span class="dv">22</span>, <span class="dv">33</span>, <span class="dv">18</span>, <span class="dv">2</span>]</span>
+<span id="cb21-2"><a href="#cb21-2"></a>numbers <span class="op">=</span> <span class="bu">sorted</span>(numbers, reverse<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb21-3"><a href="#cb21-3"></a><span class="bu">print</span>(numbers)</span></code></pre></div>
+<div class="fragment">
+<p><strong>[88, 33, 22, 18, 2]</strong></p>
 </div>
 </section>
 <section id="section-8" class="slide level1">
 <h1></h1>
 <div class="left">
-<p>But isn’t it much simpler to use the <strong>sum()</strong> and <strong>len()</strong> functions?</p>
+<p>We could write a function to calculate the average of a list of numbers like this:</p>
 </div>
 <div class="sourceCode" id="cb22"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="kw">def</span> average(l):</span>
-<span id="cb22-2"><a href="#cb22-2"></a>  <span class="cf">return</span> <span class="bu">sum</span>(l) <span class="op">/</span> <span class="bu">len</span>(l)</span>
-<span id="cb22-3"><a href="#cb22-3"></a></span>
-<span id="cb22-4"><a href="#cb22-4"></a><span class="bu">print</span>(average([<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">22</span>, <span class="dv">18</span>, <span class="dv">12</span>]))</span></code></pre></div>
+<span id="cb22-2"><a href="#cb22-2"></a>  count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb22-3"><a href="#cb22-3"></a>  total <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>  <span class="cf">for</span> n <span class="kw">in</span> l:</span>
+<span id="cb22-5"><a href="#cb22-5"></a>      count <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb22-6"><a href="#cb22-6"></a>      total <span class="op">+=</span> n</span>
+<span id="cb22-7"><a href="#cb22-7"></a>  <span class="cf">return</span> total <span class="op">/</span> count</span>
+<span id="cb22-8"><a href="#cb22-8"></a></span>
+<span id="cb22-9"><a href="#cb22-9"></a><span class="bu">print</span>(average([<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">22</span>, <span class="dv">18</span>, <span class="dv">12</span>]))</span></code></pre></div>
+<div class="fragment">
+<p><strong>10</strong></p>
+</div>
+</section>
+<section id="section-9" class="slide level1">
+<h1></h1>
+<div class="left">
+<p>But isn’t it much simpler to use the <strong>sum()</strong> and <strong>len()</strong> functions?</p>
+</div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a><span class="kw">def</span> average(l):</span>
+<span id="cb23-2"><a href="#cb23-2"></a>  <span class="cf">return</span> <span class="bu">sum</span>(l) <span class="op">/</span> <span class="bu">len</span>(l)</span>
+<span id="cb23-3"><a href="#cb23-3"></a></span>
+<span id="cb23-4"><a href="#cb23-4"></a><span class="bu">print</span>(average([<span class="dv">5</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">22</span>, <span class="dv">18</span>, <span class="dv">12</span>]))</span></code></pre></div>
 <div class="fragment">
 <p><strong>10</strong></p>
 </div>
 </section>
 <section id="lists-of-lists" class="slide level1">
 <h1>Lists of Lists</h1>
-<div class="sourceCode" id="cb23"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1"></a>my_list <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">300</span>], [<span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">150</span>]]</span>
-<span id="cb23-2"><a href="#cb23-2"></a><span class="bu">print</span>(my_list)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a>my_list <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">300</span>], [<span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">150</span>]]</span>
+<span id="cb24-2"><a href="#cb24-2"></a><span class="bu">print</span>(my_list)</span></code></pre></div>
 <div class="fragment">
 <p><strong>[[1, 2, 3], [100, 200, 300], [50, 100, 150]]</strong></p>
 </div>
 <div class="fragment">
-<div class="sourceCode" id="cb24"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1"></a><span class="bu">print</span>(my_list[<span class="dv">1</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a><span class="bu">print</span>(my_list[<span class="dv">1</span>])</span></code></pre></div>
 </div>
 <div class="fragment">
 <p><strong>[100, 200, 300]</strong></p>
 </div>
 </section>
-<section id="section-9" class="slide level1">
+<section id="section-10" class="slide level1">
 <h1></h1>
-<div class="sourceCode" id="cb25"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a>my_list <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">300</span>], [<span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">150</span>]]</span>
-<span id="cb25-2"><a href="#cb25-2"></a><span class="bu">print</span>(my_list[<span class="dv">1</span>][<span class="dv">2</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a>my_list <span class="op">=</span> [[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">100</span>, <span class="dv">200</span>, <span class="dv">300</span>], [<span class="dv">50</span>, <span class="dv">100</span>, <span class="dv">150</span>]]</span>
+<span id="cb26-2"><a href="#cb26-2"></a><span class="bu">print</span>(my_list[<span class="dv">1</span>][<span class="dv">2</span>])</span></code></pre></div>
 <div class="fragment">
 <p>300</p>
 </div>
 </section>
-<section id="section-10" class="slide level1">
+<section id="section-11" class="slide level1">
+<h1></h1>
+<div style="font-size: 120pt; font-weight: bold;">
+CSV
+</div>
+</section>
+<section id="section-12" class="slide level1">
 <h1></h1>
 <p><img width="70%" src="images/grid.png"></p>
 </section>
@@ -344,45 +373,45 @@ purchasing salad</code></pre>
 <div class="left">
 <p>While it would be possible to read a CSV file as a text file Python’s <a href="https://docs.python.org/3/library/csv.html">csv module</a> helps you do it.</p>
 </div>
-<div class="sourceCode" id="cb26"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="im">import</span> csv</span>
-<span id="cb26-2"><a href="#cb26-2"></a></span>
-<span id="cb26-3"><a href="#cb26-3"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;energy.csv&#39;</span>)</span>
-<span id="cb26-4"><a href="#cb26-4"></a>spreadsheet <span class="op">=</span> csv.reader(fh)</span>
-<span id="cb26-5"><a href="#cb26-5"></a></span>
-<span id="cb26-6"><a href="#cb26-6"></a><span class="cf">for</span> row <span class="kw">in</span> spreadsheet:</span>
-<span id="cb26-7"><a href="#cb26-7"></a>    <span class="bu">print</span>(row)</span></code></pre></div>
-</section>
-<section id="read-a-csv-file-1" class="slide level1">
-<h1>Read a CSV File</h1>
-<div class="left">
-<p>Since each row is an array you can interact with it like any other array.</p>
-</div>
 <div class="sourceCode" id="cb27"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="im">import</span> csv</span>
 <span id="cb27-2"><a href="#cb27-2"></a></span>
 <span id="cb27-3"><a href="#cb27-3"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;energy.csv&#39;</span>)</span>
 <span id="cb27-4"><a href="#cb27-4"></a>spreadsheet <span class="op">=</span> csv.reader(fh)</span>
 <span id="cb27-5"><a href="#cb27-5"></a></span>
 <span id="cb27-6"><a href="#cb27-6"></a><span class="cf">for</span> row <span class="kw">in</span> spreadsheet:</span>
-<span id="cb27-7"><a href="#cb27-7"></a>    state <span class="op">=</span> row[<span class="dv">0</span>]</span>
-<span id="cb27-8"><a href="#cb27-8"></a>    solar <span class="op">=</span> row[<span class="dv">5</span>]</span>
-<span id="cb27-9"><a href="#cb27-9"></a>    <span class="bu">print</span>(state, solar)</span></code></pre></div>
+<span id="cb27-7"><a href="#cb27-7"></a>    <span class="bu">print</span>(row)</span></code></pre></div>
+</section>
+<section id="read-a-csv-file-1" class="slide level1">
+<h1>Read a CSV File</h1>
+<div class="left">
+<p>Since each row is an array you can interact with it like any other array.</p>
+</div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="im">import</span> csv</span>
+<span id="cb28-2"><a href="#cb28-2"></a></span>
+<span id="cb28-3"><a href="#cb28-3"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;energy.csv&#39;</span>)</span>
+<span id="cb28-4"><a href="#cb28-4"></a>spreadsheet <span class="op">=</span> csv.reader(fh)</span>
+<span id="cb28-5"><a href="#cb28-5"></a></span>
+<span id="cb28-6"><a href="#cb28-6"></a><span class="cf">for</span> row <span class="kw">in</span> spreadsheet:</span>
+<span id="cb28-7"><a href="#cb28-7"></a>    state <span class="op">=</span> row[<span class="dv">0</span>]</span>
+<span id="cb28-8"><a href="#cb28-8"></a>    solar <span class="op">=</span> row[<span class="dv">5</span>]</span>
+<span id="cb28-9"><a href="#cb28-9"></a>    <span class="bu">print</span>(state, solar)</span></code></pre></div>
 </section>
 <section id="write-a-csv-file" class="slide level1">
 <h1>Write a CSV File</h1>
 <div class="left">
-<p>You can also use the <a href="https://docs.python.org/3/library/csv.html#csv.writer">csv.writer</a> class to write a CSV file row by row.</p>
+<p>You can also use the **writerow* method of a <a href="https://docs.python.org/3/library/csv.html#csv.writer">csv.writer</a> class to write a CSV file row by row.</p>
 </div>
-<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource python numberLines smaller"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="im">import</span> csv</span>
-<span id="cb28-2"><a href="#cb28-2"></a></span>
-<span id="cb28-3"><a href="#cb28-3"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;salaries.csv&#39;</span>, <span class="st">&#39;w&#39;</span>)</span>
-<span id="cb28-4"><a href="#cb28-4"></a>spreadsheet <span class="op">=</span> csv.writer(fh)</span>
-<span id="cb28-5"><a href="#cb28-5"></a></span>
-<span id="cb28-6"><a href="#cb28-6"></a>spreadsheet.writerow([<span class="st">&#39;Name&#39;</span>, <span class="st">&#39;Age&#39;</span>, <span class="st">&#39;Department&#39;</span>])</span>
-<span id="cb28-7"><a href="#cb28-7"></a>spreadsheet.writerow([<span class="st">&#39;Val&#39;</span>, <span class="dv">19</span>, <span class="st">&#39;Physics&#39;</span>])</span>
-<span id="cb28-8"><a href="#cb28-8"></a>spreadsheet.writerow([<span class="st">&#39;Rick&#39;</span>, <span class="dv">22</span>, <span class="st">&#39;English&#39;</span>])</span>
-<span id="cb28-9"><a href="#cb28-9"></a>spreadsheet.writerow([<span class="st">&#39;Hope&#39;</span>, <span class="dv">20</span>, <span class="st">&#39;Information Studies&#39;</span>])</span>
-<span id="cb28-10"><a href="#cb28-10"></a></span>
-<span id="cb28-11"><a href="#cb28-11"></a>spreadsheet.close()</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a><span class="im">import</span> csv</span>
+<span id="cb29-2"><a href="#cb29-2"></a></span>
+<span id="cb29-3"><a href="#cb29-3"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;salaries.csv&#39;</span>, <span class="st">&#39;w&#39;</span>)</span>
+<span id="cb29-4"><a href="#cb29-4"></a>spreadsheet <span class="op">=</span> csv.writer(fh)</span>
+<span id="cb29-5"><a href="#cb29-5"></a></span>
+<span id="cb29-6"><a href="#cb29-6"></a>spreadsheet.writerow([<span class="st">&#39;Name&#39;</span>, <span class="st">&#39;Age&#39;</span>, <span class="st">&#39;Department&#39;</span>])</span>
+<span id="cb29-7"><a href="#cb29-7"></a>spreadsheet.writerow([<span class="st">&#39;Val&#39;</span>, <span class="dv">19</span>, <span class="st">&#39;Physics&#39;</span>])</span>
+<span id="cb29-8"><a href="#cb29-8"></a>spreadsheet.writerow([<span class="st">&#39;Rick&#39;</span>, <span class="dv">22</span>, <span class="st">&#39;English&#39;</span>])</span>
+<span id="cb29-9"><a href="#cb29-9"></a>spreadsheet.writerow([<span class="st">&#39;Hope&#39;</span>, <span class="dv">20</span>, <span class="st">&#39;Economics&#39;</span>])</span>
+<span id="cb29-10"><a href="#cb29-10"></a></span>
+<span id="cb29-11"><a href="#cb29-11"></a>spreadsheet.close()</span></code></pre></div>
 </section>
     </div>
   </div>

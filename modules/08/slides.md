@@ -9,7 +9,7 @@ transition: slide
 
 #
 
-<div style="font-size: 120pt;">Lists</div>
+<div style="font-size: 120pt; font-weight: bold;">Lists</div>
 
 #
 
@@ -96,6 +96,11 @@ print(shopping[2][3])
 
 # Mutate
 
+:::left
+Unlike *strings* which are immutable you can change, or mutate, the elements of
+a list:
+:::
+
 ``` {.python .numberLines}
 shopping = ["milk", "beer", "bread", "onions", "salad"]
 shopping[1] = "orange juice"
@@ -151,6 +156,11 @@ print(shopping)
 
 # Mixed Types
 
+::: left
+Your list can contain items of different types, such as this one that contains a
+string, int, float and boolean.
+:::
+
 ``` {.python .numberLines}
 stuff = ["cat", 123, 45.3, True]
 print(stuff)
@@ -160,14 +170,18 @@ print(stuff)
 **[\'cat\', 123, 45.3, True]**
 :::
 
+#
 
-::: fragment
+::: left
+Your list can also contain variables, and (as we'll see in a moment) these variables 
+can be of any type:
+:::
+
 ``` {.python .numberLines}
 s = "dog"
 stuff = ["cat", 123, s, 45.3, True]
 print(stuff)
 ```
-:::
 
 ::: fragment
 **[\'cat\', 123, \'dog\', 45.3, True]**
@@ -231,7 +245,25 @@ print(max(numbers))
 ``` {.python .numberLines}
 numbers = [88, 22, 33, 18, 2]
 numbers = sorted(numbers)
+print(numbers)
 ```
+
+::: fragment
+**[2, 18, 22, 33, 88]**
+:::
+
+# reverse
+
+``` {.python .numberLines}
+numbers = [88, 22, 33, 18, 2]
+numbers = sorted(numbers, reverse=True)
+print(numbers)
+```
+
+::: fragment
+**[88, 33, 22, 18, 2]**
+:::
+
 
 #
 
@@ -307,6 +339,10 @@ print(my_list[1][2])
 
 # 
 
+<div style="font-size: 120pt; font-weight: bold;">CSV</div>
+
+# 
+
 <img width="70%" src="images/grid.png">
 
 # Spreadsheets
@@ -365,10 +401,10 @@ for row in spreadsheet:
 # Write a CSV File
 
 ::: left
-You can also use the [csv.writer](https://docs.python.org/3/library/csv.html#csv.writer) class to write a CSV file row by row.
+You can also use the **writerow* method of a [csv.writer](https://docs.python.org/3/library/csv.html#csv.writer) class to write a CSV file row by row.
 :::
 
-``` {.python .numberLines .smaller}
+``` {.python .numberLines}
 import csv
 
 fh = open('salaries.csv', 'w')
@@ -377,7 +413,7 @@ spreadsheet = csv.writer(fh)
 spreadsheet.writerow(['Name', 'Age', 'Department'])
 spreadsheet.writerow(['Val', 19, 'Physics'])
 spreadsheet.writerow(['Rick', 22, 'English'])
-spreadsheet.writerow(['Hope', 20, 'Information Studies'])
+spreadsheet.writerow(['Hope', 20, 'Economics'])
 
 spreadsheet.close()
 ```
