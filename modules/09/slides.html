@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Data Structures 3</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../lib/reveal/css/reset.css">
+  <link rel="stylesheet" href="../../lib/reveal/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../lib/reveal/css/theme/inst126.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../../lib/reveal/css/print/pdf.css' : '../../lib/reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="../../lib/reveal/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Data Structures 3</h1>
+  <p class="subtitle">Dictionaries &amp; JSON</p>
+</section>
+
+<section id="dictionaries" class="slide level1">
+<h1>Dictionaries</h1>
+<p><img width="70%" src="images/dictionary.jpg"></p>
+</section>
+<section class="slide level1">
+
+<h2 id="what-are-dictionaries">What are dictionaries?</h2>
+<div>
+<ul>
+<li class="fragment">Dictionaries are <em>unordered</em> collections of key/value pairs</li>
+<li class="fragment">They are what is referred to in other languages as an “associative array”</li>
+<li class="fragment">They are similar to a phone book or real-life dictionary, except that the keys are not sorted by default</li>
+</ul>
+</div>
+</section>
+<section class="slide level1">
+
+<h2 id="creating-dictionaries">Creating dictionaries</h2>
+<p>Create a dictionary with dict() or with curly braces:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>my_dictionary <span class="op">=</span> <span class="bu">dict</span>()</span>
+<span id="cb1-2"><a href="#cb1-2"></a>my_dictionary <span class="op">=</span> {}</span>
+<span id="cb1-3"><a href="#cb1-3"></a>phone_book <span class="op">=</span> {</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="st">&#39;Bruce Banner&#39;</span>: <span class="st">&#39;555-555-1234&#39;</span>,</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="st">&#39;Sue Storm&#39;</span>: <span class="st">&#39;555-555-5678&#39;</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>}</span></code></pre></div>
+</section>
+<section class="slide level1">
+
+<h2 id="accessing-dictionaries">Accessing dictionaries</h2>
+<div>
+<ul>
+<li class="fragment">You can look up the values in a dictionary by referencing the key</li>
+</ul>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>phone_book <span class="op">=</span> {</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    <span class="st">&#39;Bruce Banner&#39;</span>: <span class="st">&#39;555-555-1234&#39;</span>,</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    <span class="st">&#39;Sue Storm&#39;</span>: <span class="st">&#39;555-555-5678&#39;</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="bu">print</span>(phone_book[<span class="st">&#39;Bruce Banner&#39;</span>])</span></code></pre></div>
+</div>
+<div class="fragment">
+<p><strong>555-555-1234</strong></p>
+</div>
+</section>
+<section class="slide level1">
+
+<p>Access the keys of a dictionary with the <strong>keys()</strong> method:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>phone_book <span class="op">=</span> {</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="st">&#39;Bruce Banner&#39;</span>: <span class="st">&#39;555-555-1234&#39;</span>,</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="st">&#39;Sue Storm&#39;</span>: <span class="st">&#39;555-555-5678&#39;</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>}</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="cf">for</span> k <span class="kw">in</span> phone_book.keys():</span>
+<span id="cb3-6"><a href="#cb3-6"></a>    <span class="bu">print</span>(k)</span></code></pre></div>
+<div class="fragment">
+<p><strong>Bruce Banner</strong><br />
+<strong>Sue Storm</strong></p>
+</div>
+</section>
+<section class="slide level1">
+
+<p>Access the values of a dictionary with the <strong>values()</strong> method:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>phone_book <span class="op">=</span> {</span>
+<span id="cb4-2"><a href="#cb4-2"></a>    <span class="st">&#39;Bruce Banner&#39;</span>: <span class="st">&#39;555-555-1234&#39;</span>,</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    <span class="st">&#39;Sue Storm&#39;</span>: <span class="st">&#39;555-555-5678&#39;</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>}</span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="cf">for</span> val <span class="kw">in</span> phone_book.values():</span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="bu">print</span>(val)</span></code></pre></div>
+<div class="fragment">
+<p><strong>555-555-1234</strong><br />
+<strong>555-555-5678</strong></p>
+</div>
+</section>
+<section class="slide level1">
+
+<p>Access the key/value pairs with the <strong>items()</strong> method:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>phone_book <span class="op">=</span> {</span>
+<span id="cb5-2"><a href="#cb5-2"></a>    <span class="st">&#39;Bruce Banner&#39;</span>: <span class="st">&#39;555-555-1234&#39;</span>,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    <span class="st">&#39;Sue Storm&#39;</span>: <span class="st">&#39;555-555-5678&#39;</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>}</span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="cf">for</span> key, val <span class="kw">in</span> phone_book.items():</span>
+<span id="cb5-6"><a href="#cb5-6"></a>    <span class="bu">print</span>(key, val)</span></code></pre></div>
+<div class="fragment">
+<p><strong>Bruce Banner 555-555-1234</strong><br />
+<strong>Sue Storm 555-555-5678</strong></p>
+</div>
+</section>
+<section class="slide level1">
+
+<h2 id="modifying-dictionaries">Modifying dictionaries</h2>
+<div>
+<ul>
+<li class="fragment">The keys of a dictionary can be assigned to different values directly</li>
+</ul>
+<div class="fragment">
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>phone_book[<span class="st">&#39;Bruce Banner&#39;</span>] <span class="op">=</span> <span class="st">&quot;555-555-9876&quot;</span></span></code></pre></div>
+</div>
+<ul>
+<li class="fragment">If the key does not exist, a new key/value pair will be added</li>
+<li class="fragment">Note that each key of a given dictionary must be unique</li>
+</ul>
+</div>
+</section>
+<section class="slide level1">
+
+<h2 id="deleting-from-a-dictionary">Deleting from a dictionary</h2>
+<p>You can remove a key/value pair from a dictionary by using the <strong>pop</strong> method:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>phone_book <span class="op">=</span> {</span>
+<span id="cb7-2"><a href="#cb7-2"></a>    <span class="st">&#39;Bruce Banner&#39;</span>: <span class="st">&#39;555-555-1234&#39;</span>,</span>
+<span id="cb7-3"><a href="#cb7-3"></a>    <span class="st">&#39;Sue Storm&#39;</span>: <span class="st">&#39;555-555-5678&#39;</span></span>
+<span id="cb7-4"><a href="#cb7-4"></a>}</span>
+<span id="cb7-5"><a href="#cb7-5"></a>phone_book.pop(<span class="st">&#39;Bruce Banner&#39;</span>)</span></code></pre></div>
+</section>
+<section class="slide level1">
+
+<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>energy <span class="op">=</span> {</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  <span class="st">&quot;Colorado&quot;</span>: {</span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="st">&quot;solar&quot;</span>: <span class="fl">16530.477</span>,</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="st">&quot;wind&quot;</span>: <span class="fl">2942132.635</span></span>
+<span id="cb8-5"><a href="#cb8-5"></a>  },</span>
+<span id="cb8-6"><a href="#cb8-6"></a>  <span class="st">&quot;New Jersey&quot;</span>: {</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    <span class="st">&quot;solar&quot;</span>: <span class="fl">2437.768</span>,</span>
+<span id="cb8-8"><a href="#cb8-8"></a>    <span class="st">&quot;wind&quot;</span>: <span class="fl">19149.957</span></span>
+<span id="cb8-9"><a href="#cb8-9"></a>  },</span>
+<span id="cb8-10"><a href="#cb8-10"></a>  <span class="st">&quot;Washington&quot;</span>: {</span>
+<span id="cb8-11"><a href="#cb8-11"></a>    <span class="st">&quot;solar&quot;</span>: <span class="fl">0.0</span>,</span>
+<span id="cb8-12"><a href="#cb8-12"></a>    <span class="st">&quot;wind&quot;</span>: <span class="fl">3538935.954</span></span>
+<span id="cb8-13"><a href="#cb8-13"></a>  }</span>
+<span id="cb8-14"><a href="#cb8-14"></a>}</span>
+<span id="cb8-15"><a href="#cb8-15"></a><span class="bu">print</span>(energy[<span class="st">&#39;Washington&#39;</span>][<span class="st">&#39;wind&#39;</span>])</span></code></pre></div>
+<div class="fragment">
+<p><strong>3538935.954</strong></p>
+</div>
+</section>
+<section id="section" class="slide level1">
+<h1></h1>
+<div class="left">
+<p>Unfortunately, not all data fits neatly into tables. What makes this example hard to represent as a table?</p>
+</div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource python numberLines small"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a>people <span class="op">=</span> [</span>
+<span id="cb9-2"><a href="#cb9-2"></a>  {</span>
+<span id="cb9-3"><a href="#cb9-3"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Val&quot;</span>,</span>
+<span id="cb9-4"><a href="#cb9-4"></a>    <span class="st">&quot;interests&quot;</span>: [<span class="st">&quot;astronomy&quot;</span>, <span class="st">&quot;hocky&quot;</span>]</span>
+<span id="cb9-5"><a href="#cb9-5"></a>  }, </span>
+<span id="cb9-6"><a href="#cb9-6"></a>  {</span>
+<span id="cb9-7"><a href="#cb9-7"></a>    <span class="st">&quot;name&quot;</span>: <span class="st">&quot;Rick&quot;</span>,</span>
+<span id="cb9-8"><a href="#cb9-8"></a>    <span class="st">&quot;interests&quot;</span>: [<span class="st">&quot;karaoke&quot;</span>]</span>
+<span id="cb9-9"><a href="#cb9-9"></a>  }</span>
+<span id="cb9-10"><a href="#cb9-10"></a>]</span></code></pre></div>
+<div class="fragment">
+<p>The interests can have one to many values.</p>
+</div>
+</section>
+<section id="apis" class="slide level1">
+<h1>APIs</h1>
+<p><img width="70%" src="images/apis.png"></p>
+</section>
+<section id="section-1" class="slide level1">
+<h1></h1>
+<h2 id="reading-a-json-file">Reading a JSON File</h2>
+<div class="left">
+<p>Python comes with a <a href="https://docs.python.org/3.7/library/json.html">json module</a> which makes it easy to read JSON using the <a href="https://docs.python.org/3.7/library/json.html#json.load">json.load</a> function. We’ll use it to load this JSON file of tweet data: <a href="aoc.json">aoc.json</a>.</p>
+</div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">import</span> json</span>
+<span id="cb10-2"><a href="#cb10-2"></a></span>
+<span id="cb10-3"><a href="#cb10-3"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;aoc.json&#39;</span>)</span>
+<span id="cb10-4"><a href="#cb10-4"></a>tweets <span class="op">=</span> json.load(fh)</span>
+<span id="cb10-5"><a href="#cb10-5"></a></span>
+<span id="cb10-6"><a href="#cb10-6"></a><span class="cf">for</span> tweet <span class="kw">in</span> tweets:</span>
+<span id="cb10-7"><a href="#cb10-7"></a>    <span class="bu">print</span>(tweet[<span class="st">&#39;hashtags&#39;</span>])</span></code></pre></div>
+</section>
+<section id="write-a-json-file" class="slide level1">
+<h1>Write a JSON File</h1>
+<div class="left">
+<p>You can also use the <a href="https://docs.python.org/3.7/library/json.html#json.dump">json.dump</a> function to save a data structure to a file.</p>
+</div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource python numberLines smaller"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="im">import</span> json</span>
+<span id="cb11-2"><a href="#cb11-2"></a></span>
+<span id="cb11-3"><a href="#cb11-3"></a>people <span class="op">=</span> [</span>
+<span id="cb11-4"><a href="#cb11-4"></a>  {<span class="st">&quot;name&quot;</span>: <span class="st">&quot;Val&quot;</span>, <span class="st">&quot;interests&quot;</span>: [<span class="st">&quot;astronomy&quot;</span>, <span class="st">&quot;hocky&quot;</span>]}, </span>
+<span id="cb11-5"><a href="#cb11-5"></a>  {<span class="st">&quot;name&quot;</span>: <span class="st">&quot;Rick&quot;</span>, <span class="st">&quot;interests&quot;</span>: [<span class="st">&quot;karaoke&quot;</span>]}</span>
+<span id="cb11-6"><a href="#cb11-6"></a>]</span>
+<span id="cb11-7"><a href="#cb11-7"></a></span>
+<span id="cb11-8"><a href="#cb11-8"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;data.json&#39;</span>, <span class="st">&#39;w&#39;</span>)</span>
+<span id="cb11-9"><a href="#cb11-9"></a>json.dump(people, fh)</span></code></pre></div>
+</section>
+    </div>
+  </div>
+
+  <script src="../../lib/reveal/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../../lib/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../../lib/reveal/plugin/zoom-js/zoom.js', async: true },
+          { src: '../../lib/reveal/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
