@@ -171,7 +171,7 @@ Final grades will be computed based on the following components:
 | Exercises/Quizzes (10) |  20 points |
 | Homework (5)           |  25 points |
 | Midterms (2)           |  20 points |
-| Reflections (3)        |  10 points |
+| Reflections (2)        |  10 points |
 | Final Project          |  15 points |
 | Participation          |  10 points |
 | TOTAL                  | 100 points |

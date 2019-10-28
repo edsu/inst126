@@ -6,9 +6,13 @@ theme: inst126
 transition: slide
 ---
 
-# Dictionaries
+#
 
-<img width="70%" src="images/dictionary.jpg">
+<img width="80%" src="images/dictionary.jpg">
+
+#
+
+<img width="80%" src="images/phone-book.jpg">
 
 ---
 
@@ -17,8 +21,10 @@ transition: slide
 ::: incremental
 
 * Dictionaries are _unordered_ collections of key/value pairs
-* They are what is referred to in other languages as an "associative array"
-* They are similar to a phone book or real-life dictionary, except that the keys are not sorted by default
+* They are what is referred to in other languages as an "associative array",
+  "map" or sometimes "hash".
+* They are similar to a phone book or real-life dictionary.
+* You can add, get, modify and delete entries in a dictionary.
 
 :::
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Homework 1: The File-System and Command Line</title>
+  <title>Homework 4: Dictionaries and JSON</title>
   <style>
       code{white-space: pre-wrap;}
       span.smallcaps{font-variant: small-caps;}
@@ -18,42 +18,14 @@
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Homework 1: The File-System and Command Line</h1>
+<h1 class="title">Homework 4: Dictionaries and JSON</h1>
 </header>
-<p>Follow these instructions while substituting anywhere you see <code>{umd-id}</code> with your UMD Directory ID.</p>
-<h2 id="setup">Setup</h2>
-<ol type="1">
-<li>Download <em>hw1-files.tar.gz</em> from the <em>Homeworks</em> files in ELMS to your <em>Projects/inst126</em> directory.</li>
-<li>Open Visual Studio Code.</li>
-<li>Open your folder <em>Projects/inst126</em> in Visual Studio Code.</li>
-<li>Open a bash terminal window using Terminal menu (make sure it’s bash!).</li>
-<li>Unpack the archive file <em>hw1.tar.gz</em>: <code>tar xvfz hw1-files.tar.gz</code></li>
-<li>Rename <code>hw1-files</code> directory to your University Directory ID: for example, <code>mv hw1-files {umd-id}</code></li>
-<li>Change directory: <code>cd {umd-id}</code></li>
-</ol>
-<h2 id="organize">Organize</h2>
-<ol type="1">
-<li>List the contents of the directory: <code>ls</code></li>
-<li>List the contents of the directory with file sizes: <code>ls -l</code></li>
-<li>Remove the the largest file: <code>rm &lt;filename&gt;</code></li>
-<li>Make a directory called <em>images</em>: <code>mkdir images</code></li>
-<li>Make a directory called <em>documents</em>: <code>mkdir documents</code></li>
-<li>Move all of the <code>.jpg</code> files to the <em>images</em> directory: <code>mv *.jpg images</code></li>
-<li>Move all of the <code>.txt</code> files to the <em>documents</em> directory: <code>mv *.txt documents</code></li>
-</ol>
-<h2 id="package-and-upload">Package and Upload</h2>
-<ol type="1">
-<li>Change directories up: <code>cd ..</code></li>
-<li>Package up the your directory as tar file: <code>tar cvfz {umd-id}.tar.gz {umd-id}</code></li>
-<li>Submit the file to the assignment.</li>
-</ol>
-<h2 id="rubric">Rubric:</h2>
+<p>Download the JSON file <em>atl.json</em> from ELMS. This is a dataset of information about the Atlantic Building (where our class is held) and its use of resources such as electricity, natural gas, water and C02 emissions. The data was obtained from <a href="https://terpfootprints.umd.edu/">https://terpfootprints.umd.edu/</a>.</p>
+<p>Write a program that:</p>
 <ul>
-<li>Able to unpack tar file (1pt)</li>
-<li>Able to navigate directories (1pt)</li>
-<li>Able to remove a file (1pt)</li>
-<li>Able to move files (1pt)</li>
-<li>Able to package up directory as a tar file (1pt)</li>
+<li>reads the <em>atl.json</em> file</li>
+<li>prints out the month with the <em>most</em> electricity usage</li>
+<li>prints out the total amount of water used in 2015</li>
 </ul>
 </body>
 </html>
