@@ -117,7 +117,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="fragment">Dictionaries are <em>unordered</em> collections of key/value pairs</li>
 <li class="fragment">They are what is referred to in other languages as an “associative array”, “map” or sometimes “hash”.</li>
-<li class="fragment">They are similar to a phone book or real-life dictionary, except that the keys are not sorted by default.</li>
+<li class="fragment">They are similar to a phone book or real-life dictionary.</li>
+<li class="fragment">You can add, get, modify and delete entries in a dictionary.</li>
 </ul>
 </div>
 </section>
@@ -271,7 +272,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="sourceCode" id="cb10"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1"></a><span class="im">import</span> json</span>
 <span id="cb10-2"><a href="#cb10-2"></a></span>
-<span id="cb10-3"><a href="#cb10-3"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;aoc.json&#39;</span>)</span>
+<span id="cb10-3"><a href="#cb10-3"></a>fh <span class="op">=</span> <span class="bu">open</span>(<span class="st">&#39;aoc.json&#39;</span>, encoding<span class="op">=</span><span class="st">&#39;utf8&#39;</span>)</span>
 <span id="cb10-4"><a href="#cb10-4"></a>tweets <span class="op">=</span> json.load(fh)</span>
 <span id="cb10-5"><a href="#cb10-5"></a></span>
 <span id="cb10-6"><a href="#cb10-6"></a><span class="cf">for</span> tweet <span class="kw">in</span> tweets:</span>

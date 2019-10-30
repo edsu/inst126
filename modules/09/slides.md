@@ -221,7 +221,7 @@ which makes it easy to read JSON using the [json.load](https://docs.python.org/3
 ``` {.python .numberLines}
 import json
 
-fh = open('aoc.json')
+fh = open('aoc.json', encoding='utf8')
 tweets = json.load(fh)
 
 for tweet in tweets:
