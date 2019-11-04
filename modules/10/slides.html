@@ -279,19 +279,46 @@ Counters
 </section>
 <section id="section-7" class="slide level1">
 <h1></h1>
-<p>create a Counter</p>
+<p><a href="https://en.wikipedia.org/wiki/Babylonian_cuneiform_numerals"><img
+src="images/counting.png"></a></p>
 </section>
-<section id="section-8" class="slide level1">
-<h1></h1>
-<p>update a counter</p>
+<section id="create-a-counter" class="slide level1">
+<h1>Create a Counter</h1>
+<div class="left">
+<p>The Counter class needs to be imported from Python’s <a href="https://docs.python.org/3.5/library/collections.html">collections</a> module.</p>
+</div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
+<span id="cb27-2"><a href="#cb27-2"></a></span>
+<span id="cb27-3"><a href="#cb27-3"></a>c <span class="op">=</span> Counter()</span></code></pre></div>
 </section>
-<section id="section-9" class="slide level1">
-<h1></h1>
-<p>print out a counter value</p>
+<section id="create-a-counter-1" class="slide level1">
+<h1>Create a Counter</h1>
+<div class="sourceCode" id="cb28"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
+<span id="cb28-2"><a href="#cb28-2"></a></span>
+<span id="cb28-3"><a href="#cb28-3"></a>c <span class="op">=</span> Counter([<span class="st">&#39;#nats&#39;</span>, <span class="st">&#39;#astros&#39;</span>, <span class="st">&#39;#nats&#39;</span>])</span></code></pre></div>
 </section>
-<section id="section-10" class="slide level1">
-<h1></h1>
-<p>most common</p>
+<section id="update-a-counter" class="slide level1">
+<h1>Update a Counter</h1>
+<p>Use the subscript notation (square brackets) to update a value in the counter.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
+<span id="cb29-2"><a href="#cb29-2"></a></span>
+<span id="cb29-3"><a href="#cb29-3"></a>c <span class="op">=</span> Counter()</span>
+<span id="cb29-4"><a href="#cb29-4"></a>c[<span class="st">&#39;#nats&#39;</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb29-5"><a href="#cb29-5"></a>c[<span class="st">&#39;#astros&#39;</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb29-6"><a href="#cb29-6"></a>c[<span class="st">&#39;#nats&#39;</span>)] <span class="op">+=</span> <span class="dv">1</span></span></code></pre></div>
+</section>
+<section id="output-counter" class="slide level1">
+<h1>Output Counter</h1>
+<div class="sourceCode" id="cb30"><pre class="sourceCode numberSource python numberLines"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1"></a><span class="im">from</span> collections <span class="im">import</span> Counter</span>
+<span id="cb30-2"><a href="#cb30-2"></a></span>
+<span id="cb30-3"><a href="#cb30-3"></a>c <span class="op">=</span> Counter()</span>
+<span id="cb30-4"><a href="#cb30-4"></a>c[<span class="st">&#39;#nats&#39;</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb30-5"><a href="#cb30-5"></a>c[<span class="st">&#39;#astros&#39;</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb30-6"><a href="#cb30-6"></a>c[<span class="st">&#39;#nats&#39;</span>] <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb30-7"><a href="#cb30-7"></a><span class="bu">print</span>(counter.most_common())</span></code></pre></div>
+<div class="fragment">
+<pre><code>[(&#39;#nats&#39;, 2), (&#39;#astros&#39;, 1)]</code></pre>
+</div>
 </section>
     </div>
   </div>

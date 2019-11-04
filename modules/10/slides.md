@@ -247,16 +247,61 @@ False
 
 #
 
-create a Counter
+<a href="https://en.wikipedia.org/wiki/Babylonian_cuneiform_numerals"><img
+src="images/counting.png"></a>
 
-#
+# Create a Counter
 
-update a counter
+::: left
 
-#
+The Counter class needs to be imported from Python's 
+[collections](https://docs.python.org/3.5/library/collections.html) module.
 
-print out a counter value
+:::
 
-#
+``` {.python .numberLines}
+from collections import Counter
 
-most common
+c = Counter()
+
+```
+
+# Create a Counter
+
+``` {.python .numberLines}
+from collections import Counter
+
+c = Counter(['#nats', '#astros', '#nats'])
+```
+
+# Update a Counter
+
+Use the subscript notation (square brackets) to update a value in the counter.
+
+``` {.python .numberLines}
+from collections import Counter
+
+c = Counter()
+c['#nats'] += 1
+c['#astros'] += 1
+c['#nats')] += 1
+```
+
+# Output Counter
+
+``` {.python .numberLines}
+from collections import Counter
+
+c = Counter()
+c['#nats'] += 1
+c['#astros'] += 1
+c['#nats'] += 1
+print(counter.most_common())
+```
+
+::: fragment
+```
+[('#nats', 2), ('#astros', 1)]
+```
+:::
+
