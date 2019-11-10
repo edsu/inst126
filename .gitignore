@@ -3,3 +3,4 @@ readings
 .vscode
 Pipfile.lock
 **/submitted/*
+**/submissions/*
