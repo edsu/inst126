@@ -180,3 +180,60 @@ min        78.010000  1798.000000  1952.000000  -76.956092   38.976139
 max    533481.040000  2017.000000  2017.000000  -76.924696   39.007068
 ```
 
+#
+
+``` {.python}
+>>> df = df.read_csv('buildings.csv')
+>>> df['area'].max()
+533481.04
+>>> df[df['area'] == 533481.04]
+```
+
+::: fragment
+``` {.smaller}
+                             name    ...       latitude
+135  Regents Drive Parking Garage    ...      38.989667
+```
+:::
+
+#
+
+``` {.python}
+>>> df = pandas.read_csv('emissions.csv')
+>>> df.head()
+       building                      date       lbs_c02
+0  Energy Plant  2014-10-01T04:00:00.000Z  2.136055e+07
+1  Energy Plant  2014-11-01T04:00:00.000Z  2.489652e+07
+2  Energy Plant  2014-12-01T05:00:00.000Z  2.861628e+07
+3  Energy Plant  2015-01-01T05:00:00.000Z  3.081701e+07
+4  Energy Plant  2015-02-01T05:00:00.000Z  2.489250e+07
+```
+
+#
+
+``` {.python}
+>>> df = pandas.read_csv('emissions.csv', parse_dates=['date'])a
+>>> df.head()
+       building                date       lbs_c02
+0  Energy Plant 2014-10-01 04:00:00  2.136055e+07
+1  Energy Plant 2014-11-01 04:00:00  2.489652e+07
+2  Energy Plant 2014-12-01 05:00:00  2.861628e+07
+3  Energy Plant 2015-01-01 05:00:00  3.081701e+07
+4  Energy Plant 2015-02-01 05:00:00  2.489250e+07
+```
+#
+
+``` {.python}
+>>> df = pandas.read_csv('emissions.csv',
+        parse_dates=['date'],
+        index_col=['date']
+    )
+>>> df.head()
+                         building       lbs_c02
+date                                           
+2014-10-01 04:00:00  Energy Plant  2.136055e+07
+2014-11-01 04:00:00  Energy Plant  2.489652e+07
+2014-12-01 05:00:00  Energy Plant  2.861628e+07
+2015-01-01 05:00:00  Energy Plant  3.081701e+07
+2015-02-01 05:00:00  Energy Plant  2.489250e+07
+```
