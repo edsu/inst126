@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title>Data Analysis 3</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../lib/reveal/css/reset.css">
+  <link rel="stylesheet" href="../../lib/reveal/css/reveal.css">
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <style>
+code.sourceCode > span { display: inline-block; line-height: 1.25; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode { white-space: pre; position: relative; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+code.sourceCode { white-space: pre-wrap; }
+code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../lib/reveal/css/theme/inst126.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? '../../lib/reveal/css/print/pdf.css' : '../../lib/reveal/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="../../lib/reveal/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide">
+  <h1 class="title">Data Analysis 3</h1>
+  <p class="subtitle">More Pandas</p>
+</section>
+
+<section id="section" class="slide level1">
+<h1></h1>
+<section data-background-image="images/map.png">
+</section>
+</section>
+<section id="buildings" class="slide level1">
+<h1>Buildings</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="op">&gt;&gt;&gt;</span> <span class="im">import</span> pandas</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="op">&gt;&gt;&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="op">&gt;&gt;&gt;</span> buildings <span class="op">=</span> pandas.read_csv(<span class="st">&#39;buildings.csv&#39;</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="op">&gt;&gt;&gt;</span> buildings.head()</span></code></pre></div>
+<div class="fragment">
+<pre class="smaller"><code>                name      area  built  renovated  longitude   latitude
+0       Energy Plant  39655.00   1931       2005 -76.935606  38.985843
+1   Service Building  84030.42   1940       1970 -76.935830  38.986042
+2   Ritchie Coliseum  59791.00   1932       1996 -76.936447  38.985035
+3       Building 006  17716.77   1957       1970 -76.934517  38.985800
+4  Pocomoke Building  30045.91   1946       2013 -76.937115  38.982956</code></pre>
+</div>
+</section>
+<section id="section-1" class="slide level1">
+<h1></h1>
+<section data-background-image="images/download.png">
+</section>
+</section>
+<section id="energy" class="slide level1">
+<h1>Energy</h1>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="op">&gt;&gt;&gt;</span> energy <span class="op">=</span> pandas.read_csv(<span class="st">&#39;energy.csv&#39;</span>)</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="op">&gt;&gt;&gt;</span> energy.head()</span></code></pre></div>
+<div class="fragment">
+<pre class="smaller"><code>       building                      date          kBtu
+0  Energy Plant  2014-10-01T04:00:00.000Z  1.820209e+08
+1  Energy Plant  2014-11-01T04:00:00.000Z  2.117367e+08
+2  Energy Plant  2014-12-01T05:00:00.000Z  2.434488e+08
+3  Energy Plant  2015-01-01T05:00:00.000Z  2.626871e+08
+4  Energy Plant  2015-02-01T05:00:00.000Z  2.114589e+08</code></pre>
+</div>
+</section>
+<section id="section-2" class="slide level1">
+<h1></h1>
+<div class="left">
+<p>The <a href="https://en.wikipedia.org/wiki/British_thermal_unit">British thermal unit</a> (Btu or BTU) is a non-SI, traditional unit of heat; it is defined as the amount of heat required to raise the temperature of one pound of water by one degree Fahrenheit. It is also part of the United States customary units. Its counterpart in the metric system is the <a href="https://en.wikipedia.org/wiki/calorie">calorie</a>, which is defined as the amount of heat required to raise the temperature of one gram of water by one degree Celsius.</p>
+</div>
+</section>
+<section id="exponential-notation" class="slide level1">
+<h1>Exponential Notation</h1>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="op">&gt;&gt;&gt;</span> energy[<span class="st">&#39;kBtu&#39;</span>].head()</span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="dv">0</span>    <span class="fl">1.820209e+08</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="dv">1</span>    <span class="fl">2.117367e+08</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="dv">2</span>    <span class="fl">2.434488e+08</span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="dv">3</span>    <span class="fl">2.626871e+08</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="dv">4</span>    <span class="fl">2.114589e+08</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>Name: kBtu, dtype: float64</span></code></pre></div>
+</section>
+<section id="formatting" class="slide level1">
+<h1>Formatting</h1>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python smaller"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="op">&gt;&gt;&gt;</span> pandas.options.display.float_format <span class="op">=</span> <span class="st">&#39;{:20,.2f}&#39;</span>.<span class="bu">format</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="op">&gt;&gt;&gt;</span> energy[<span class="st">&#39;kBtu&#39;</span>].head()</span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="dv">0</span>         <span class="dv">182</span>,<span class="dv">020</span>,<span class="fl">945.22</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="dv">1</span>         <span class="dv">211</span>,<span class="dv">736</span>,<span class="fl">729.36</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="dv">2</span>         <span class="dv">243</span>,<span class="dv">448</span>,<span class="fl">842.23</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="dv">3</span>         <span class="dv">262</span>,<span class="dv">687</span>,<span class="fl">104.34</span></span>
+<span id="cb6-7"><a href="#cb6-7"></a><span class="dv">4</span>         <span class="dv">211</span>,<span class="dv">458</span>,<span class="fl">878.06</span></span>
+<span id="cb6-8"><a href="#cb6-8"></a>Name: kBtu, dtype: float64</span></code></pre></div>
+</section>
+<section id="time-series" class="slide level1">
+<h1>Time Series</h1>
+<p><img src="images/time-series.png"></p>
+</section>
+<section id="reindexing-1" class="slide level1">
+<h1>Reindexing (1)</h1>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a><span class="op">&gt;&gt;&gt;</span> energy.head()</span></code></pre></div>
+<pre class="smaller"><code>       building                      date          kBtu
+0  Energy Plant  2014-10-01T04:00:00.000Z  1.820209e+08
+1  Energy Plant  2014-11-01T04:00:00.000Z  2.117367e+08
+2  Energy Plant  2014-12-01T05:00:00.000Z  2.434488e+08
+3  Energy Plant  2015-01-01T05:00:00.000Z  2.626871e+08
+4  Energy Plant  2015-02-01T05:00:00.000Z  2.114589e+08</code></pre>
+</section>
+<section id="reindexing-2" class="slide level1">
+<h1>Reindexing (2)</h1>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="op">&gt;&gt;&gt;</span> energy <span class="op">=</span> pandas.read_csv(<span class="st">&#39;energy.csv&#39;</span>, </span>
+<span id="cb9-2"><a href="#cb9-2"></a>                             index_col<span class="op">=</span><span class="st">&#39;date&#39;</span>,</span>
+<span id="cb9-3"><a href="#cb9-3"></a>                             parse_dates<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb9-4"><a href="#cb9-4"></a><span class="op">&gt;&gt;&gt;</span> energy.head()</span></code></pre></div>
+<pre class="smaller"><code>                               building                 kBtu
+date                                                        
+2014-10-01 04:00:00+00:00  Energy Plant       182,020,945.22
+2014-11-01 04:00:00+00:00  Energy Plant       211,736,729.36
+2014-12-01 05:00:00+00:00  Energy Plant       243,448,842.23
+2015-01-01 05:00:00+00:00  Energy Plant       262,687,104.34
+2015-02-01 05:00:00+00:00  Energy Plant       211,458,878.06</code></pre>
+</section>
+<section id="section-3" class="slide level1">
+<h1></h1>
+<p><img src="images/pivot.jpg"></p>
+</section>
+<section id="section-4" class="slide level1">
+<h1></h1>
+<div class="left">
+<p>A <a href="https://en.wikipedia.org/wiki/Pivot_table">pivot table</a> is a table of statistics that summarizes the data of a more extensive table (such as from a database, spreadsheet, or business intelligence program). This summary might include sums, averages, or other statistics, which the pivot table groups together in a meaningful way.</p>
+</div>
+</section>
+<section id="pivot" class="slide level1">
+<h1>Pivot</h1>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a><span class="op">&gt;&gt;&gt;</span> energy_bldg <span class="op">=</span> energy.pivot(columns<span class="op">=</span><span class="st">&#39;building&#39;</span>,</span>
+<span id="cb11-2"><a href="#cb11-2"></a>                               values<span class="op">=</span><span class="st">&#39;kBtu&#39;</span>)</span>
+<span id="cb11-3"><a href="#cb11-3"></a><span class="op">&gt;&gt;&gt;</span> energy_bldg.head()</span></code></pre></div>
+<div class="fragment">
+<pre class="smaller"><code>building                   A.v. Williams Building  ...       Xfinity Center
+date                                               ...                     
+2014-10-01 04:00:00+00:00            5,205,268.48  ...         3,558,033.68
+2014-11-01 04:00:00+00:00            5,226,309.96  ...         4,668,428.15
+2014-12-01 05:00:00+00:00            5,564,066.38  ...         4,935,815.16
+2015-01-01 05:00:00+00:00            5,659,389.78  ...         6,506,048.75
+2015-02-01 05:00:00+00:00            5,464,419.89  ...         4,224,159.80
+...                                           ...  ...                  ...
+2019-06-01 04:00:00+00:00            4,564,119.46  ...         3,979,011.17
+2019-07-01 04:00:00+00:00            4,340,331.89  ...         3,717,400.12
+2019-08-01 04:00:00+00:00            4,867,625.66  ...         3,882,545.44
+2019-09-01 04:00:00+00:00            5,229,447.37  ...         3,712,515.43
+2019-10-01 04:00:00+00:00              228,352.79  ...           223,743.05
+
+[61 rows x 185 columns]</code></pre>
+</div>
+</section>
+<section id="section-5" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1"></a><span class="op">&gt;&gt;&gt;</span> energy_bldg[<span class="st">&#39;Atlantic Building&#39;</span>].head()</span></code></pre></div>
+<div class="fragment">
+<pre><code>date
+2014-10-01 04:00:00+00:00           3,173,049.24
+2014-11-01 04:00:00+00:00           3,513,962.04
+2014-12-01 05:00:00+00:00           3,994,225.63
+2015-01-01 05:00:00+00:00           1,626,398.17
+2015-02-01 05:00:00+00:00           1,552,411.77
+Name: Atlantic Building, dtype: float6</code></pre>
+</div>
+</section>
+<section id="sum" class="slide level1">
+<h1>Sum</h1>
+<p>Calculate the total energy by building.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python smaller"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1"></a><span class="op">&gt;&gt;&gt;</span> energy_sum <span class="op">=</span> energy_bldg.<span class="bu">sum</span>()</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="op">&gt;&gt;&gt;</span> energy_sum.head()</span>
+<span id="cb15-3"><a href="#cb15-3"></a>A.v. Williams Building                    <span class="dv">294</span>,<span class="dv">810</span>,<span class="fl">304.34</span></span>
+<span id="cb15-4"><a href="#cb15-4"></a>Agriculture Shed                              <span class="dv">284</span>,<span class="fl">638.63</span></span>
+<span id="cb15-5"><a href="#cb15-5"></a>Allegany Hall                               <span class="dv">4</span>,<span class="dv">304</span>,<span class="fl">867.94</span></span>
+<span id="cb15-6"><a href="#cb15-6"></a>Animal Science Service Building                     <span class="fl">0.00</span></span>
+<span id="cb15-7"><a href="#cb15-7"></a>Animal Sciences<span class="op">/</span>agric. Engrg Bldg         <span class="dv">144</span>,<span class="dv">124</span>,<span class="fl">191.89</span>)</span></code></pre></div>
+</section>
+<section id="sum-by-year" class="slide level1">
+<h1>Sum by Year</h1>
+<p>Calculate the total energy by building for 2018.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python smaller"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1"></a><span class="op">&gt;&gt;&gt;</span> energy_2018 <span class="op">=</span> energy_bldg[<span class="st">&#39;2018&#39;</span>].<span class="bu">sum</span>()</span>
+<span id="cb16-2"><a href="#cb16-2"></a><span class="op">&gt;&gt;&gt;</span> energy_2018.head()</span>
+<span id="cb16-3"><a href="#cb16-3"></a>building</span>
+<span id="cb16-4"><a href="#cb16-4"></a>A.v. Williams Building                     <span class="dv">54</span>,<span class="dv">683</span>,<span class="fl">493.23</span></span>
+<span id="cb16-5"><a href="#cb16-5"></a>Agriculture Shed                               <span class="dv">75</span>,<span class="fl">471.03</span></span>
+<span id="cb16-6"><a href="#cb16-6"></a>Allegany Hall                               <span class="dv">1</span>,<span class="dv">170</span>,<span class="fl">078.00</span></span>
+<span id="cb16-7"><a href="#cb16-7"></a>Animal Science Service Building                     <span class="fl">0.00</span></span>
+<span id="cb16-8"><a href="#cb16-8"></a>Animal Sciences<span class="op">/</span>agric. Engrg Bldg          <span class="dv">53</span>,<span class="dv">560</span>,<span class="fl">055.29</span></span></code></pre></div>
+</section>
+<section id="average-energy-by-building" class="slide level1">
+<h1>Average Energy by Building</h1>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1"></a><span class="op">&gt;&gt;&gt;</span> energy_avg <span class="op">=</span> energy_bldg.mean()</span>
+<span id="cb17-2"><a href="#cb17-2"></a><span class="op">&gt;&gt;&gt;</span> energy_avg.head()</span>
+<span id="cb17-3"><a href="#cb17-3"></a>building</span>
+<span id="cb17-4"><a href="#cb17-4"></a>A.v. Williams Building                      <span class="dv">4</span>,<span class="dv">832</span>,<span class="fl">955.81</span></span>
+<span id="cb17-5"><a href="#cb17-5"></a>Agriculture Shed                                <span class="dv">4</span>,<span class="fl">907.56</span></span>
+<span id="cb17-6"><a href="#cb17-6"></a>Allegany Hall                                  <span class="dv">70</span>,<span class="fl">571.61</span></span>
+<span id="cb17-7"><a href="#cb17-7"></a>Animal Science Service Building                     <span class="fl">0.00</span></span>
+<span id="cb17-8"><a href="#cb17-8"></a>Animal Sciences<span class="op">/</span>agric. Engrg Bldg           <span class="dv">2</span>,<span class="dv">362</span>,<span class="fl">691.67</span></span></code></pre></div>
+</section>
+<section id="join-1" class="slide level1">
+<h1>Join (1)</h1>
+<p>::: left Now we can join our building data with our energy data. The first step is reading our buildings data into a DataFrame using the building name as its index.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python smaller"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1"></a><span class="op">&gt;&gt;&gt;</span> buildings <span class="op">=</span> pandas.read_csv(<span class="st">&#39;buildings.csv&#39;</span>, index_col<span class="op">=</span><span class="st">&#39;name&#39;</span>)</span>
+<span id="cb18-2"><a href="#cb18-2"></a><span class="op">&gt;&gt;&gt;</span> buildings.head()</span>
+<span id="cb18-3"><a href="#cb18-3"></a>                                  area  built  renovated            longitude             latitude</span>
+<span id="cb18-4"><a href="#cb18-4"></a>name                                                                                              </span>
+<span id="cb18-5"><a href="#cb18-5"></a>Energy Plant                 <span class="dv">39</span>,<span class="fl">655.00</span>   <span class="dv">1931</span>       <span class="dv">2005</span>               <span class="fl">-76.94</span>                <span class="fl">38.99</span></span>
+<span id="cb18-6"><a href="#cb18-6"></a>Service Building             <span class="dv">84</span>,<span class="fl">030.42</span>   <span class="dv">1940</span>       <span class="dv">1970</span>               <span class="fl">-76.94</span>                <span class="fl">38.99</span></span>
+<span id="cb18-7"><a href="#cb18-7"></a>Ritchie Coliseum             <span class="dv">59</span>,<span class="fl">791.00</span>   <span class="dv">1932</span>       <span class="dv">1996</span>               <span class="fl">-76.94</span>                <span class="fl">38.99</span></span>
+<span id="cb18-8"><a href="#cb18-8"></a>Building <span class="dv">006</span>                 <span class="dv">17</span>,<span class="fl">716.77</span>   <span class="dv">1957</span>       <span class="dv">1970</span>               <span class="fl">-76.93</span>                <span class="fl">38.99</span></span>
+<span id="cb18-9"><a href="#cb18-9"></a>Pocomoke Building            <span class="dv">30</span>,<span class="fl">045.91</span>   <span class="dv">1946</span>       <span class="dv">2013</span>               <span class="fl">-76.94</span>                <span class="fl">38.98</span></span></code></pre></div>
+</section>
+<section id="join-2" class="slide level1">
+<h1>Join (2)</h1>
+<div class="left">
+<p>Since our <em>buildings</em> and <em>energy_avg</em> DataFrames share the same index we can use them together. Here we are adding a new column to our <em>buildings</em> DataFrame called <em>kBtu</em>.</p>
+</div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python smaller"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1"></a><span class="op">&gt;&gt;&gt;</span> buildings[<span class="st">&#39;kBtu&#39;</span>] <span class="op">=</span> energy_avg</span>
+<span id="cb19-2"><a href="#cb19-2"></a><span class="op">&gt;&gt;&gt;</span> buildings.head()</span>
+<span id="cb19-3"><a href="#cb19-3"></a>                                  area  built  ...             latitude                 kBtu</span>
+<span id="cb19-4"><a href="#cb19-4"></a>name                                           ...                                          </span>
+<span id="cb19-5"><a href="#cb19-5"></a>Energy Plant                 <span class="dv">39</span>,<span class="fl">655.00</span>   <span class="dv">1931</span>  ...                <span class="fl">38.99</span>       <span class="dv">189</span>,<span class="dv">798</span>,<span class="fl">173.78</span></span>
+<span id="cb19-6"><a href="#cb19-6"></a>Service Building             <span class="dv">84</span>,<span class="fl">030.42</span>   <span class="dv">1940</span>  ...                <span class="fl">38.99</span>           <span class="dv">957</span>,<span class="fl">811.26</span></span>
+<span id="cb19-7"><a href="#cb19-7"></a>Ritchie Coliseum             <span class="dv">59</span>,<span class="fl">791.00</span>   <span class="dv">1932</span>  ...                <span class="fl">38.99</span>           <span class="dv">273</span>,<span class="fl">035.99</span></span>
+<span id="cb19-8"><a href="#cb19-8"></a>Building <span class="dv">006</span>                 <span class="dv">17</span>,<span class="fl">716.77</span>   <span class="dv">1957</span>  ...                <span class="fl">38.99</span>            <span class="dv">14</span>,<span class="fl">644.56</span></span>
+<span id="cb19-9"><a href="#cb19-9"></a>Pocomoke Building            <span class="dv">30</span>,<span class="fl">045.91</span>   <span class="dv">1946</span>  ...                <span class="fl">38.98</span>           <span class="dv">295</span>,<span class="fl">203.25</span></span></code></pre></div>
+</section>
+<section id="energyarea" class="slide level1">
+<h1>Energy/Area</h1>
+<div class="left">
+<p>Now we can calculate the average energy use per square foot using a single Pandas expression.</p>
+</div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python smaller"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1"></a><span class="op">&gt;&gt;&gt;</span> buildings[<span class="st">&#39;kBtu/sqft&#39;</span>] <span class="op">=</span> buildings[<span class="st">&#39;kBtu&#39;</span>] <span class="op">/</span> buildings[<span class="st">&#39;area&#39;</span>]</span>
+<span id="cb20-2"><a href="#cb20-2"></a><span class="op">&gt;&gt;&gt;</span> buildings.head()</span>
+<span id="cb20-3"><a href="#cb20-3"></a>Energy Plant                 <span class="dv">39</span>,<span class="fl">655.00</span>   <span class="dv">1931</span>  ...       <span class="dv">189</span>,<span class="dv">798</span>,<span class="fl">173.78</span>             <span class="dv">4</span>,<span class="fl">786.24</span></span>
+<span id="cb20-4"><a href="#cb20-4"></a>Service Building             <span class="dv">84</span>,<span class="fl">030.42</span>   <span class="dv">1940</span>  ...           <span class="dv">957</span>,<span class="fl">811.26</span>                <span class="fl">11.40</span></span>
+<span id="cb20-5"><a href="#cb20-5"></a>Ritchie Coliseum             <span class="dv">59</span>,<span class="fl">791.00</span>   <span class="dv">1932</span>  ...           <span class="dv">273</span>,<span class="fl">035.99</span>                 <span class="fl">4.57</span></span>
+<span id="cb20-6"><a href="#cb20-6"></a>Building <span class="dv">006</span>                 <span class="dv">17</span>,<span class="fl">716.77</span>   <span class="dv">1957</span>  ...            <span class="dv">14</span>,<span class="fl">644.56</span>                 <span class="fl">0.83</span></span>
+<span id="cb20-7"><a href="#cb20-7"></a>Pocomoke Building            <span class="dv">30</span>,<span class="fl">045.91</span>   <span class="dv">1946</span>  ...           <span class="dv">295</span>,<span class="fl">203.25</span>                 <span class="fl">9.83</span></span></code></pre></div>
+</section>
+<section id="energyarea-sorted" class="slide level1">
+<h1>Energy/Area Sorted</h1>
+<div class="left">
+<p>If we sort the dataframe by <em>kBtu/sqft</em> we can see the buildings that use the most energy per square foot.</p>
+</div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python smaller"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1"></a><span class="op">&gt;&gt;&gt;</span> buildings <span class="op">=</span> buildings.sort_values(<span class="st">&#39;kBtu/sqft&#39;</span>, ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb21-2"><a href="#cb21-2"></a><span class="op">&gt;&gt;&gt;</span> buildings[<span class="st">&#39;kBtu/sqft&#39;</span>].head(<span class="dv">10</span>)</span>
+<span id="cb21-3"><a href="#cb21-3"></a>                                             area  built  ...                 kBtu            kBtu<span class="op">/</span>sqft</span>
+<span id="cb21-4"><a href="#cb21-4"></a>name                                                      ...                                          </span>
+<span id="cb21-5"><a href="#cb21-5"></a>Energy Plant                            <span class="dv">39</span>,<span class="fl">655.00</span>   <span class="dv">1931</span>  ...       <span class="dv">189</span>,<span class="dv">798</span>,<span class="fl">173.78</span>             <span class="dv">4</span>,<span class="fl">786.24</span></span>
+<span id="cb21-6"><a href="#cb21-6"></a>Leonardtown Community Center             <span class="dv">7</span>,<span class="fl">280.00</span>   <span class="dv">1982</span>  ...           <span class="dv">702</span>,<span class="fl">301.85</span>                <span class="fl">96.47</span></span>
+<span id="cb21-7"><a href="#cb21-7"></a>Main Administration Building            <span class="dv">41</span>,<span class="fl">298.72</span>   <span class="dv">1940</span>  ...         <span class="dv">1</span>,<span class="dv">909</span>,<span class="fl">419.67</span>                <span class="fl">46.23</span></span>
+<span id="cb21-8"><a href="#cb21-8"></a>Bioscience Research Building           <span class="dv">141</span>,<span class="fl">019.44</span>   <span class="dv">2007</span>  ...         <span class="dv">5</span>,<span class="dv">416</span>,<span class="fl">567.24</span>                <span class="fl">38.41</span></span>
+<span id="cb21-9"><a href="#cb21-9"></a>Jull Hall                               <span class="dv">17</span>,<span class="fl">574.00</span>   <span class="dv">1954</span>  ...           <span class="dv">641</span>,<span class="fl">889.28</span>                <span class="fl">36.52</span></span>
+<span id="cb21-10"><a href="#cb21-10"></a>Kim Engineering Building               <span class="dv">167</span>,<span class="fl">905.84</span>   <span class="dv">2005</span>  ...         <span class="dv">5</span>,<span class="dv">510</span>,<span class="fl">806.56</span>                <span class="fl">32.82</span></span>
+<span id="cb21-11"><a href="#cb21-11"></a>Research Greenhouse                     <span class="dv">66</span>,<span class="fl">369.52</span>   <span class="dv">2003</span>  ...         <span class="dv">2</span>,<span class="dv">169</span>,<span class="fl">246.74</span>                <span class="fl">32.68</span></span>
+<span id="cb21-12"><a href="#cb21-12"></a>Somerset Hall                           <span class="dv">31</span>,<span class="fl">196.00</span>   <span class="dv">1949</span>  ...           <span class="dv">950</span>,<span class="fl">262.28</span>                <span class="fl">30.46</span></span>
+<span id="cb21-13"><a href="#cb21-13"></a>Microbiology Building                   <span class="dv">88</span>,<span class="fl">285.39</span>   <span class="dv">1939</span>  ...         <span class="dv">2</span>,<span class="dv">599</span>,<span class="fl">391.03</span>                <span class="fl">29.44</span></span>
+<span id="cb21-14"><a href="#cb21-14"></a>Ellicott Area Dining Hall               <span class="dv">48</span>,<span class="fl">280.12</span>   <span class="dv">1967</span>  ...         <span class="dv">1</span>,<span class="dv">289</span>,<span class="fl">533.64</span>                <span class="fl">26.71</span></span></code></pre></div>
+</section>
+<section id="section-6" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1"></a><span class="op">&gt;&gt;&gt;</span> buildings[<span class="st">&#39;kBtu/sqft&#39;</span>].head(<span class="dv">10</span>)</span>
+<span id="cb22-2"><a href="#cb22-2"></a>name</span>
+<span id="cb22-3"><a href="#cb22-3"></a>Energy Plant                               <span class="dv">4</span>,<span class="fl">786.24</span></span>
+<span id="cb22-4"><a href="#cb22-4"></a>Leonardtown Community Center                  <span class="fl">96.47</span></span>
+<span id="cb22-5"><a href="#cb22-5"></a>Main Administration Building                  <span class="fl">46.23</span></span>
+<span id="cb22-6"><a href="#cb22-6"></a>Bioscience Research Building                  <span class="fl">38.41</span></span>
+<span id="cb22-7"><a href="#cb22-7"></a>Jull Hall                                     <span class="fl">36.52</span></span>
+<span id="cb22-8"><a href="#cb22-8"></a>Kim Engineering Building                      <span class="fl">32.82</span></span>
+<span id="cb22-9"><a href="#cb22-9"></a>Research Greenhouse                           <span class="fl">32.68</span></span>
+<span id="cb22-10"><a href="#cb22-10"></a>Somerset Hall                                 <span class="fl">30.46</span></span>
+<span id="cb22-11"><a href="#cb22-11"></a>Microbiology Building                         <span class="fl">29.44</span></span>
+<span id="cb22-12"><a href="#cb22-12"></a>Ellicott Area Dining Hall                     <span class="fl">26.71</span></span></code></pre></div>
+</section>
+<section id="install-matplotlib" class="slide level1">
+<h1>Install Matplotlib</h1>
+<p>Mac:</p>
+<pre><code>pip3 install matplotlib</code></pre>
+<p>Windows:</p>
+<pre><code>py -m pip install matplotlib</code></pre>
+</section>
+<section id="a-plot" class="slide level1">
+<h1>A Plot</h1>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1"></a><span class="op">&gt;&gt;&gt;</span> df <span class="op">=</span> pandas.read_csv(<span class="st">&#39;buildings.csv&#39;</span>)</span>
+<span id="cb25-2"><a href="#cb25-2"></a><span class="op">&gt;&gt;&gt;</span> plot <span class="op">=</span> df[<span class="st">&#39;area&#39;</span>].plot()</span>
+<span id="cb25-3"><a href="#cb25-3"></a><span class="op">&gt;&gt;&gt;</span> fig <span class="op">=</span> plot.get_figure()</span>
+<span id="cb25-4"><a href="#cb25-4"></a><span class="op">&gt;&gt;&gt;</span> fig.show()</span></code></pre></div>
+</section>
+<section id="an-image" class="slide level1">
+<h1>An Image</h1>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1"></a><span class="op">&gt;&gt;&gt;</span> df <span class="op">=</span> pandas.read_csv(<span class="st">&#39;buildings.csv&#39;</span>)</span>
+<span id="cb26-2"><a href="#cb26-2"></a><span class="op">&gt;&gt;&gt;</span> plot <span class="op">=</span> df[<span class="st">&#39;area&#39;</span>].plot()</span>
+<span id="cb26-3"><a href="#cb26-3"></a><span class="op">&gt;&gt;&gt;</span> fig <span class="op">=</span> plot.get_figure()</span>
+<span id="cb26-4"><a href="#cb26-4"></a><span class="op">&gt;&gt;&gt;</span> fig.savefig(<span class="st">&quot;figure.png&quot;</span>)</span></code></pre></div>
+</section>
+<section id="sum-1" class="slide level1">
+<h1>Sum</h1>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1"></a><span class="op">&gt;&gt;&gt;</span> df <span class="op">=</span> pandas.read_csv(<span class="st">&#39;buildings.csv&#39;</span>)</span>
+<span id="cb27-2"><a href="#cb27-2"></a><span class="op">&gt;&gt;&gt;</span> df <span class="op">=</span> df.groupby(<span class="st">&#39;built&#39;</span>).<span class="bu">sum</span>()</span>
+<span id="cb27-3"><a href="#cb27-3"></a><span class="op">&gt;&gt;&gt;</span> plot <span class="op">=</span> df[<span class="st">&#39;area&#39;</span>].plot()</span>
+<span id="cb27-4"><a href="#cb27-4"></a><span class="op">&gt;&gt;&gt;</span> fig <span class="op">=</span> plot.get_figure()</span>
+<span id="cb27-5"><a href="#cb27-5"></a><span class="op">&gt;&gt;&gt;</span> fig.show()</span></code></pre></div>
+</section>
+<section id="section-7" class="slide level1">
+<h1></h1>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1"></a><span class="op">&gt;&gt;&gt;</span> df <span class="op">=</span> pandas.read_csv(<span class="st">&#39;buildings.csv&#39;</span>, </span>
+<span id="cb28-2"><a href="#cb28-2"></a>                         index_col<span class="op">=</span><span class="st">&#39;built&#39;</span>,</span>
+<span id="cb28-3"><a href="#cb28-3"></a>                         parse_dates<span class="op">=</span>[<span class="st">&#39;built&#39;</span>])</span>
+<span id="cb28-4"><a href="#cb28-4"></a><span class="op">&gt;&gt;&gt;</span> df.head()</span></code></pre></div>
+<div class="fragment">
+<pre class="smaller"><code>df.head()
+                         name      area  renovated  longitude   latitude
+built                                                                   
+1931-01-01       Energy Plant  39655.00       2005 -76.935606  38.985843
+1940-01-01   Service Building  84030.42       1970 -76.935830  38.986042
+1932-01-01   Ritchie Coliseum  59791.00       1996 -76.936447  38.985035
+1957-01-01       Building 006  17716.77       1970 -76.934517  38.985800
+1946-01-01  Pocomoke Building  30045.91       2013 -76.937115  38.982956</code></pre>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="../../lib/reveal/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Push each slide change to the browser history
+        history: true,
+        // Transition style
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: '../../lib/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: '../../lib/reveal/plugin/zoom-js/zoom.js', async: true },
+          { src: '../../lib/reveal/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>

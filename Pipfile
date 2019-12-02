@@ -9,3 +9,5 @@ pylint = "<2.0.0"
 [packages]
 flask = "*"
 pandas = "*"
+matplotlib = "*"
+seaborn = "*"
