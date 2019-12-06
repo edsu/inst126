@@ -322,7 +322,9 @@ Microbiology Building                         29.44
 Ellicott Area Dining Hall                     26.71
 ```
 
-# Install Matplotlib
+# Install
+
+Install Jupyter and matplotlib using pip in your terminal window:
 
 Mac:
 
