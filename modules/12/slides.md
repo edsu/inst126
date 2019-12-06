@@ -326,11 +326,11 @@ Ellicott Area Dining Hall                     26.71
 
 Mac:
 
-    pip3 install matplotlib
+    pip3 install jupyter matplotlib
 
 Windows:
 
-    py -m pip install matplotlib
+    py -m pip install jupyter matplotlib
 
 # A Plot
 
