@@ -133,7 +133,8 @@ colors by their [x, y] coordinates in the Red Triangle (Gamut B) below:
 Experiment with the *bri* option which can be an integer from 0 to 255. What
 does it seem to do?
 
-[Phillips Hue Lights]: https://www2.meethue.com/en-us/bulbs [requests]:
-https://2.python-requests.org/en/master/ [Requests Quickstart]:
-https://2.python-requests.org/en/master/user/quickstart/ [tp-link]:
-https://www.tp-link.com/us/home-networking/wifi-router/tl-wr902ac/
+[Phillips Hue Lights]: https://www2.meethue.com/en-us/bulbs
+[requests]: https://2.python-requests.org/en/master/
+[Requests Quickstart]: https://2.python-requests.org/en/master/user/quickstart/
+[tp-link]: https://www.tp-link.com/us/home-networking/wifi-router/tl-wr902ac/
+
