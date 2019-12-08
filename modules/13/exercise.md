@@ -9,8 +9,8 @@ Welcome to the last class! As you know we have spent the semester learning to
 program in Python by using it to process data. This data processing has involved
 both reading and writing information using data and control structures which
 allow us to interact with data representations like text, CSV and JSON. We've
-often used these programs to generate new insight about data such as the UMD
-TerpFootprints data.
+often used these programs to generate new insights about data and how it was
+collected (e.g. the UMD TerpFootprints data).
 
 <img style="width: 200px; float: right; padding: 10px;" src="images/light.jpg">
 
