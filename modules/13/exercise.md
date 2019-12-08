@@ -18,8 +18,8 @@ The objective of this last exercise is to get a feel for how data processing can
 (and always does) change things in the world. In this case we'll just be
 changing a small thing (the color of some light bulbs) in the hopes that it
 gives you the sense of how computation isn't an immaterial, abstract phenomenon,
-but one that has very real material effects, often with political and social
-consequences.
+but one that has very real material effects, which can often have social and
+political consequences.
 
 Using our knowledge of basic data types, JSON and writing data to the web (which
 we haven't talked a whole lot about yet) we are going to change the color of
