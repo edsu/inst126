@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Module 13 Exercise</title>
+  <style>
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" href="../../css/page.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Module 13 Exercise</h1>
+</header>
+<h2 id="lights-challenge">Lights Challenge</h2>
+<p>Welcome to the last class! As you know we have spent the semester learning to program in Python by using it to process data. This data processing has involved both reading and writing information using data and control structures which allow us to interact with data representations like text, CSV and JSON. We’ve often used these programs to generate new insight about data such as the UMD TerpFootprints data.</p>
+<p><img style="width: 200px; float: right; padding: 10px;" src="images/light.jpg"></p>
+<p>The objective of this last exercise is to get a feel for how data processing can (and always does) change things in the world. In this case we’ll just be changing a small thing (the color of some light bulbs) in the hopes that it gives you the sense of how computation isn’t an immaterial, abstract phenomenon, but one that has very real material effects, often with political and social consequences.</p>
+<p>Using our knowledge of basic data types, JSON and writing data to the web (which we haven’t talked a whole lot about yet) we are going to change the color of some [Phillips Hue Lights]. You can talk to these lights using the HyperText Transfer Protocol (HTTP) which is the protocol that makes the web possible. Each of three lights in the room is listening on a local wifi network.</p>
+<h3 id="the-challenge">The Challenge</h3>
+<p>The goal of this exercise is to see if you can change the color of one or more of the Phillips Hue lights that are in the room. See if you can do one or more of the following things:</p>
+<ol type="1">
+<li>Change the color of a light.</li>
+<li>Alternate the light between two colors.</li>
+<li>Turn the light a random color.</li>
+<li>Turn the light off and on.</li>
+</ol>
+<p>Here are some preliminary things for you to get started…</p>
+<h3 id="install-requests">1. Install Requests</h3>
+<p>[requests] is a Python module that makes it easy to send HTTP requests. Once you install it you’ll be able to import it into your program just like we installed and imported pandas. Open a terminal window and type the command appropriate for your operating system:</p>
+<p><strong>OS X:</strong></p>
+<pre><code>    pip3 install requests</code></pre>
+<p><strong>Windows:</strong></p>
+<pre><code>    py -m pip install requests</code></pre>
+<h3 id="requests-documentation">2. Requests Documentation</h3>
+<p>You will be using requests to send HTTP requests to the lights. So open up the [Requests Quickstart] in a browser tab for you to look at while you are doing your work:</p>
+<pre><code>    https://2.python-requests.org/en/master/user/quickstart/</code></pre>
+<h3 id="the-network">3. The Network</h3>
+<p><img style="width: 125px; float: right;" src="images/tp-link.png"></p>
+<p>You need to talk to the Phillips Hue Lights using your computer’s network connection. However the UMD Wi-Fi network is fairly tightly controlled, so it’s not easy to quickly put the Phillips Hue lights on the UMD network by simply plugging them in. To get around this I’ve used a [tp-link] portable travel router to create a local wi-fi network that you can join.</p>
+<p><strong>Network:</strong> TP-Link_1B36<br />
+<strong>Password:</strong> 76281273</p>
+<h3 id="the-lights">4. The Lights</h3>
+<p><img style="width: 200px; float: right;" src="images/bridge.jpg"></p>
+<p>There are three Phillips Hue lights in the room that you can talk to using the Hue Lights API. The API is a little web server running on this device</p>
+<pre><code>http://192.168.0.101/api/{key}/</code></pre>
+<p>So for example you can see the state of all the lights by visiting this URL in your browser:</p>
+<pre><code>http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights</code></pre>
+<p>You can see the state of one of the lights by adding the <em>light number</em> (1, 2 or 3) to the URL, for example:</p>
+<pre><code>http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1
+http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2
+http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/3</code></pre>
+<h3 id="lights-onoff">5. Lights On/Off</h3>
+<p>You can change the state of one of the lights by doing an HTTP PUT of some JSON data to a URL like:</p>
+<pre><code>http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2/state</code></pre>
+<p>The requests module has a <em>put()</em> method that lets you send data to a URL. You can use <em>put</em> method’s <em>json</em> parameter to pass in data to send as JSON. See if you can post this Python dictionary as JSON to turn on and off a light:</p>
+<pre><code>{&quot;on&quot;: False}</code></pre>
+<p>or:</p>
+<pre><code>{&quot;on&quot;: True}</code></pre>
+<h3 id="color">6. Color</h3>
+<p>The lights use a particular type of codes for color. You can update the color by sending a PUT request to the light’s state URL, just as you did to turn them off and on, but the dictionary you send as JSON should look like this to turn the color red:</p>
+<pre><code>{&quot;xy&quot;: [.6, .3]}</code></pre>
+<p>Or green:</p>
+<pre><code>{&quot;xy&quot;: [.4, .5]}</code></pre>
+<p>Try to come up with other colors by putting different “xy” values by identifying colors by their [x, y] coordinates in the Red Triangle (Gamut B) below:</p>
+<p><img width="1000" src="images/color.png"></p>
+<p>Experiment with the <em>bri</em> option which can be an integer from 0 to 255. What does it seem to do?</p>
+<p>[Phillips Hue Lights]: https://www2.meethue.com/en-us/bulbs [requests]: https://2.python-requests.org/en/master/ [Requests Quickstart]: https://2.python-requests.org/en/master/user/quickstart/ [tp-link]: https://www.tp-link.com/us/home-networking/wifi-router/tl-wr902ac/</p>
+</body>
+</html>

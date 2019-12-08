@@ -3,3 +3,14 @@ body {
     font: 14pt Calibri;
 }
 
+figure {
+    display: inline;
+    text-align: center;
+    border: thin solid #ccc;
+    padding: 10px;
+}
+
+figcaption {
+    text-align: center;
+}
+
