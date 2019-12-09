@@ -138,9 +138,6 @@ colors by their [x, y] coordinates in the Red Triangle (Gamut B) below:
 
   <img width="1000" src="images/color.png">
 
-Experiment with the *bri* option which can be an integer from 0 to 255. What
-does it seem to do?
-
 ### Timed Changes
 
 Try to change the light colors in a loop. But be sure to use a sleep command to
