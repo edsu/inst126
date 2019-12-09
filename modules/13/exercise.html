@@ -89,16 +89,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Welcome to the last class! As you know we have spent the semester learning to program in Python by using it to process data. This data processing has involved both reading and writing information using data and control structures which allow us to interact with data representations like text, CSV and JSON. We’ve often used these programs to generate new insights about data and how it was collected (e.g. the UMD TerpFootprints data).</p>
 <p><img style="width: 200px; float: right; padding: 10px;" src="images/light.jpg"></p>
 <p>The objective of this last exercise is to get a feel for how data processing can (and always does) change things in the world. In this case we’ll just be changing a small thing (the color of some light bulbs) in the hopes that it gives you the sense of how computation isn’t an immaterial, abstract phenomenon, but one that has very real material effects, which can often have social and political consequences.</p>
-<p>Using our knowledge of basic data types, and writing data to the web (which we haven’t talked a whole lot about yet) we are going to change the color of some <a href="https://www2.meethue.com/en-us/bulbs">Phillips Hue Lights</a> in the room. You can talk to these lights using the HyperText Transfer Protocol (HTTP) which is the protocol that makes the World Wide Web possible. Each of three lights in the room is listening on a local Wi-Fi network.</p>
+<p>Using our knowledge of basic data types, and writing data to the web (which we haven’t talked a whole lot about yet) we are going to change the color of two <a href="https://www2.meethue.com/en-us/bulbs">Phillips Hue Lights</a> in the room. You can talk to these lights using the HyperText Transfer Protocol (HTTP) which is the protocol that makes the World Wide Web possible. Each of three lights in the room is listening on a local Wi-Fi network.</p>
 <h3 id="the-challenge">The Challenge</h3>
-<p>The goal of this exercise is to see if you can change the color of one or more of the Phillips Hue lights that are in the room. After you understand the basics of this experiment see if you can do one or more of the following things:</p>
-<ol type="1">
-<li>Change the color of a light.</li>
-<li>Alternate the light between two colors.</li>
-<li>Turn the light a random color.</li>
-<li>Turn the light off and on.</li>
-</ol>
-<p>Here are some preliminary things for you to get started…</p>
+<p>The goal of this exercise is to see if you can change the color of one of the Phillips Hue lights that are in the room. We will split the class in half, where one half of the class will try to change the color of Light 1, and the other half will do the same for Light 2. We will also divide each side into Red, Green and Blue, so that we know when a group was successful.</p>
+<p>Here are some preliminary things you will need to do to get started…</p>
 <h3 id="install-requests">1. Install Requests</h3>
 <p><a href="https://2.python-requests.org/en/master/">requests</a> is a Python module that makes it easy to send HTTP requests. Once you install it you’ll be able to import it into your program just like we installed and imported pandas. Open a terminal window and type the command appropriate for your operating system:</p>
 <p><strong>OS X:</strong></p>
@@ -115,14 +109,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <strong>Password:</strong> 76281273</p>
 <h3 id="the-lights">4. The Lights</h3>
 <p><img style="width: 200px; float: right;" src="images/bridge.jpg"></p>
-<p>There are three Phillips Hue lights in the room that you can talk to using the Hue Lights API. The API is a little web server running on this device</p>
+<p>There are two Phillips Hue lights in the room that you can talk to using the Hue Lights API. The API is a little web server running on this device</p>
 <pre><code>http://192.168.0.101/api/{key}/</code></pre>
 <p>So for example you can see the state of all the lights by visiting this URL in your browser:</p>
 <pre><code>http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights</code></pre>
-<p>You can see the state of one of the lights by adding the <em>light number</em> (1, 2 or 3) to the URL, for example:</p>
+<p>You can see the state of one of the lights by adding the <em>light number</em> (1 or 2) to the URL, for example:</p>
 <pre><code>http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1
-http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2
-http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/3</code></pre>
+http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2</code></pre>
 <h3 id="lights-onoff">5. Lights On/Off</h3>
 <p>You can change the state of one of the lights by doing an HTTP PUT of some JSON data to a URL like:</p>
 <pre><code>http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1/state
@@ -133,16 +126,22 @@ http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/3/state
 <p>or:</p>
 <pre><code>{&quot;on&quot;: True}</code></pre>
 <h3 id="color">6. Color</h3>
-<p>The lights use a particular type of code for color. You can update the color by sending a PUT request to the light’s state URL, just as you did to turn them off and on. But in the case of changing the color you will send a dictionary that looks like this:</p>
+<p>The lights use a particular type of code (a list of floats) for color. You can update the color by sending a PUT request to the light’s state URL, just as you did to turn them off and on. But in the case of changing the color you will send a dictionary that contains a key “xy” that points to a list of float values.</p>
 <pre><code>{&quot;xy&quot;: [.6, .3]}</code></pre>
-<p>That should have turned the light you addressed turn red. Alternative you can turn it green:</p>
-<pre><code>{&quot;xy&quot;: [.4, .5]}</code></pre>
+<p>When sent correctly to the lights this “xy” value will turn the light you addressed red. Here are the values for Red, Green and Blue for your team to use:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>red <span class="op">=</span> [.<span class="dv">6</span>, <span class="fl">.3</span>]</span>
+<span id="cb11-2"><a href="#cb11-2"></a>green <span class="op">=</span> [.<span class="dv">4</span>, <span class="fl">.5</span>]</span>
+<span id="cb11-3"><a href="#cb11-3"></a>blue <span class="op">=</span> [.<span class="dv">17</span>, <span class="fl">.04</span>]</span></code></pre></div>
+<h3 id="color-challenge">Color Challenge</h3>
 <p>Try to come up with other colors by putting different “xy” values by identifying colors by their [x, y] coordinates in the Red Triangle (Gamut B) below:</p>
 <p><img width="1000" src="images/color.png"></p>
 <p>Experiment with the <em>bri</em> option which can be an integer from 0 to 255. What does it seem to do?</p>
+<h3 id="timed-changes">Timed Changes</h3>
 <p>Try to change the light colors in a loop. But be sure to use a sleep command to wait between requests so you don’t overhwhelm the light. For example this sleeps 5 seconds:</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1"></a><span class="im">import</span> time</span>
 <span id="cb12-2"><a href="#cb12-2"></a></span>
 <span id="cb12-3"><a href="#cb12-3"></a>time.sleep(<span class="dv">5</span>)</span></code></pre></div>
+<h3 id="brightness">Brightness</h3>
+<p>See if you can change the brightness of the lights using the “bri” key which takes an integer from 0 to 255.</p>
 </body>
 </html>

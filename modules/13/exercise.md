@@ -30,13 +30,13 @@ Wi-Fi network.
 
 ### The Challenge
 
-The goal of this exercise is to see if you can change the color of one or more
-of the Phillips Hue lights that are in the room. We will split the class in
-half, where one half of the class will try to change the color of Light 1, and
-the other half will do the same for Light 2. We will also divide each side into
-Red, Green and Blue, so that we know when a group was succesful.
+The goal of this exercise is to see if you can change the color of one of the
+Phillips Hue lights that are in the room. We will split the class in half, where
+one half of the class will try to change the color of Light 1, and the other
+half will do the same for Light 2. We will also divide each side into Red, Green
+and Blue, so that we know when a group was successful.
 
-Here are some preliminary things for you to get started...
+Here are some preliminary things you will need to do to get started...
 
 ### 1. Install Requests
 
