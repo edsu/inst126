@@ -81,26 +81,26 @@ There are two Phillips Hue lights in the room that you can talk to using the Hue
 Lights API. The API is a little web server running on this device known as the
 bridge:
 
-    http://192.168.0.100/api/{key}/
+    http://192.168.0.101/api/{key}/
 
 So for example you can see the state of all the lights by visiting this URL in
 your browser:
 
-    http://192.168.0.100/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights
+    http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights
 
 You can see the state of one of the lights by adding the *light number* (1 or 2)
 to the URL, for example:
 
-    http://192.168.0.100/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1
-    http://192.168.0.100/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2
+    http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1
+    http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2
 
 ### 5. Light Color
 
 You can change the state of one of the lights by sending an HTTP PUT request
 containing some JSON data to an API URL like:
 
-    http://192.168.0.100/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1/state
-    http://192.168.0.100/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2/state
+    http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1/state
+    http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2/state
 
 The requests module has a *put()* method that lets you send data to a URL. You
 can use *put* method's *json* parameter to pass in the Python data to send as
