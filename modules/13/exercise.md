@@ -100,7 +100,6 @@ JSON data to a URL like:
 
     http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1/state
     http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2/state
-    http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/3/state
 
 The requests module has a *put()* method that lets you send data to a URL. You
 can use *put* method's *json* parameter to pass in data to send as JSON. See if
