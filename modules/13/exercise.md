@@ -21,21 +21,20 @@ gives you the sense of how computation isn't an immaterial, abstract phenomenon,
 but one that has very real material effects, which can often have social and
 political consequences.
 
-Using our knowledge of basic data types, JSON and writing data to the web (which
-we haven't talked a whole lot about yet) we are going to change the color of
-some [Phillips Hue Lights]. You can talk to these lights using the HyperText
-Transfer Protocol (HTTP) which is the protocol that makes the web possible. Each
-of three lights in the room is listening on a local wifi network.
+Using our knowledge of basic data types, and writing data to the web (which we
+haven't talked a whole lot about yet) we are going to change the color of two
+[Phillips Hue Lights] in the room. You can talk to these lights using the
+HyperText Transfer Protocol (HTTP) which is the protocol that makes the World
+Wide Web possible. Each of three lights in the room is listening on a local
+Wi-Fi network.
 
 ### The Challenge
 
 The goal of this exercise is to see if you can change the color of one or more
-of the Phillips Hue lights that are in the room. See if you can do one or more of the following things:
-
-1. Change the color of a light.
-2. Alternate the light between two colors.
-3. Turn the light a random color.
-4. Turn the light off and on.
+of the Phillips Hue lights that are in the room. We will split the class in
+half, where one half of the class will try to change the color of Light 1, and
+the other half will do the same for Light 2. We will also divide each side into
+Red, Green and Blue, so that we know when a group was succesful.
 
 Here are some preliminary things for you to get started...
 
@@ -78,8 +77,8 @@ network that you can join.
 
 <img style="width: 200px; float: right;" src="images/bridge.jpg">
 
-There are three Phillips Hue lights in the room that you can talk to using the
-Hue Lights API. The API is a little web server running on this device 
+There are two Phillips Hue lights in the room that you can talk to using the Hue
+Lights API. The API is a little web server running on this device 
 
     http://192.168.0.101/api/{key}/
 
@@ -88,19 +87,20 @@ your browser:
 
     http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights
 
-You can see the state of one of the lights by adding the *light number* (1, 2 or
-3) to the URL, for example:
+You can see the state of one of the lights by adding the *light number* (1 or 2)
+to the URL, for example:
 
     http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1
     http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2
-    http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/3
 
 ### 5. Lights On/Off
 
 You can change the state of one of the lights by doing an HTTP PUT of some
 JSON data to a URL like:
 
+    http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1/state
     http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2/state
+    http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/3/state
 
 The requests module has a *put()* method that lets you send data to a URL. You
 can use *put* method's *json* parameter to pass in data to send as JSON. See if
@@ -114,16 +114,24 @@ or:
 
 ### 6. Color
 
-The lights use a particular type of codes for color. You can update the color by
-sending a PUT request to the light's state URL, just as you did to turn them off
-and on, but the dictionary you send as JSON should look like this to turn the
-color red:
+The lights use a particular type of code (a list of floats) for color. You can
+update the color by sending a PUT request to the light's state URL, just as you
+did to turn them off and on. But in the case of changing the color you will send
+a dictionary that contains a key "xy" that points to a list of float values. 
 
     {"xy": [.6, .3]}
 
-Or green:
+When sent correctly to the lights this "xy" value will turn the light you
+addressed red. Here are the values for Red, Green and Blue for your team to
+use:
 
-    {"xy": [.4, .5]}
+```python
+red = [.6, .3]
+green = [.4, .5]
+blue = [.17, .04]
+```
+
+### Color Challenge
 
 Try to come up with other colors by putting different "xy" values by identifying
 colors by their [x, y] coordinates in the Red Triangle (Gamut B) below:
@@ -132,6 +140,23 @@ colors by their [x, y] coordinates in the Red Triangle (Gamut B) below:
 
 Experiment with the *bri* option which can be an integer from 0 to 255. What
 does it seem to do?
+
+### Timed Changes
+
+Try to change the light colors in a loop. But be sure to use a sleep command to
+wait between requests so you don't overhwhelm the light. For example this sleeps
+5 seconds:
+
+```python
+import time
+
+time.sleep(5)
+```
+
+### Brightness
+
+See if you can change the brightness of the lights using the "bri" key which
+takes an integer from 0 to 255.
 
 [Phillips Hue Lights]: https://www2.meethue.com/en-us/bulbs
 [requests]: https://2.python-requests.org/en/master/
