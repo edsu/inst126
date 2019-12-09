@@ -73,12 +73,13 @@ network that you can join.
 **Network:** TP-Link_1B36  
 **Password:** 76281273
 
-### 4. The Lights
+### 4. Light State
 
 <img style="width: 200px; float: right;" src="images/bridge.jpg">
 
 There are two Phillips Hue lights in the room that you can talk to using the Hue
-Lights API. The API is a little web server running on this device 
+Lights API. The API is a little web server running on this device known as the
+bridge:
 
     http://192.168.0.101/api/{key}/
 
@@ -93,36 +94,28 @@ to the URL, for example:
     http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1
     http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2
 
-### 5. Lights On/Off
+### 5. Light Color
 
-You can change the state of one of the lights by doing an HTTP PUT of some
-JSON data to a URL like:
+You can change the state of one of the lights by sending an HTTP PUT request
+containing some JSON data to an API URL like:
 
     http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/1/state
     http://192.168.0.101/api/ht4E04Dq3umptpRXiHqZLFzEBiJcJhypKWBxWT81/lights/2/state
 
 The requests module has a *put()* method that lets you send data to a URL. You
-can use *put* method's *json* parameter to pass in data to send as JSON. See if
-you can post this Python dictionary as JSON to turn on and off a light:
-
-    {"on": False}
-
-or:
-
-    {"on": True}
-
-### 6. Color
+can use *put* method's *json* parameter to pass in the Python data to send as
+JSON.
 
 The lights use a particular type of code (a list of floats) for color. You can
-update the color by sending a PUT request to the light's state URL, just as you
-did to turn them off and on. But in the case of changing the color you will send
-a dictionary that contains a key "xy" that points to a list of float values. 
+update a light's color by sending a PUT request containing JSON data for a
+dictionary that contains a key "xy" that points to a list of float values.
+
+For example sending a PUT request to the state URL containing this JSON payload
+will turn that light Red:
 
     {"xy": [.6, .3]}
 
-When sent correctly to the lights this "xy" value will turn the light you
-addressed red. Here are the values for Red, Green and Blue for your team to
-use:
+Here are the values for Red, Green and Blue for your team to use:
 
 ```python
 red = [.6, .3]
@@ -130,18 +123,19 @@ green = [.4, .5]
 blue = [.17, .04]
 ```
 
-### Color Challenge
+### 6. Color Challenge
 
-Try to come up with other colors by putting different "xy" values by identifying
-colors by their [x, y] coordinates in the Red Triangle (Gamut B) below:
+If you were able to turn your light a particular color try to come up with other
+colors by putting different "xy" values by identifying colors by their [x, y]
+coordinates in the Red Triangle (Gamut B) below:
 
   <img width="1000" src="images/color.png">
 
-### Timed Changes
+### 7. Timed Changes
 
-Try to change the light colors in a loop. But be sure to use a sleep command to
-wait between requests so you don't overhwhelm the light. For example this sleeps
-5 seconds:
+Try to change the light different colors (perhaps random ones) in a loop. But be
+sure to use a sleep command to wait between requests so you don't overwhelm the
+light.  For example this command will cause your program to sleeps 5 seconds:
 
 ```python
 import time
@@ -149,10 +143,15 @@ import time
 time.sleep(5)
 ```
 
-### Brightness
+### 8. Brightness
 
-See if you can change the brightness of the lights using the "bri" key which
-takes an integer from 0 to 255.
+See if you can change the brightness of the lights using the "bri" key and an
+integer key that has a value from 0 to 255.
+
+### 9. On/Off
+
+See if you can use the "on" key with a boolean value to turn off and on the
+light.
 
 [Phillips Hue Lights]: https://www2.meethue.com/en-us/bulbs
 [requests]: https://2.python-requests.org/en/master/
